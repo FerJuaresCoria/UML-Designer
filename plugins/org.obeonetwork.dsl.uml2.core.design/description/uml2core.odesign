@@ -451,47 +451,47 @@
               <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
             </style>
             <conditionnalStyles predicateExpression="aql:self.oclIsTypeOf(uml::InitialNode)">
-              <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="service:computeUmlLabel" resizeKind="NSEW" arcWidth="0" arcHeight="0" roundedCorner="true" workspacePath="/org.obeonetwork.dsl.uml2.design/images/InitNode.svg">
+              <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="service:computeUmlLabel" hideLabelByDefault="true" resizeKind="NSEW" arcWidth="0" arcHeight="0" roundedCorner="true" workspacePath="/org.obeonetwork.dsl.uml2.design/images/InitNode.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="aql:self.oclIsTypeOf(uml::ForkNode)">
-              <style xsi:type="style:SquareDescription" showIcon="false" labelExpression="service:computeUmlLabel" resizeKind="EAST_WEST" width="3" height="1">
+              <style xsi:type="style:SquareDescription" showIcon="false" labelExpression="service:computeUmlLabel" hideLabelByDefault="true" resizeKind="EAST_WEST" width="3" height="1">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="aql:self.oclIsTypeOf(uml::JoinNode)">
-              <style xsi:type="style:SquareDescription" borderSizeComputationExpression="1" showIcon="false" labelExpression="service:computeUmlLabel" resizeKind="EAST_WEST" width="2" height="1">
+              <style xsi:type="style:SquareDescription" borderSizeComputationExpression="1" showIcon="false" labelExpression="service:computeUmlLabel" hideLabelByDefault="true" resizeKind="EAST_WEST" width="2" height="1">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="aql:self.oclIsTypeOf(uml::ActivityFinalNode)">
-              <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="service:computeUmlLabel" resizeKind="NSEW" arcWidth="0" arcHeight="0" roundedCorner="true" workspacePath="/org.obeonetwork.dsl.uml2.design/images/FinalNode.svg">
+              <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="service:computeUmlLabel" hideLabelByDefault="true" resizeKind="NSEW" arcWidth="0" arcHeight="0" roundedCorner="true" workspacePath="/org.obeonetwork.dsl.uml2.design/images/FinalNode.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="aql:self.oclIsTypeOf(uml::MergeNode)">
-              <style xsi:type="style:LozengeNodeDescription" showIcon="false" labelExpression="service:computeUmlLabel" sizeComputationExpression="2">
+              <style xsi:type="style:LozengeNodeDescription" showIcon="false" labelExpression="service:computeUmlLabel" hideLabelByDefault="true" sizeComputationExpression="2">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="aql:self.oclIsTypeOf(uml::DecisionNode)">
-              <style xsi:type="style:LozengeNodeDescription" showIcon="false" labelExpression="service:computeUmlLabel">
+              <style xsi:type="style:LozengeNodeDescription" showIcon="false" labelExpression="service:computeUmlLabel" hideLabelByDefault="true">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="aql:self.oclIsTypeOf(uml::FlowFinalNode)">
-              <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="service:computeUmlLabel" resizeKind="NSEW" arcWidth="0" arcHeight="0" roundedCorner="true" workspacePath="/org.obeonetwork.dsl.uml2.design/images/FlowNode.svg">
+              <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="service:computeUmlLabel" hideLabelByDefault="true" resizeKind="NSEW" arcWidth="0" arcHeight="0" roundedCorner="true" workspacePath="/org.obeonetwork.dsl.uml2.design/images/FlowNode.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>

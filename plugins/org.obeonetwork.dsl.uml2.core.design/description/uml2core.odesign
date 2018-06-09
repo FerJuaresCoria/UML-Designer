@@ -471,7 +471,7 @@
               </style>
             </conditionnalStyles>
             <conditionnalStyles predicateExpression="aql:self.oclIsTypeOf(uml::ActivityFinalNode)">
-              <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="service:computeUmlLabel" resizeKind="NSEW" arcWidth="0" arcHeight="0" roundedCorner="true" workspacePath="/org.obeonetwork.dsl.uml2.design/images/FinalNode.png">
+              <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="service:computeUmlLabel" resizeKind="NSEW" arcWidth="0" arcHeight="0" roundedCorner="true" workspacePath="/org.obeonetwork.dsl.uml2.design/images/FinalNode.svg">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                 <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               </style>

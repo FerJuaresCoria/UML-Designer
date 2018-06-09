@@ -442,7 +442,7 @@ public class ActivityDiagramServices extends AbstractDiagramServices {
         final Predicate<EObject> predicate = new Predicate<EObject>() {
             @Override
             public boolean apply(EObject eObj) {
-                return eObj instanceof Operation && (((Operation) eObj).getMethods() == null || ((Operation) eObj).getMethods().size() == 0);
+                return eObj instanceof Operation;
             }
         };
         for (final org.eclipse.uml2.uml.Package pkg : rootPkgs) {

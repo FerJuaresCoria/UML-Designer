@@ -1413,7 +1413,7 @@
             <beginLabelStyleDescription showIcon="false" labelExpression="aql:self.computeAssociationBeginLabel()">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </beginLabelStyleDescription>
-            <centerLabelStyleDescription showIcon="false" labelExpression="service:computeUmlLabel">
+            <centerLabelStyleDescription showIcon="false">
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             </centerLabelStyleDescription>
             <endLabelStyleDescription showIcon="false" labelExpression="aql:self.computeAssociationEndLabel()">

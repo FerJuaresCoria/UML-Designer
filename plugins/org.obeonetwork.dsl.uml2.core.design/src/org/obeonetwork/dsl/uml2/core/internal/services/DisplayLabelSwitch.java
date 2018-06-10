@@ -806,7 +806,15 @@ public class DisplayLabelSwitch extends UMLSwitch<String> implements ILabelConst
      */
     @Override
     public String caseStructuralFeature(StructuralFeature object) {
-        return caseTypedElement(object) + " " + caseMultiplicityElement(object); //$NON-NLS-1$
+    	String multiplicity = caseMultiplicityElement(object);
+    	if (multiplicity.isEmpty())
+    	{
+    		return caseTypedElement(object); //$NON-NLS-1$
+    	}
+    	else
+    	{
+    		return caseTypedElement(object) + " " + multiplicity; //$NON-NLS-1$
+    	}
     }
 
     @Override
@@ -1007,12 +1015,12 @@ public class DisplayLabelSwitch extends UMLSwitch<String> implements ILabelConst
             propertyModifier.append("ordered"); //$NON-NLS-1$
         }
         // Unique applies on multivalued multiplicity only
-        if (object.getUpper() != 1 && object.isUnique()) {
-            if (propertyModifier.length() > 0) {
-                propertyModifier.append(", "); //$NON-NLS-1$
-            }
-            propertyModifier.append("unique"); //$NON-NLS-1$
-        }
+//        if (object.getUpper() != 1 && object.isUnique()) {
+//            if (propertyModifier.length() > 0) {
+//                propertyModifier.append(", "); //$NON-NLS-1$
+//            }
+//            propertyModifier.append("unique"); //$NON-NLS-1$
+//        }
         if (!object.isUnique() && object.isOrdered()) {
             if (propertyModifier.length() > 0) {
                 propertyModifier.append(", "); //$NON-NLS-1$
@@ -1062,7 +1070,9 @@ public class DisplayLabelSwitch extends UMLSwitch<String> implements ILabelConst
      */
     private String getMultiplicity(int lower, int upper) {
         final StringBuffer label = new StringBuffer();
-        if (lower == upper) {
+        if (lower == upper && lower == 1) {
+        }
+        else if (lower == upper) {
             // [1..1]
             label.append("[" + lower + "]"); //$NON-NLS-1$ //$NON-NLS-2$
         } else if (lower == 0 && upper == -1) {

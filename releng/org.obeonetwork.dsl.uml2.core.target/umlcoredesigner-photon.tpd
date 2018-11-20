@@ -1,8 +1,8 @@
-target "UML Core Designer Oxygen" with source requirements
+target "UML Core Designer photon" with source requirements
 
 // Eclipse
 
-location "http://download.eclipse.org/releases/oxygen/" {
+location "http://download.eclipse.org/releases/photon/" {
 	org.eclipse.platform.sdk lazy
 	org.eclipse.equinox.executable.feature.group lazy
 	org.eclipse.epp.mpc.feature.group lazy
@@ -15,7 +15,7 @@ location "http://download.eclipse.org/releases/oxygen/" {
 
 // UML
 
-location "http://download.eclipse.org/releases/oxygen/" {
+location "http://download.eclipse.org/releases/photon/" {
 	org.eclipse.uml2.uml.feature.group [5.3.0,5.4.0)
 	org.eclipse.uml2.uml.edit.feature.group [5.3.0,5.4.0)
 	org.eclipse.uml2.feature.group [5.3.0,5.4.0)
@@ -39,7 +39,7 @@ location "http://download.eclipse.org/modeling/emft/eef/updates/nightly/latest/n
 
 // Sirius
 
-location "http://download.eclipse.org/sirius/updates/releases/6.1.0/oxygen" {
+location "http://download.eclipse.org/sirius/updates/releases/6.1.0/photon" {
 	org.eclipse.sirius.runtime.feature.group lazy
 	//org.eclipse.sirius.runtime.acceleo.feature.group lazy
 	org.eclipse.sirius.runtime.aql.feature.group lazy

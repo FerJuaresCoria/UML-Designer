@@ -25,6 +25,7 @@ import org.eclipse.uml2.uml.AssociationClass;
 import org.eclipse.uml2.uml.CallEvent;
 import org.eclipse.uml2.uml.Classifier;
 import org.eclipse.uml2.uml.DataStoreNode;
+import org.eclipse.uml2.uml.CentralBufferNode;
 import org.eclipse.uml2.uml.DecisionNode;
 import org.eclipse.uml2.uml.Element;
 import org.eclipse.uml2.uml.ElementImport;
@@ -182,6 +183,8 @@ public class LabelServices {
             name = "Join"; //$NON-NLS-1$
         } else if (element instanceof DataStoreNode) {
             name = "DataStore"; //$NON-NLS-1$
+        } else if (element instanceof CentralBufferNode) {
+            name = "CentralBuffer"; //$NON-NLS-1$
         } else if (element instanceof ActivityParameterNode) {
             name = "Parameter"; //$NON-NLS-1$
         } else if (element instanceof ForkNode) {
@@ -256,8 +259,8 @@ public class LabelServices {
      * @return Label
      */
     public String computeElementImportLabel(ElementImport element) {
-        // ['Â«MetaclassÂ»\n'+self.oclAsType(uml::Element).computeUmlLabel()/]
-        return "Â«MetaclassÂ»\n" + computeUmlLabel(element); //$NON-NLS-1$
+        // ['«Metaclass»\n'+self.oclAsType(uml::Element).computeUmlLabel()/]
+        return "«Metaclass»\n" + computeUmlLabel(element); //$NON-NLS-1$
     }
 
     /**
@@ -294,8 +297,8 @@ public class LabelServices {
      * @return Label
      */
     public String computeProfileLabel(Profile element) {
-        // ['Â«ProfileÂ» \n'+self.oclAsType(uml::Element).computeUmlLabel()/]
-        return "Â«ProfileÂ» \n" + computeUmlLabel(element); //$NON-NLS-1$
+        // ['«Profile» \n'+self.oclAsType(uml::Element).computeUmlLabel()/]
+        return "«Profile» \n" + computeUmlLabel(element); //$NON-NLS-1$
     }
 
     /**
@@ -306,8 +309,8 @@ public class LabelServices {
      * @return Label
      */
     public String computeStereotypeLabel(Stereotype element) {
-        // ['Â«StereotypeÂ» \n'+self.oclAsType(uml::Element).computeUmlLabel()/]
-        return "Â«StereotypeÂ» \n" + computeUmlLabel(element); //$NON-NLS-1$
+        // ['«Stereotype» \n'+self.oclAsType(uml::Element).computeUmlLabel()/]
+        return "«Stereotype» \n" + computeUmlLabel(element); //$NON-NLS-1$
     }
 
     /**

@@ -25,6 +25,7 @@ import org.eclipse.uml2.uml.CallOperationAction;
 import org.eclipse.uml2.uml.Class;
 import org.eclipse.uml2.uml.Classifier;
 import org.eclipse.uml2.uml.Constraint;
+import org.eclipse.uml2.uml.CentralBufferNode;
 import org.eclipse.uml2.uml.DataStoreNode;
 import org.eclipse.uml2.uml.Dependency;
 import org.eclipse.uml2.uml.Duration;
@@ -334,6 +335,19 @@ public class DisplayLabelSwitch extends UMLSwitch<String> implements ILabelConst
      * {@inheritDoc}
      */
     @Override
+    public String caseCentralBufferNode(CentralBufferNode object) {
+        final StringBuffer buffer = new StringBuffer();
+        buffer.append(OPEN_QUOTE_MARK);
+        buffer.append("CentralBuffer"); //$NON-NLS-1$
+        buffer.append(CLOSE_QUOTE_MARK);
+        buffer.append(NL);
+        buffer.append(caseNamedElement(object));
+        return buffer.toString();
+    }
+    /**
+     * {@inheritDoc}
+     */
+    @Override
     public String caseDependency(Dependency object) {
         return ""; //$NON-NLS-1$
     }
@@ -471,9 +485,9 @@ public class DisplayLabelSwitch extends UMLSwitch<String> implements ILabelConst
     public String caseInterval(Interval object) {
         final String minLabel = LabelServices.INSTANCE.computeUmlLabel(object.getMin());
         final String maxLabel = LabelServices.INSTANCE.computeUmlLabel(object.getMax());
-        if (minLabel != null && minLabel.length() > 0 && maxLabel != null && maxLabel.length() > 0) {
+        /*if (minLabel != null && minLabel.length() > 0 && maxLabel != null && maxLabel.length() > 0) {
             return OPENING_BRACE + minLabel + " " + maxLabel + CLOSING_BRACE; //$NON-NLS-1$
-        }
+        }*/
         return ""; //$NON-NLS-1$
     }
 

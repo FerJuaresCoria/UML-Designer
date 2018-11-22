@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/description/tool/1.1.0" name="VariantDescription" version="12.0.0.2017041100">
+  <ownedViewpoints name="MyViewpoint">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="diagramVariantDescription" label="Variant Description" domainClass="uml.Package" enablePopupBars="true">
+      <metamodel href="http://www.eclipse.org/uml2/5.0.0/Types#/"/>
+      <metamodel href="http://www.eclipse.org/uml2/5.0.0/UML#/"/>
+      <defaultLayer name="Class">
+        <containerMappings xsi:type="description_1:ContainerMappingImport" name="VD_I_ReusedMappingForFeatures" semanticCandidatesExpression="null">
+          <subNodeMappings xsi:type="description_1:NodeMappingImport" name="VD_I_Operation" semanticCandidatesExpression="service:getSemanticElements">
+            <importedMapping href="platform:/plugin/org.obeonetwork.dsl.uml2.design/description/uml2.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@containerMappings[name='CD_ReusedMappingForFeatures']/@subNodeMappings[name='CD_Operation']"/>
+          </subNodeMappings>
+          <subNodeMappings xsi:type="description_1:NodeMappingImport" name="VD_I_Property" semanticCandidatesExpression="aql:if(self.oclIsKindOf(uml::Class) or self.oclIsKindOf(uml::Interface)) then self.ownedAttribute else null endif" semanticElements="service:getSemanticElements">
+            <importedMapping href="platform:/plugin/org.obeonetwork.dsl.uml2.design/description/uml2.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@containerMappings[name='CD_ReusedMappingForFeatures']/@subNodeMappings[name='CD_Property']"/>
+          </subNodeMappings>
+          <subNodeMappings xsi:type="description_1:NodeMappingImport" name="VD_I_Qualifier" semanticCandidatesExpression="service:getSemanticCandidatesQualifier(diagram)">
+            <importedMapping href="platform:/plugin/org.obeonetwork.dsl.uml2.design/description/uml2.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@containerMappings[name='CD_ReusedMappingForFeatures']/@subNodeMappings[name='CD_Qualifier']"/>
+          </subNodeMappings>
+          <importedMapping href="platform:/plugin/org.obeonetwork.dsl.uml2.design/description/uml2.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@containerMappings[name='CD_ReusedMappingForFeatures']"/>
+        </containerMappings>
+        <containerMappings xsi:type="description_1:ContainerMappingImport" name="VD_I_Class" semanticCandidatesExpression="service:self.getSemanticCandidatesClasses()" reusedBorderedNodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='diagramVariantDescription']/@defaultLayer/@containerMappings[name='VD_I_ReusedMappingForFeatures']/@subNodeMappings[name='VD_I_Qualifier']" reusedNodeMappings="//@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='diagramVariantDescription']/@defaultLayer/@containerMappings[name='VD_I_ReusedMappingForFeatures']/@subNodeMappings[name='VD_I_Operation'] //@ownedViewpoints[name='MyViewpoint']/@ownedRepresentations[name='diagramVariantDescription']/@defaultLayer/@containerMappings[name='VD_I_ReusedMappingForFeatures']/@subNodeMappings[name='VD_I_Property']" childrenPresentation="List">
+          <importedMapping href="platform:/plugin/org.obeonetwork.dsl.uml2.design/description/uml2.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@containerMappings[name='CD_Class']"/>
+        </containerMappings>
+        <toolSections name="VD_ExistingElements">
+          <reusedTools xsi:type="tool:ToolDescription" href="platform:/plugin/org.obeonetwork.dsl.uml2.design/description/uml2.odesign#//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Reused%20Description']/@toolSection/@subSections[name='existingElements']/@ownedTools[name='AddExistingElements']"/>
+          <reusedTools xsi:type="tool:OperationAction" href="platform:/plugin/org.obeonetwork.dsl.uml2.design/description/uml2.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='CD_AddRelatedElements']"/>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+    <ownedJavaExtensions qualifiedClassName="VariantDescription.design.Services"/>
+    <ownedJavaExtensions qualifiedClassName="org.obeonetwork.dsl.uml2.design.api.services.ClassDiagramServices"/>
+  </ownedViewpoints>
+</description:Group>

@@ -24,12 +24,6 @@
         </eClassifiers>
         <eClassifiers xmi:type="ecore:EClass" xmi:id="_z8XPK_-qEeeWj5Hk1hRMPg" name="valueVariant">
           <eAnnotations xmi:id="_z8XPLP-qEeeWj5Hk1hRMPg" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_vBrvYPp8EeeqlIDbIHFFiQ"/>
-          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_z8XPLf-qEeeWj5Hk1hRMPg" name="modificationWeight" ordered="false" lowerBound="1" defaultValueLiteral="1.0">
-            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Real"/>
-          </eStructuralFeatures>
-          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_z8XPL_-qEeeWj5Hk1hRMPg" name="requiredModificationPoints" ordered="false" lowerBound="1" defaultValueLiteral="1.0">
-            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Real"/>
-          </eStructuralFeatures>
           <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_z8XPMf-qEeeWj5Hk1hRMPg" name="base_Property" ordered="false" lowerBound="1">
             <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Property"/>
           </eStructuralFeatures>

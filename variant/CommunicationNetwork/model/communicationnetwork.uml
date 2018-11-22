@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:VariantProfile="http:///schemas/VariantProfile/_z8VZ8P-qEeeWj5Hk1hRMPg/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/VariantProfile/_z8VZ8P-qEeeWj5Hk1hRMPg/0 platform:/resource/VariantProfile/VariantProfile.uml#_z8XPIf-qEeeWj5Hk1hRMPg">
+  <uml:Model xmi:id="_Uaa4ILVfEeaH88x1PakFmw" name="CommunicationNetwork">
+    <packagedElement xmi:type="uml:Class" xmi:id="_O-1jwLVgEeaH88x1PakFmw" name="Network">
+      <ownedAttribute xmi:id="_KBJP0LViEeaH88x1PakFmw" name="networkNodes" type="_2EJV4LVhEeaH88x1PakFmw" association="_EC6W0LViEeaH88x1PakFmw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Mdf9gLViEeaH88x1PakFmw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_MOl-0LViEeaH88x1PakFmw" value="*"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_x3jZoLVhEeaH88x1PakFmw" name="Connection" isAbstract="true">
+      <ownedRule xmi:id="_ES72MLVqEeaH88x1PakFmw" name="nodeCheck">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="_GLtVsLVqEeaH88x1PakFmw">
+          <body>context Connection inv: self.node1 != self.node2</body>
+        </specification>
+      </ownedRule>
+      <nestedClassifier xmi:type="uml:Activity" xmi:id="_bqOlYLVtEeaH88x1PakFmw" name="createConnection"/>
+      <ownedAttribute xmi:id="_DL6LcLVkEeaH88x1PakFmw" name="networkNodes" type="_2EJV4LVhEeaH88x1PakFmw" association="_-lgS8LVhEeaH88x1PakFmw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_IKSJ8LVkEeaH88x1PakFmw" value="2"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ItXo4LVkEeaH88x1PakFmw" value="2"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_9_TjsLVjEeaH88x1PakFmw" name="dataRate">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="_2EJV4LVhEeaH88x1PakFmw" name="NetworkNode" isAbstract="true">
+      <ownedRule xmi:id="_cghbkLVqEeaH88x1PakFmw" name="WLANConnectionCheck">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="_gk1lkLVqEeaH88x1PakFmw">
+          <body>context NetworkNode inv: self.isWLANExisting == (WLANConnections.allInstance()->select(node1=self or node2=self)->count() > 0)</body>
+        </specification>
+      </ownedRule>
+      <ownedRule xmi:id="_zIP2YLVqEeaH88x1PakFmw" name="LANConnectionCheck">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="_1kyKQLVqEeaH88x1PakFmw">
+          <body>context NetworkNode inv: self.numberLANPorts >= LANConnections.allInstances()->select(node1=self or node2=self)->count()</body>
+        </specification>
+      </ownedRule>
+      <nestedClassifier xmi:type="uml:FunctionBehavior" xmi:id="_Cs4o8LVrEeaH88x1PakFmw" name="calculateInitialCosts">
+        <body>= self.sumberLanPorts*10 + (self.numberMaxWLANConnections > 0)*20</body>
+      </nestedClassifier>
+      <nestedClassifier xmi:type="uml:FunctionBehavior" xmi:id="_HwpdwLVrEeaH88x1PakFmw" name="calculateCommunicationCosts">
+        <body>=(WLANConnection.allInstances()->select(node1=self or node2=self)->count() > 0 )*0.2</body>
+      </nestedClassifier>
+      <nestedClassifier xmi:type="uml:FunctionBehavior" xmi:id="_OymdkLVrEeaH88x1PakFmw" name="calculateTotalCosts">
+        <body>= self.executionCostsPerDay + communicationCostsPerDay</body>
+      </nestedClassifier>
+      <ownedAttribute xmi:id="_MPhrkLVlEeaH88x1PakFmw" name="nodeName">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_Qdb2cLVlEeaH88x1PakFmw" name="position_x">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_XFAAULVlEeaH88x1PakFmw" name="position_y">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_ZOmKELVlEeaH88x1PakFmw" name="position_z">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_dHkmwLVlEeaH88x1PakFmw" name="countLANPorts">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        <defaultValue xmi:type="uml:LiteralInteger" xmi:id="_fwvocLVlEeaH88x1PakFmw"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_iLIAMLVlEeaH88x1PakFmw" name="isWLANExisting">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_l2MjwLVlEeaH88x1PakFmw"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_KpuV8LVmEeaH88x1PakFmw" name="connection" type="_x3jZoLVhEeaH88x1PakFmw" association="_-lgS8LVhEeaH88x1PakFmw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_MNIpcLVmEeaH88x1PakFmw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_L82KsLVmEeaH88x1PakFmw" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_Qd8XULVmEeaH88x1PakFmw" name="initialCosts">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_Vz0P0LVmEeaH88x1PakFmw" name="communicationCostsPerDay">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_b1OYoLVmEeaH88x1PakFmw" name="exectionCostsPerDay">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        <defaultValue xmi:type="uml:LiteralReal" xmi:id="_m9JvULVmEeaH88x1PakFmw" value="0.05"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_tO1IwLVmEeaH88x1PakFmw" name="totalCostsPerDay">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_-lgS8LVhEeaH88x1PakFmw" name="A_networkNodes_connections" memberEnd="_DL6LcLVkEeaH88x1PakFmw _KpuV8LVmEeaH88x1PakFmw"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_EC6W0LViEeaH88x1PakFmw" memberEnd="_EC694LViEeaH88x1PakFmw _KBJP0LViEeaH88x1PakFmw">
+      <name xsi:nil="true"/>
+      <ownedEnd xmi:id="_EC694LViEeaH88x1PakFmw" name="networks" type="_O-1jwLVgEeaH88x1PakFmw" association="_EC6W0LViEeaH88x1PakFmw">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EC7k8LViEeaH88x1PakFmw"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EC8MALViEeaH88x1PakFmw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_yC1nILViEeaH88x1PakFmw" name="LANConnection">
+      <ownedAttribute xmi:id="_U8fRILVkEeaH88x1PakFmw" name="dataRate">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        <defaultValue xmi:type="uml:LiteralReal" xmi:id="_cbZ5wLVkEeaH88x1PakFmw" value="100.0"/>
+      </ownedAttribute>
+      <interfaceRealization xmi:id="_0obJULViEeaH88x1PakFmw" client="_yC1nILViEeaH88x1PakFmw" supplier="_x3jZoLVhEeaH88x1PakFmw" contract="_x3jZoLVhEeaH88x1PakFmw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_1Sxt4LViEeaH88x1PakFmw" name="WLANConnection">
+      <ownedRule xmi:id="_4TVtILVoEeaH88x1PakFmw" name="rangeCheck">
+        <specification xmi:type="uml:OpaqueExpression" xmi:id="_5GuR4LVoEeaH88x1PakFmw">
+          <body>context Connection inv : self.maxRange.range >= self.distance</body>
+        </specification>
+      </ownedRule>
+      <ownedAttribute xmi:id="_hxoXkLVkEeaH88x1PakFmw" name="distance">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_zkptQLVkEeaH88x1PakFmw" name="maxRange">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        <defaultValue xmi:type="uml:LiteralReal" xmi:id="_3WYScLVkEeaH88x1PakFmw" value="50.0"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_7Peq8LVkEeaH88x1PakFmw" name="dataRate">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        <defaultValue xmi:type="uml:LiteralReal" xmi:id="__FbBwLVkEeaH88x1PakFmw" value="50.0"/>
+      </ownedAttribute>
+      <interfaceRealization xmi:id="_34UMwLViEeaH88x1PakFmw" client="_1Sxt4LViEeaH88x1PakFmw" supplier="_x3jZoLVhEeaH88x1PakFmw" contract="_x3jZoLVhEeaH88x1PakFmw"/>
+      <ownedBehavior xmi:type="uml:FunctionBehavior" xmi:id="_NqxvULVqEeaH88x1PakFmw" name="calculateDistance">
+        <body>// =node1.position-node2.position</body>
+      </ownedBehavior>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_6tS10LViEeaH88x1PakFmw" name="EndNode">
+      <ownedAttribute xmi:id="_F8eHMLVnEeaH88x1PakFmw" name="datarateMean">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        <defaultValue xmi:type="uml:LiteralReal" xmi:id="_MgrbELVnEeaH88x1PakFmw" value="5.0"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_ONRfwLVnEeaH88x1PakFmw" name="datarateVariance">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        <defaultValue xmi:type="uml:LiteralReal" xmi:id="_Rzk4ELVnEeaH88x1PakFmw" value="50.0"/>
+      </ownedAttribute>
+      <interfaceRealization xmi:id="_BUXQcLVjEeaH88x1PakFmw" client="_6tS10LViEeaH88x1PakFmw" supplier="_2EJV4LVhEeaH88x1PakFmw" contract="_2EJV4LVhEeaH88x1PakFmw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_Bn-I8LVjEeaH88x1PakFmw" name="AccessPoint">
+      <ownedAttribute xmi:id="_YuPkILVnEeaH88x1PakFmw" name="countLANPorts">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_fNF24LVnEeaH88x1PakFmw" name="isWLANExisting">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_ijDGELVnEeaH88x1PakFmw" name="position_x">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_l6j0cLVnEeaH88x1PakFmw" name="position_y">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_pGK00LVnEeaH88x1PakFmw" name="position_z">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <interfaceRealization xmi:id="_DgRuYLVjEeaH88x1PakFmw" client="_Bn-I8LVjEeaH88x1PakFmw" supplier="_2EJV4LVhEeaH88x1PakFmw" contract="_2EJV4LVhEeaH88x1PakFmw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_MaYioLVjEeaH88x1PakFmw" client="_2EJV4LVhEeaH88x1PakFmw" supplier="_x3jZoLVhEeaH88x1PakFmw">
+      <name xsi:nil="true"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_NALXULVjEeaH88x1PakFmw" client="_O-1jwLVgEeaH88x1PakFmw" supplier="_Bn-I8LVjEeaH88x1PakFmw"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="_OXkBALVjEeaH88x1PakFmw" client="_O-1jwLVgEeaH88x1PakFmw" supplier="_6tS10LViEeaH88x1PakFmw">
+      <name xsi:nil="true"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="_80UdoLVrEeaH88x1PakFmw" name="endNode1" classifier="_6tS10LViEeaH88x1PakFmw">
+      <slot xmi:id="_pEsJ8LVuEeaH88x1PakFmw" definingFeature="_MPhrkLVlEeaH88x1PakFmw">
+        <value xmi:type="uml:LiteralString" xmi:id="_2SvqMLVvEeaH88x1PakFmw" value="smart phone"/>
+      </slot>
+      <slot xmi:id="_eqxTULVvEeaH88x1PakFmw" definingFeature="_iLIAMLVlEeaH88x1PakFmw">
+        <value xmi:type="uml:LiteralBoolean" xmi:id="_g-JrMLVvEeaH88x1PakFmw" value="true"/>
+      </slot>
+      <slot xmi:id="_i9IgYLVvEeaH88x1PakFmw" definingFeature="_Qdb2cLVlEeaH88x1PakFmw">
+        <value xmi:type="uml:LiteralReal" xmi:id="_mKB6MLVvEeaH88x1PakFmw" value="2.5"/>
+      </slot>
+      <slot xmi:id="_pfO7cLVvEeaH88x1PakFmw" definingFeature="_XFAAULVlEeaH88x1PakFmw">
+        <value xmi:type="uml:LiteralReal" xmi:id="_r8wt0LVvEeaH88x1PakFmw" value="0.5"/>
+      </slot>
+      <slot xmi:id="_tHHoILVvEeaH88x1PakFmw" definingFeature="_ZOmKELVlEeaH88x1PakFmw">
+        <value xmi:type="uml:LiteralReal" xmi:id="_u0PRQLVvEeaH88x1PakFmw" value="1.0"/>
+      </slot>
+    </packagedElement>
+    <packagedElement xmi:type="uml:InstanceSpecification" xmi:id="__eN4ELVrEeaH88x1PakFmw" name="endNode2" classifier="_6tS10LViEeaH88x1PakFmw">
+      <slot xmi:id="_wn4ZILVvEeaH88x1PakFmw" definingFeature="_MPhrkLVlEeaH88x1PakFmw">
+        <value xmi:type="uml:LiteralString" xmi:id="_0BJbALVvEeaH88x1PakFmw" value="computer"/>
+      </slot>
+      <slot xmi:id="_4Q28sLVvEeaH88x1PakFmw" definingFeature="_dHkmwLVlEeaH88x1PakFmw">
+        <value xmi:type="uml:LiteralInteger" xmi:id="_9uC-ILVvEeaH88x1PakFmw" value="1"/>
+      </slot>
+      <slot xmi:id="_BQGIkLVwEeaH88x1PakFmw" definingFeature="_Qdb2cLVlEeaH88x1PakFmw">
+        <value xmi:type="uml:LiteralReal" xmi:id="_FDWXwLVwEeaH88x1PakFmw" value="6.5"/>
+      </slot>
+      <slot xmi:id="_Ge8zELVwEeaH88x1PakFmw" definingFeature="_XFAAULVlEeaH88x1PakFmw">
+        <value xmi:type="uml:LiteralReal" xmi:id="_HP1dcLVwEeaH88x1PakFmw" value="4.5"/>
+      </slot>
+      <slot xmi:id="_jSpA4LVwEeaH88x1PakFmw" definingFeature="_ZOmKELVlEeaH88x1PakFmw">
+        <value xmi:type="uml:LiteralReal" xmi:id="_lUlDcLVwEeaH88x1PakFmw" value="1.0"/>
+      </slot>
+    </packagedElement>
+    <profileApplication xmi:id="_GMQYgG4AEei7lo0iwXxi8A">
+      <eAnnotations xmi:id="_GMQ_kG4AEei7lo0iwXxi8A" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="platform:/resource/VariantProfile/VariantProfile.uml#_z8XPIf-qEeeWj5Hk1hRMPg"/>
+      </eAnnotations>
+      <appliedProfile href="platform:/resource/VariantProfile/VariantProfile.uml#_AHV2sBwjEeaYldefHnIHZQ"/>
+    </profileApplication>
+  </uml:Model>
+  <VariantProfile:countFixedInstanceVariant xmi:id="_JXqkkG4AEei7lo0iwXxi8A" base_Dependency="_OXkBALVjEeaH88x1PakFmw" target="_KBJP0LViEeaH88x1PakFmw" uniqueInstances="true" instanceCount="2" instanceList="_80UdoLVrEeaH88x1PakFmw __eN4ELVrEeaH88x1PakFmw"/>
+  <VariantProfile:countVariableInstanceVariant xmi:id="_UZMYUG4AEei7lo0iwXxi8A" base_Dependency="_NALXULVjEeaH88x1PakFmw" target="_KBJP0LViEeaH88x1PakFmw" minimalCount="1" maximalCount="3" step="1"/>
+  <VariantProfile:intervalValueVariant xmi:id="_IvU8wG4BEei7lo0iwXxi8A" base_Property="_YuPkILVnEeaH88x1PakFmw" max="3.0" step="1.0"/>
+  <VariantProfile:optionalValueVariant xmi:id="_NuIZEG4BEei7lo0iwXxi8A" base_Property="_fNF24LVnEeaH88x1PakFmw"/>
+  <VariantProfile:intervalValueVariant xmi:id="_PKhekG4BEei7lo0iwXxi8A" base_Property="_ijDGELVnEeaH88x1PakFmw" min="1.0" max="10.0" step="3.0"/>
+  <VariantProfile:intervalValueVariant xmi:id="_T33XcG4BEei7lo0iwXxi8A" base_Property="_l6j0cLVnEeaH88x1PakFmw" max="2.0" step="1.0"/>
+  <VariantProfile:variant xmi:id="_3RIaQHJjEeiLiMWtG0hRXA" rootClass="_O-1jwLVgEeaH88x1PakFmw" base_Model="_Uaa4ILVfEeaH88x1PakFmw"/>
+</xmi:XMI>

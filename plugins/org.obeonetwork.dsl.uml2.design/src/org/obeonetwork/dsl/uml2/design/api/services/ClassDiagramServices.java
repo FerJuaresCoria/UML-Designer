@@ -442,6 +442,14 @@ public class ClassDiagramServices extends AbstractDiagramServices {
 			if (target instanceof Element) {
 				results.addAll(((Element)target).getStereotypeApplications());
 			}
+			if (target instanceof Class)
+			{
+				final Class classElement = (Class) target;
+				final EList<Property> propertyList = classElement.allAttributes();
+				for (final Property object : propertyList) {
+					results.addAll(object.getStereotypeApplications());
+				}
+			}
 		}
 		return results;
 	}

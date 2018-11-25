@@ -349,7 +349,7 @@ public class DisplayLabelSwitch extends UMLSwitch<String> implements ILabelConst
      */
     @Override
     public String caseDependency(Dependency object) {
-        return ""; //$NON-NLS-1$
+        return computeStereotypes(object); //$NON-NLS-1$
     }
 
     /**

@@ -43,10 +43,16 @@ import org.eclipse.uml2.uml.Class;
 import org.eclipse.uml2.uml.Classifier;
 import org.eclipse.uml2.uml.Component;
 import org.eclipse.uml2.uml.DataType;
+import org.eclipse.uml2.uml.Dependency;
 import org.eclipse.uml2.uml.Element;
 import org.eclipse.uml2.uml.Enumeration;
 import org.eclipse.uml2.uml.Feature;
 import org.eclipse.uml2.uml.Interface;
+import org.eclipse.uml2.uml.LiteralBoolean;
+import org.eclipse.uml2.uml.LiteralInteger;
+import org.eclipse.uml2.uml.LiteralReal;
+import org.eclipse.uml2.uml.LiteralString;
+import org.eclipse.uml2.uml.LiteralUnlimitedNatural;
 import org.eclipse.uml2.uml.Model;
 import org.eclipse.uml2.uml.NamedElement;
 import org.eclipse.uml2.uml.Operation;
@@ -56,6 +62,7 @@ import org.eclipse.uml2.uml.Property;
 import org.eclipse.uml2.uml.Stereotype;
 import org.eclipse.uml2.uml.Type;
 import org.eclipse.uml2.uml.UMLFactory;
+import org.eclipse.uml2.uml.ValueSpecification;
 import org.obeonetwork.dsl.uml2.core.api.services.AbstractDiagramServices;
 import org.obeonetwork.dsl.uml2.core.internal.services.AssociationServices;
 import org.obeonetwork.dsl.uml2.core.internal.services.DirectEditLabelSwitch;
@@ -449,6 +456,11 @@ public class ClassDiagramServices extends AbstractDiagramServices {
 				for (final Property object : propertyList) {
 					results.addAll(object.getStereotypeApplications());
 				}
+
+				final EList<Dependency> depList = classElement.getClientDependencies();
+				for (final Dependency dep : depList) {
+					results.addAll(dep.getStereotypeApplications());
+				}
 			}
 		}
 		return results;
@@ -705,7 +717,54 @@ public class ClassDiagramServices extends AbstractDiagramServices {
 		final DDiagramElement stereotypeApplicationView = (DDiagramElement)view.eContainer();
 		final EObject stereotypeApplication = stereotypeApplicationView.getTarget();
 
-		return feature.getName() + "=" + stereotypeApplication.eGet(feature); //$NON-NLS-1$
+		final Object value = stereotypeApplication.eGet(feature);
+		if (value instanceof ValueSpecification) {
+			final ValueSpecification valueSpec = (ValueSpecification)value;
+			String label = feature.getName() + "=<" + valueSpec.eClass().getName() + "> "; //$NON-NLS-1$ //$NON-NLS-2$
+			if (valueSpec instanceof LiteralInteger)
+			{
+				label += valueSpec.integerValue();
+			} else if (valueSpec instanceof LiteralBoolean) {
+				label += valueSpec.booleanValue();
+			} else if (valueSpec instanceof LiteralReal) {
+				label += valueSpec.realValue();
+			} else if (valueSpec instanceof LiteralString) {
+				label += valueSpec.stringValue();
+			} else if (valueSpec instanceof LiteralUnlimitedNatural) {
+				label += valueSpec.unlimitedValue();
+			}
+			return label;
+		}
+		else if (value instanceof Property)
+		{
+			final Property prop = (Property) value;
+			return feature.getName() + " = <Property> " + ((Classifier)prop.eContainer()).getName() + "::" //$NON-NLS-1$//$NON-NLS-2$
+					+ prop.getName();
+		}
+		else if (value instanceof NamedElement)
+		{
+			final NamedElement namedElement = (NamedElement)value;
+			return feature.getName() + " = <" + namedElement.eClass().getName() + "> " //$NON-NLS-1$ //$NON-NLS-2$
+					+ namedElement.getName();
+		}
+		else if (value instanceof EList<?>) {
+			final EList<?> list = (EList<?>) value;
+			final List<String> valueStrings = new ArrayList<String>();
+			for (final Object object : list) {
+				if (object instanceof NamedElement)
+				{
+					final NamedElement namedElement = (NamedElement) object;
+					valueStrings.add("<" + namedElement.eClass().getName() + "> " + namedElement.getName());  //$NON-NLS-1$//$NON-NLS-2$
+				}
+				else
+				{
+					valueStrings.add(object.toString());
+				}
+			}
+			return feature.getName() + " = [" + String.join(",", valueStrings) + "]"; //$NON-NLS-1$//$NON-NLS-2$ //$NON-NLS-3$
+		}
+
+		return feature.getName() + "=" + value; //$NON-NLS-1$
 	}
 
 	/**

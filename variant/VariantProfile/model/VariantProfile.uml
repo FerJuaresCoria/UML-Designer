@@ -24,12 +24,6 @@
         </eClassifiers>
         <eClassifiers xmi:type="ecore:EClass" xmi:id="_lil_W-8PEeihQM0yE0RAbw" name="valueVariant">
           <eAnnotations xmi:id="_lil_XO8PEeihQM0yE0RAbw" source="http://www.eclipse.org/uml2/2.0.0/UML" references="_vBrvYPp8EeeqlIDbIHFFiQ"/>
-          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_lil_Xe8PEeihQM0yE0RAbw" name="modificationWeight" ordered="false" lowerBound="1" defaultValueLiteral="1.0">
-            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Real"/>
-          </eStructuralFeatures>
-          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_lil_X-8PEeihQM0yE0RAbw" name="requiredModificationPoints" ordered="false" lowerBound="1" defaultValueLiteral="1.0">
-            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Real"/>
-          </eStructuralFeatures>
           <eStructuralFeatures xmi:type="ecore:EReference" xmi:id="_lil_Ye8PEeihQM0yE0RAbw" name="base_Property" ordered="false" lowerBound="1">
             <eType xmi:type="ecore:EClass" href="http://www.eclipse.org/uml2/5.0.0/UML#//Property"/>
           </eStructuralFeatures>
@@ -80,12 +74,6 @@
           </eStructuralFeatures>
           <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_lil_hu8PEeihQM0yE0RAbw" name="uniqueInstances" ordered="false" lowerBound="1">
             <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Boolean"/>
-          </eStructuralFeatures>
-          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_lil_iO8PEeihQM0yE0RAbw" name="modificationWeight" ordered="false" lowerBound="1" defaultValueLiteral="1.0">
-            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Real"/>
-          </eStructuralFeatures>
-          <eStructuralFeatures xmi:type="ecore:EAttribute" xmi:id="_lil_iu8PEeihQM0yE0RAbw" name="requiredModificationPoints" ordered="false" lowerBound="1" defaultValueLiteral="1.0">
-            <eType xmi:type="ecore:EDataType" href="http://www.eclipse.org/uml2/5.0.0/Types#//Real"/>
           </eStructuralFeatures>
         </eClassifiers>
         <eClassifiers xmi:type="ecore:EClass" xmi:id="_lil_jO8PEeihQM0yE0RAbw" name="variant">

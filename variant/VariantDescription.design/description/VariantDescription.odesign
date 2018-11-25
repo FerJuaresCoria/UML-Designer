@@ -306,6 +306,62 @@
             </initialOperation>
           </ownedTools>
         </toolSections>
+        <toolSections name="VD_ToolSection_Dependency_With_Instance_Based_Variant" label="Dependencies with instance based variant specification">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="VD_Tools_countFixedInstanceVariant" label="Dependency with countFixedInstanceVariant" precondition="service:preTarget.dependencyCreationCompletePrecondition" connectionStartPrecondition="service:preSource.dependencyCreationStartPrecondition">
+            <edgeMappings href="platform:/plugin/org.obeonetwork.dsl.uml2.design/description/uml2.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@edgeMappings[name='CD_Dependency']"/>
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:source.eContainer(uml::Package)">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="uml.Dependency" referenceName="packagedElement">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="supplier" valueExpression="var:target"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="client" valueExpression="var:source"/>
+                  <subModelOperations xsi:type="tool_1:If" conditionExpression="aql:instance.getApplicableStereotype('VariantProfile::countFixedInstanceVariant') &lt;> null">
+                    <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:instance.applyStereotype(instance.getApplicableStereotype('VariantProfile::countFixedInstanceVariant'))"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="VD_Tools_countVariableInstanceVariant" label="Dependency with countVariableInstanceVariant" precondition="service:preTarget.dependencyCreationCompletePrecondition" connectionStartPrecondition="service:preSource.dependencyCreationStartPrecondition">
+            <edgeMappings href="platform:/plugin/org.obeonetwork.dsl.uml2.design/description/uml2.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@edgeMappings[name='CD_Dependency']"/>
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:source.eContainer(uml::Package)">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="uml.Dependency" referenceName="packagedElement">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="supplier" valueExpression="var:target"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="client" valueExpression="var:source"/>
+                  <subModelOperations xsi:type="tool_1:If" conditionExpression="aql:instance.getApplicableStereotype('VariantProfile::countVariableInstanceVariant') &lt;> null">
+                    <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:instance.applyStereotype(instance.getApplicableStereotype('VariantProfile::countVariableInstanceVariant'))"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="VD_Tools_derivedInstanceVariant" label="Dependency with derivedInstanceVariant" precondition="service:preTarget.dependencyCreationCompletePrecondition" connectionStartPrecondition="service:preSource.dependencyCreationStartPrecondition">
+            <edgeMappings href="platform:/plugin/org.obeonetwork.dsl.uml2.design/description/uml2.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@edgeMappings[name='CD_Dependency']"/>
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:source.eContainer(uml::Package)">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="uml.Dependency" referenceName="packagedElement">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="supplier" valueExpression="var:target"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="client" valueExpression="var:source"/>
+                  <subModelOperations xsi:type="tool_1:If" conditionExpression="aql:instance.getApplicableStereotype('VariantProfile::derivedInstanceVariant') &lt;> null">
+                    <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:instance.applyStereotype(instance.getApplicableStereotype('VariantProfile::derivedInstanceVariant'))"/>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
       </defaultLayer>
     </ownedRepresentations>
     <ownedJavaExtensions qualifiedClassName="VariantDescription.design.Services"/>

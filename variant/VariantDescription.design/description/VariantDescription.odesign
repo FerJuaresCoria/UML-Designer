@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:properties="http://www.eclipse.org/sirius/properties/1.0.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="VariantDescription" version="12.0.0.2017041100">
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:properties="http://www.eclipse.org/sirius/properties/1.0.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" xmlns:validation="http://www.eclipse.org/sirius/description/validation/1.1.0" name="VariantDescription" version="12.0.0.2017041100">
   <ownedViewpoints name="System Optimization" modelFileExtension="uml">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="diagramVariantDescription" label="Variant Description" titleExpression="aql:self.name +' Class Diagram'" domainClass="uml.Package" enablePopupBars="true">
       <dropDescriptions href="platform:/plugin/org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Reused%20Description']/@toolSection/@subSections[name='existingElements']/@ownedTools[name='Drop%20From%20Diagram']"/>
@@ -8,20 +8,37 @@
       <metamodel href="http://www.eclipse.org/sirius/1.1.0#/"/>
       <metamodel href="http://www.eclipse.org/sirius/diagram/1.1.0#/"/>
       <pasteDescriptions href="platform:/plugin/org.obeonetwork.dsl.uml2.design/description/uml2.odesign#//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Reused%20Description']/@toolSection/@subSections[name='existingElements']/@ownedTools[name='Paste']"/>
-      <defaultLayer name="Class">
-        <edgeMappingImports name="VD_I_Generalization">
+      <validationSet name="Validation rules for system variant specification">
+        <ownedRules xsi:type="validation:SemanticValidationRule" name="VD_VR_interfalValueVariant_min_ge_0" level="ERROR" message="The attribut 'min' of stereotype 'intervalValueVariant' must have a non-negative integer value." targetClass="uml::Property">
+          <audits auditExpression="aql:self.getAppliedStereotypes()->select(s | s.eClass().name.equalsIgnoreCase('intervalValueVariant')).eGet('min') > -1"/>
+          <fixes>
+            <initialOperation/>
+          </fixes>
+        </ownedRules>
+      </validationSet>
+      <defaultLayer name="System">
+        <edgeMappings name="VD_Dependency" preconditionExpression="aql:not self.oclIsKindOf(uml::InterfaceRealization)" semanticCandidatesExpression="service:diagram.getDependencyInverseRefs" semanticElements="service:getSemanticElements" sourceMapping="//@ownedViewpoints[name='System%20Optimization']/@ownedRepresentations[name='diagramVariantDescription']/@defaultLayer/@containerMappings[name='VD_Class'] //@ownedViewpoints[name='System%20Optimization']/@ownedRepresentations[name='diagramVariantDescription']/@defaultLayer/@containerMappings[name='VD_Interface']" targetMapping="//@ownedViewpoints[name='System%20Optimization']/@ownedRepresentations[name='diagramVariantDescription']/@defaultLayer/@containerMappings[name='VD_Class'] //@ownedViewpoints[name='System%20Optimization']/@ownedRepresentations[name='diagramVariantDescription']/@defaultLayer/@containerMappings[name='VD_Interface']" targetFinderExpression="feature:supplier" sourceFinderExpression="feature:client" targetExpression="var:self" domainClass="uml.Dependency" useDomainElement="true">
+          <deletionDescription href="platform:/plugin/org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Reused%20Description']/@toolSection/@subSections[name='existingElements']/@ownedTools[name='DEL_DeleteFromModel']"/>
+          <labelDirectEdit href="platform:/plugin/org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Reused%20Description']/@toolSection/@subSections[name='directEdit']/@ownedTools[name='NamedElementServiceDirectEdit']"/>
+          <style lineStyle="dash">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription showIcon="false" labelExpression="service:computeUmlLabel">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+          <reconnections href="platform:/plugin/org.obeonetwork.dsl.uml2.design/description/uml2.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@toolSections.3/@ownedTools[name='Reconnect%20Target']"/>
+          <reconnections href="platform:/plugin/org.obeonetwork.dsl.uml2.design/description/uml2.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@toolSections.3/@ownedTools[name='Reconnect%20Source']"/>
+        </edgeMappings>
+        <edgeMappingImports name="VD_Generalization">
           <importedMapping xsi:type="description_1:EdgeMapping" href="platform:/plugin/org.obeonetwork.dsl.uml2.design/description/uml2.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@edgeMappings[name='CD_Generalization']"/>
         </edgeMappingImports>
-        <edgeMappingImports name="VD_I_InterfaceRealization">
+        <edgeMappingImports name="VD_InterfaceRealization">
           <importedMapping xsi:type="description_1:EdgeMapping" href="platform:/plugin/org.obeonetwork.dsl.uml2.design/description/uml2.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@edgeMappings[name='CD_InterfaceRealization']"/>
         </edgeMappingImports>
-        <edgeMappingImports name="VD_I_Association">
+        <edgeMappingImports name="VD_Association">
           <importedMapping xsi:type="description_1:EdgeMapping" href="platform:/plugin/org.obeonetwork.dsl.uml2.design/description/uml2.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@edgeMappings[name='CD_Association']"/>
         </edgeMappingImports>
-        <edgeMappingImports name="VD_I_Dependency">
-          <importedMapping xsi:type="description_1:EdgeMapping" href="platform:/plugin/org.obeonetwork.dsl.uml2.design/description/uml2.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@edgeMappings[name='CD_Dependency']"/>
-        </edgeMappingImports>
-        <containerMappings xsi:type="description_1:ContainerMappingImport" name="VD_I_ReusedMappingForFeatures" semanticCandidatesExpression="null">
+        <containerMappings xsi:type="description_1:ContainerMappingImport" name="VD_ReusedMappingForFeatures" semanticCandidatesExpression="null">
           <subNodeMappings xsi:type="description_1:NodeMappingImport" name="VD_I_Operation" semanticCandidatesExpression="aql:if(self.oclIsKindOf(uml::Class) or self.oclIsKindOf(uml::Interface)) then self.ownedOperation else null endif">
             <importedMapping href="platform:/plugin/org.obeonetwork.dsl.uml2.design/description/uml2.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@containerMappings[name='CD_ReusedMappingForFeatures']/@subNodeMappings[name='CD_Operation']"/>
           </subNodeMappings>
@@ -33,7 +50,7 @@
           </subNodeMappings>
           <importedMapping href="platform:/plugin/org.obeonetwork.dsl.uml2.design/description/uml2.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@containerMappings[name='CD_ReusedMappingForFeatures']"/>
         </containerMappings>
-        <containerMappings xsi:type="description_1:ContainerMappingImport" name="VD_I_Class" semanticCandidatesExpression="service:self.getSemanticCandidatesClasses()" semanticElements="service:getSemanticElements" reusedBorderedNodeMappings="//@ownedViewpoints[name='System%20Optimization']/@ownedRepresentations[name='diagramVariantDescription']/@defaultLayer/@containerMappings[name='VD_I_ReusedMappingForFeatures']/@subNodeMappings[name='VD_I_Qualifier']" reusedNodeMappings="//@ownedViewpoints[name='System%20Optimization']/@ownedRepresentations[name='diagramVariantDescription']/@defaultLayer/@containerMappings[name='VD_I_ReusedMappingForFeatures']/@subNodeMappings[name='VD_I_Property'] //@ownedViewpoints[name='System%20Optimization']/@ownedRepresentations[name='diagramVariantDescription']/@defaultLayer/@containerMappings[name='VD_I_ReusedMappingForFeatures']/@subNodeMappings[name='VD_I_Operation']" childrenPresentation="List">
+        <containerMappings xsi:type="description_1:ContainerMappingImport" name="VD_Class" semanticCandidatesExpression="service:self.getSemanticCandidatesClasses()" semanticElements="service:getSemanticElements" reusedBorderedNodeMappings="//@ownedViewpoints[name='System%20Optimization']/@ownedRepresentations[name='diagramVariantDescription']/@defaultLayer/@containerMappings[name='VD_ReusedMappingForFeatures']/@subNodeMappings[name='VD_I_Qualifier']" reusedNodeMappings="//@ownedViewpoints[name='System%20Optimization']/@ownedRepresentations[name='diagramVariantDescription']/@defaultLayer/@containerMappings[name='VD_ReusedMappingForFeatures']/@subNodeMappings[name='VD_I_Property'] //@ownedViewpoints[name='System%20Optimization']/@ownedRepresentations[name='diagramVariantDescription']/@defaultLayer/@containerMappings[name='VD_ReusedMappingForFeatures']/@subNodeMappings[name='VD_I_Operation']" childrenPresentation="List">
           <detailDescriptions xsi:type="tool:DiagramCreationDescription" href="platform:/plugin/org.obeonetwork.dsl.uml2.design/description/uml2.odesign#//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Reused%20Description']/@toolSection/@subSections[name='navigations']/@subSections[name='Class%20diagram']/@ownedTools[name='Create%20class%20diagram%20from%20component']"/>
           <detailDescriptions xsi:type="tool:DiagramCreationDescription" href="platform:/plugin/org.obeonetwork.dsl.uml2.design/description/uml2.odesign#//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Reused%20Description']/@toolSection/@subSections[name='navigations']/@subSections[name='Class%20diagram']/@ownedTools[name='Create%20class%20diagram%20from%20class']"/>
           <detailDescriptions xsi:type="tool:DiagramCreationDescription" href="platform:/plugin/org.obeonetwork.dsl.uml2.design/description/uml2.odesign#//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Reused%20Description']/@toolSection/@subSections[name='navigations']/@subSections[name='Activity%20diagram']/@ownedTools[name='Create%20activity%20diagram%20from%20operation']"/>
@@ -42,14 +59,23 @@
           <navigationDescriptions xsi:type="tool:DiagramNavigationDescription" href="platform:/plugin/org.obeonetwork.dsl.uml2.design/description/uml2.odesign#//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Reused%20Description']/@toolSection/@subSections[name='navigations']/@subSections[name='Activity%20diagram']/@ownedTools[name='Open%20activity%20diagram%20from%20package']"/>
           <navigationDescriptions xsi:type="tool:DiagramNavigationDescription" href="platform:/plugin/org.obeonetwork.dsl.uml2.design/description/uml2.odesign#//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Reused%20Description']/@toolSection/@subSections[name='navigations']/@subSections[name='Activity%20diagram']/@ownedTools[name='Open%20activity%20diagram%20from%20classifier']"/>
           <navigationDescriptions xsi:type="tool:DiagramNavigationDescription" href="platform:/plugin/org.obeonetwork.dsl.uml2.design/description/uml2.odesign#//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Reused%20Description']/@toolSection/@subSections[name='navigations']/@subSections[name='Activity%20diagram']/@ownedTools[name='Open%20activity%20diagram%20from%20operation']"/>
+          <borderedNodeMappings name="VD_Class_Attribute" semanticCandidatesExpression="aql:self.getAllAttributes()->select(myProperty | myProperty.getAppliedStereotypes()->size()>0)" domainClass="uml.Property">
+            <style xsi:type="style:DotDescription" labelSize="12" showIcon="false" labelExpression="" sizeComputationExpression="1" resizeKind="NSEW" strokeSizeComputationExpression="1">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+              <forbiddenSides>SOUTH</forbiddenSides>
+              <forbiddenSides>NORTH</forbiddenSides>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            </style>
+          </borderedNodeMappings>
           <dropDescriptions href="platform:/plugin/org.obeonetwork.dsl.uml2.design/description/uml2.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='Drop%20Attributes%20or%20Operations']"/>
           <importedMapping href="platform:/plugin/org.obeonetwork.dsl.uml2.design/description/uml2.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@containerMappings[name='CD_Class']"/>
         </containerMappings>
-        <containerMappings xsi:type="description_1:ContainerMappingImport" name="VD_I_Interface" semanticElements="service:getSemanticElements" reusedBorderedNodeMappings="//@ownedViewpoints[name='System%20Optimization']/@ownedRepresentations[name='diagramVariantDescription']/@defaultLayer/@containerMappings[name='VD_I_ReusedMappingForFeatures']/@subNodeMappings[name='VD_I_Qualifier']" reusedNodeMappings="//@ownedViewpoints[name='System%20Optimization']/@ownedRepresentations[name='diagramVariantDescription']/@defaultLayer/@containerMappings[name='VD_I_ReusedMappingForFeatures']/@subNodeMappings[name='VD_I_Property'] //@ownedViewpoints[name='System%20Optimization']/@ownedRepresentations[name='diagramVariantDescription']/@defaultLayer/@containerMappings[name='VD_I_ReusedMappingForFeatures']/@subNodeMappings[name='VD_I_Operation']" childrenPresentation="List">
+        <containerMappings xsi:type="description_1:ContainerMappingImport" name="VD_Interface" semanticElements="service:getSemanticElements" reusedBorderedNodeMappings="//@ownedViewpoints[name='System%20Optimization']/@ownedRepresentations[name='diagramVariantDescription']/@defaultLayer/@containerMappings[name='VD_ReusedMappingForFeatures']/@subNodeMappings[name='VD_I_Qualifier']" reusedNodeMappings="//@ownedViewpoints[name='System%20Optimization']/@ownedRepresentations[name='diagramVariantDescription']/@defaultLayer/@containerMappings[name='VD_ReusedMappingForFeatures']/@subNodeMappings[name='VD_I_Property'] //@ownedViewpoints[name='System%20Optimization']/@ownedRepresentations[name='diagramVariantDescription']/@defaultLayer/@containerMappings[name='VD_ReusedMappingForFeatures']/@subNodeMappings[name='VD_I_Operation']" childrenPresentation="List">
           <dropDescriptions href="platform:/plugin/org.obeonetwork.dsl.uml2.design/description/uml2.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='Drop%20Attributes%20or%20Operations']"/>
           <importedMapping href="platform:/plugin/org.obeonetwork.dsl.uml2.design/description/uml2.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@containerMappings[name='CD_Interface']"/>
         </containerMappings>
-        <containerMappings xsi:type="description_1:ContainerMappingImport" name="VD_I_Package" semanticElements="service:getSemanticElements">
+        <containerMappings xsi:type="description_1:ContainerMappingImport" name="VD_Package" semanticElements="service:getSemanticElements">
           <detailDescriptions xsi:type="tool:DiagramCreationDescription" href="platform:/plugin/org.obeonetwork.dsl.uml2.design/description/uml2.odesign#//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Reused%20Description']/@toolSection/@subSections[name='navigations']/@subSections[name='Class%20diagram']/@ownedTools[name='Create%20class%20diagram%20from%20class']"/>
           <detailDescriptions xsi:type="tool:DiagramCreationDescription" href="platform:/plugin/org.obeonetwork.dsl.uml2.design/description/uml2.odesign#//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Reused%20Description']/@toolSection/@subSections[name='navigations']/@subSections[name='Activity%20diagram']/@ownedTools[name='Create%20activity%20diagram%20from%20operation']"/>
           <pasteDescriptions href="platform:/plugin/org.obeonetwork.dsl.uml2.design/description/uml2.odesign#//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Reused%20Description']/@toolSection/@subSections[name='existingElements']/@ownedTools[name='Paste']"/>
@@ -63,7 +89,7 @@
           <reusedTools xsi:type="tool_1:OperationAction" href="platform:/plugin/org.obeonetwork.dsl.uml2.design/description/uml2.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='CD_AddRelatedElements']"/>
         </toolSections>
         <toolSections name="VD_Tools_Types" label="Types">
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="VD_Tool_CreateClass" label="Class" containerMappings="//@ownedViewpoints[name='System%20Optimization']/@ownedRepresentations[name='diagramVariantDescription']/@defaultLayer/@containerMappings[name='VD_I_Class']">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="VD_Tool_CreateClass" label="Class" containerMappings="//@ownedViewpoints[name='System%20Optimization']/@ownedRepresentations[name='diagramVariantDescription']/@defaultLayer/@containerMappings[name='VD_Class']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -93,7 +119,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:ContainerCreationDescription" name="VD_Tool_CreateInterface" label="Interface" containerMappings="//@ownedViewpoints[name='System%20Optimization']/@ownedRepresentations[name='diagramVariantDescription']/@defaultLayer/@containerMappings[name='VD_I_Interface']">
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="VD_Tool_CreateInterface" label="Interface" containerMappings="//@ownedViewpoints[name='System%20Optimization']/@ownedRepresentations[name='diagramVariantDescription']/@defaultLayer/@containerMappings[name='VD_Interface']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -125,43 +151,7 @@
           </ownedTools>
         </toolSections>
         <toolSections name="VD_ToolSection_Properties_With_Value_Based_Variant" label="Properties with value-based variant specification">
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="createPropertyOptionalValueVariant" label="Property with OptionalValueVariant" nodeMappings="//@ownedViewpoints[name='System%20Optimization']/@ownedRepresentations[name='diagramVariantDescription']/@defaultLayer/@containerMappings[name='VD_I_ReusedMappingForFeatures']/@subNodeMappings[name='VD_I_Property']">
-            <variable name="container"/>
-            <viewVariable name="containerView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="uml.Property" referenceName="ownedAttribute" variableName="aProperty">
-                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="attribute"/>
-                  <subModelOperations xsi:type="tool_1:If" conditionExpression="aql:aProperty.findTypeByName('Boolean') &lt;> null">
-                    <subModelOperations xsi:type="tool_1:SetValue" featureName="type" valueExpression="aql:self.findTypeByName('Boolean')"/>
-                  </subModelOperations>
-                  <subModelOperations xsi:type="tool_1:If" conditionExpression="aql:aProperty.getApplicableStereotype('VariantProfile::optionalValueVariant') &lt;> null">
-                    <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:aProperty.applyStereotype(aProperty.getApplicableStereotype('VariantProfile::optionalValueVariant'))"/>
-                  </subModelOperations>
-                  <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="Create Property">
-                    <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
-                      <initialOperation>
-                        <firstModelOperations xsi:type="tool_1:ChangeContext"/>
-                      </initialOperation>
-                    </buttons>
-                    <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
-                      <initialOperation>
-                        <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var.self"/>
-                      </initialOperation>
-                    </buttons>
-                    <page name="VD_Tool_CreateProperty_optional" labelExpression="Page" semanticCandidateExpression="var:self">
-                      <groups href="platform:/plugin/org.obeonetwork.dsl.uml2.design/description/uml2.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='Property']/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.5/@groups.0"/>
-                      <groups href="platform:/plugin/org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.0/@groups.1"/>
-                    </page>
-                    <groups name="Default Group" labelExpression="Group" semanticCandidateExpression="var:self">
-                      <extends href="platform:/plugin/org.obeonetwork.dsl.uml2.design/description/uml2.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Composite%20Structure%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='CS_Create_Part']/@initialOperation/@firstModelOperations/@subModelOperations.2/@groups.0"/>
-                    </groups>
-                  </subModelOperations>
-                </subModelOperations>
-              </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="createPropertyIntervalVariant" label="Property with IntervalValueVariant" nodeMappings="//@ownedViewpoints[name='System%20Optimization']/@ownedRepresentations[name='diagramVariantDescription']/@defaultLayer/@containerMappings[name='VD_I_ReusedMappingForFeatures']/@subNodeMappings[name='VD_I_Property']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="createPropertyIntervalVariant" label="Property with IntervalValueVariant" nodeMappings="//@ownedViewpoints[name='System%20Optimization']/@ownedRepresentations[name='diagramVariantDescription']/@defaultLayer/@containerMappings[name='VD_ReusedMappingForFeatures']/@subNodeMappings[name='VD_I_Property']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -197,7 +187,43 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="createPropertyTypeValueVariant" label="Property with TypeValueVariant" nodeMappings="//@ownedViewpoints[name='System%20Optimization']/@ownedRepresentations[name='diagramVariantDescription']/@defaultLayer/@containerMappings[name='VD_I_ReusedMappingForFeatures']/@subNodeMappings[name='VD_I_Property']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="createPropertyOptionalValueVariant" label="Property with OptionalValueVariant" nodeMappings="//@ownedViewpoints[name='System%20Optimization']/@ownedRepresentations[name='diagramVariantDescription']/@defaultLayer/@containerMappings[name='VD_ReusedMappingForFeatures']/@subNodeMappings[name='VD_I_Property']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="uml.Property" referenceName="ownedAttribute" variableName="aProperty">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="attribute"/>
+                  <subModelOperations xsi:type="tool_1:If" conditionExpression="aql:aProperty.findTypeByName('Boolean') &lt;> null">
+                    <subModelOperations xsi:type="tool_1:SetValue" featureName="type" valueExpression="aql:self.findTypeByName('Boolean')"/>
+                  </subModelOperations>
+                  <subModelOperations xsi:type="tool_1:If" conditionExpression="aql:aProperty.getApplicableStereotype('VariantProfile::optionalValueVariant') &lt;> null">
+                    <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="aql:aProperty.applyStereotype(aProperty.getApplicableStereotype('VariantProfile::optionalValueVariant'))"/>
+                  </subModelOperations>
+                  <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="Create Property">
+                    <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
+                      <initialOperation>
+                        <firstModelOperations xsi:type="tool_1:ChangeContext"/>
+                      </initialOperation>
+                    </buttons>
+                    <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
+                      <initialOperation>
+                        <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var.self"/>
+                      </initialOperation>
+                    </buttons>
+                    <page name="VD_Tool_CreateProperty_optional" labelExpression="Page" semanticCandidateExpression="var:self">
+                      <groups href="platform:/plugin/org.obeonetwork.dsl.uml2.design/description/uml2.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='Property']/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.5/@groups.0"/>
+                      <groups href="platform:/plugin/org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.0/@groups.1"/>
+                    </page>
+                    <groups name="Default Group" labelExpression="Group" semanticCandidateExpression="var:self">
+                      <extends href="platform:/plugin/org.obeonetwork.dsl.uml2.design/description/uml2.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Composite%20Structure%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='CS_Create_Part']/@initialOperation/@firstModelOperations/@subModelOperations.2/@groups.0"/>
+                    </groups>
+                  </subModelOperations>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="createPropertyTypeValueVariant" label="Property with TypeValueVariant" nodeMappings="//@ownedViewpoints[name='System%20Optimization']/@ownedRepresentations[name='diagramVariantDescription']/@defaultLayer/@containerMappings[name='VD_ReusedMappingForFeatures']/@subNodeMappings[name='VD_I_Property']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -233,7 +259,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="createPropertyFixedVariant" label="Property with FixedValueVariant" nodeMappings="//@ownedViewpoints[name='System%20Optimization']/@ownedRepresentations[name='diagramVariantDescription']/@defaultLayer/@containerMappings[name='VD_I_ReusedMappingForFeatures']/@subNodeMappings[name='VD_I_Property']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="createPropertyFixedVariant" label="Property with FixedValueVariant" nodeMappings="//@ownedViewpoints[name='System%20Optimization']/@ownedRepresentations[name='diagramVariantDescription']/@defaultLayer/@containerMappings[name='VD_ReusedMappingForFeatures']/@subNodeMappings[name='VD_I_Property']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -269,7 +295,7 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="createPropertyDerivedValueVariant" label="Property with DerivedValueVariant" nodeMappings="//@ownedViewpoints[name='System%20Optimization']/@ownedRepresentations[name='diagramVariantDescription']/@defaultLayer/@containerMappings[name='VD_I_ReusedMappingForFeatures']/@subNodeMappings[name='VD_I_Property']">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="createPropertyDerivedValueVariant" label="Property with DerivedValueVariant" nodeMappings="//@ownedViewpoints[name='System%20Optimization']/@ownedRepresentations[name='diagramVariantDescription']/@defaultLayer/@containerMappings[name='VD_ReusedMappingForFeatures']/@subNodeMappings[name='VD_I_Property']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
@@ -400,9 +426,43 @@
           </vsmElementCustomizations>
         </customization>
       </defaultLayer>
+      <additionalLayers name="StereotypeApplication" label="Stereotype Application">
+        <edgeMappings name="VD_StereotypeLink" sourceMapping="//@ownedViewpoints[name='System%20Optimization']/@ownedRepresentations[name='diagramVariantDescription']/@defaultLayer/@containerMappings[name='VD_Class'] //@ownedViewpoints[name='System%20Optimization']/@ownedRepresentations[name='diagramVariantDescription']/@defaultLayer/@edgeMappings[name='VD_Dependency'] //@ownedViewpoints[name='System%20Optimization']/@ownedRepresentations[name='diagramVariantDescription']/@defaultLayer/@containerMappings[name='VD_Interface']" targetMapping="//@ownedViewpoints[name='System%20Optimization']/@ownedRepresentations[name='diagramVariantDescription']/@additionalLayers[name='StereotypeApplication']/@containerMappings[name='VD_I_StereotypeApplication']" targetFinderExpression="aql:self.getStereotypeApplications()">
+          <style lineStyle="dot" targetArrow="NoDecoration" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="CD_StereotypeLink_Property" sourceMapping="//@ownedViewpoints[name='System%20Optimization']/@ownedRepresentations[name='diagramVariantDescription']/@defaultLayer/@containerMappings[name='VD_Class']/@borderedNodeMappings[name='VD_Class_Attribute']" targetMapping="//@ownedViewpoints[name='System%20Optimization']/@ownedRepresentations[name='diagramVariantDescription']/@additionalLayers[name='StereotypeApplication']/@containerMappings[name='VD_I_StereotypeApplication']" targetFinderExpression="aql:self.getStereotypeApplications()">
+          <style lineStyle="dot" targetArrow="NoDecoration" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappingImports name="VD_I_StereotypeApplicationLink">
+          <importedMapping xsi:type="description_1:EdgeMapping" href="platform:/plugin/org.obeonetwork.dsl.uml2.design/description/uml2.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Class%20Diagram']/@additionalLayers[name='Stereotypes']/@edgeMappings[name='CD_StereotypeApplicationLink']"/>
+        </edgeMappingImports>
+        <edgeMappingImports name="VD_StereotypeApplicationLinkProperty">
+          <importedMapping xsi:type="description_1:EdgeMapping" href="platform:/plugin/org.obeonetwork.dsl.uml2.design/description/uml2.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Class%20Diagram']/@additionalLayers[name='Stereotypes']/@edgeMappings[name='CD_StereotypeApplicationLink_Property']"/>
+        </edgeMappingImports>
+        <containerMappings xsi:type="description_1:ContainerMappingImport" name="VD_I_StereotypeApplication" semanticCandidatesExpression="aql:diagram.getAllStereotypeApplications()" semanticElements="service:getBaseClass" childrenPresentation="List">
+          <reusedNodeMappings href="platform:/plugin/org.obeonetwork.dsl.uml2.design/description/uml2.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Class%20Diagram']/@additionalLayers[name='Stereotypes']/@containerMappings[name='CD_StereotypeApplication']/@subNodeMappings[name='CD_TaggedValue']"/>
+          <importedMapping href="platform:/plugin/org.obeonetwork.dsl.uml2.design/description/uml2.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Class%20Diagram']/@additionalLayers[name='Stereotypes']/@containerMappings[name='CD_StereotypeApplication']"/>
+        </containerMappings>
+      </additionalLayers>
     </ownedRepresentations>
     <ownedJavaExtensions qualifiedClassName="VariantDescription.design.Services"/>
     <ownedJavaExtensions qualifiedClassName="org.obeonetwork.dsl.uml2.design.api.services.ClassDiagramServices"/>
     <ownedJavaExtensions qualifiedClassName="org.obeonetwork.dsl.uml2.core.api.services.ReusedDescriptionServices"/>
   </ownedViewpoints>
+  <extensions xsi:type="properties:ViewExtensionDescription" name="Properties">
+    <categories name="Default Category">
+      <pages name="Default Page" labelExpression="Page" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.0"/>
+      <groups name="Default Group" labelExpression="Group" semanticCandidateExpression="var:self"/>
+    </categories>
+  </extensions>
 </description:Group>

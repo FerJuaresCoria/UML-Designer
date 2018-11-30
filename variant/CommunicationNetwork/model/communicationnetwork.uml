@@ -146,9 +146,6 @@
       </ownedAttribute>
       <interfaceRealization xmi:id="_DgRuYLVjEeaH88x1PakFmw" client="_Bn-I8LVjEeaH88x1PakFmw" supplier="_2EJV4LVhEeaH88x1PakFmw" contract="_2EJV4LVhEeaH88x1PakFmw"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Dependency" xmi:id="_MaYioLVjEeaH88x1PakFmw" client="_2EJV4LVhEeaH88x1PakFmw" supplier="_x3jZoLVhEeaH88x1PakFmw">
-      <name xsi:nil="true"/>
-    </packagedElement>
     <packagedElement xmi:type="uml:Dependency" xmi:id="_NALXULVjEeaH88x1PakFmw" client="_O-1jwLVgEeaH88x1PakFmw" supplier="_Bn-I8LVjEeaH88x1PakFmw"/>
     <packagedElement xmi:type="uml:Dependency" xmi:id="_OXkBALVjEeaH88x1PakFmw" client="_O-1jwLVgEeaH88x1PakFmw" supplier="_6tS10LViEeaH88x1PakFmw">
       <name xsi:nil="true"/>

@@ -56,7 +56,6 @@ Contributors:
     <module>../../packaging/org.obeonetwork.dsl.uml2.umlgen.feature</module>
 
     <!-- Build update-sites -->
-    <module>../../packaging/org.obeonetwork.dsl.uml2.core.update</module>
     <module>../../packaging/org.obeonetwork.dsl.uml2.update</module>
   </modules>
 </project>

@@ -56,4 +56,6 @@ public interface ILabelConstants {
 	 * The guard suffix constant.
 	 */
 	public static final String GUARD_SUFFIX = "_guard"; //$NON-NLS-1$
+
+	public static final String STEREOTYPE_INTERFACE_LABEL = ILabelConstants.OPEN_QUOTE_MARK + "Interface" + ILabelConstants.CLOSE_QUOTE_MARK + System.lineSeparator();
 }

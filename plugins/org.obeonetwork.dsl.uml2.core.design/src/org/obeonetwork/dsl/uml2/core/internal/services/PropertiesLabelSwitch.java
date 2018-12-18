@@ -82,7 +82,7 @@ public class PropertiesLabelSwitch extends UMLSwitch<String> {
 		} else if (UMLPackage.eINSTANCE.getInterface_OwnedOperation().equals(structuralFeature)) {
 			return OPERATIONS_LABEL;
 		}
-		return caseClassifier(object);
+		return ILabelConstants.STEREOTYPE_INTERFACE_LABEL + caseClassifier(object);
 	}
 
 	@Override

@@ -39,6 +39,7 @@ import org.eclipse.uml2.uml.FunctionBehavior;
 import org.eclipse.uml2.uml.InstanceSpecification;
 import org.eclipse.uml2.uml.InstanceValue;
 import org.eclipse.uml2.uml.Interaction;
+import org.eclipse.uml2.uml.Interface;
 import org.eclipse.uml2.uml.Interval;
 import org.eclipse.uml2.uml.Lifeline;
 import org.eclipse.uml2.uml.LiteralBoolean;
@@ -837,9 +838,19 @@ public class DisplayLabelSwitch extends UMLSwitch<String> implements ILabelConst
         if (templateParameters != null) {
             return computeStereotypes(object) + caseNamedElement((NamedElement) object) + templateParameters;
         }
+        if (object instanceof Interface)
+        {
+        	return computeInterfaceLabel((Interface) object);
+        }
         return caseNamedElement((NamedElement) object);
     }
 
+    private String computeInterfaceLabel(Interface object)
+    {
+  		return STEREOTYPE_INTERFACE_LABEL + caseNamedElement(object);
+    }
+ 
+    
     /**
      * {@inheritDoc}
      */
@@ -1048,7 +1059,8 @@ public class DisplayLabelSwitch extends UMLSwitch<String> implements ILabelConst
     }
 
     private String computeQualifierLabel(Property object) {
-        if (object.getType() != null) {
+        if (object.getType() != null) 
+        {
             return caseNamedElement(object) + SPACED_COLUMN + object.getType().getName();
         }
         return caseNamedElement(object);

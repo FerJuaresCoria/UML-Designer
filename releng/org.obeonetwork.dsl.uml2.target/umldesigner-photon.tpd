@@ -17,14 +17,14 @@ location "http://download.eclipse.org/releases/photon/" {
 
 // Acceleo 3
 
-location "http://download.eclipse.org/acceleo/updates/milestones/3.7/S201705121344" {
+location "http://download.eclipse.org/acceleo/updates/milestones/3.7/S201812041426" {
 	org.eclipse.acceleo.query.feature.group lazy
 	org.eclipse.acceleo.feature.group lazy
 }
 
 // UML compare 
 
-location "http://download.eclipse.org/modeling/emf/compare/updates/milestones" {
+location "http://download.eclipse.org/modeling/emf/compare/updates/milestones/3.3/S201812111422" {
 	org.eclipse.emf.compare.diagram.gmf.feature.group lazy
 	org.eclipse.emf.compare.ide.ui.feature.group lazy
 	org.eclipse.emf.compare.rcp.ui.feature.group lazy

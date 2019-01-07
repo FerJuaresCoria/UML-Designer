@@ -2,7 +2,7 @@ target "UML Core Designer photon" with source requirements
 
 // Eclipse
 
-location "http://download.eclipse.org/releases/photon/" {
+location "http://download.eclipse.org/releases/2018-12" {
 	org.eclipse.platform.sdk lazy
 	org.eclipse.equinox.executable.feature.group lazy
 	org.eclipse.epp.mpc.feature.group lazy
@@ -13,16 +13,7 @@ location "http://download.eclipse.org/releases/photon/" {
 	org.eclipse.pde.feature.group lazy
 }
 
-// UML
-
-location "http://download.eclipse.org/releases/photon/" {
-	org.eclipse.uml2.uml.feature.group [5.3.0,5.4.0)
-	org.eclipse.uml2.uml.edit.feature.group [5.3.0,5.4.0)
-	org.eclipse.uml2.feature.group [5.3.0,5.4.0)
-}
-
 // Orbit
-
 location "http://download.eclipse.org/tools/orbit/downloads/drops/R20170307180635/repository" {
 	com.google.guava [15.0.0,16.0.0)
 	org.hamcrest.core [1.3.0,2.0.0)
@@ -31,7 +22,6 @@ location "http://download.eclipse.org/tools/orbit/downloads/drops/R2017030718063
 }
 
 // EEF 2.0
-
 location "http://download.eclipse.org/modeling/emft/eef/updates/nightly/latest/neon" {
 	org.eclipse.eef.sdk.feature.feature.group lazy
 	org.eclipse.eef.ext.widgets.reference.feature.feature.group lazy

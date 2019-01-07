@@ -52,7 +52,7 @@
       <unit id="org.eclipse.emf.compare.uml2.feature.group" version="0.0.0"/>
       <unit id="org.eclipse.emf.compare.diagram.ide.ui.sirius" version="0.0.0"/>
       <unit id="org.eclipse.emf.compare.diagram.sirius" version="0.0.0"/>
-      <repository location="http://download.eclipse.org/modeling/emf/compare/updates/releases/3.3"/>
+      <repository location="https://download.eclipse.org/modeling/emf/compare/updates/milestones/3.3/S201812111422"/>
     </location>
   </locations>
 </target>

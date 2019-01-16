@@ -441,7 +441,6 @@ public class ActivityDiagramServices extends AbstractDiagramServices {
         final List<EObject> operations = Lists.newArrayList();
         final List<org.eclipse.uml2.uml.Package> rootPkgs = getAllAvailableRootPackages(element);
         final Predicate<EObject> predicate = new Predicate<EObject>() {
-            @Override
             public boolean apply(EObject eObj) {
                 return eObj instanceof Operation;
             }
@@ -769,7 +768,8 @@ public class ActivityDiagramServices extends AbstractDiagramServices {
         // ForkNode, JoinNode, MergeNode, DecisionNode : if the incoming edge is
         // a ControlFlow, then all
         // outgoing edges shall be ControlFlows
-        if (preSource instanceof ActivityNode) {
+    	
+        if (preSource instanceof ActivityNode && !(preSource instanceof DecisionNode)) {
             for (final ActivityEdge incoming : ((ActivityNode) preSource).getIncomings()) {
                 if (incoming instanceof ObjectFlow) {
                     return false;
@@ -883,7 +883,7 @@ public class ActivityDiagramServices extends AbstractDiagramServices {
         // ForkNode, JoinNode, MergeNode, DecisionNode : if the incoming edge is
         // an ObjectFlow, then all
         // outgoing edges shall be ObjectFlows
-        if (preSource instanceof ActivityNode) {
+        if (preSource instanceof ActivityNode && !(preSource instanceof DecisionNode)) {
             for (final ActivityEdge incoming : ((ActivityNode) preSource).getIncomings()) {
                 if (incoming instanceof ControlFlow) {
                     return false;

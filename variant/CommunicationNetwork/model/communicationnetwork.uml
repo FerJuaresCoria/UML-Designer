@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:VariantProfile="http:///schemas/VariantProfile/_RUgGgPCdEeiU9blFqAI6Qg/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/VariantProfile/_RUgGgPCdEeiU9blFqAI6Qg/0 ../VariantProfile/VariantProfile.uml">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:VariantProfile="http:///schemas/VariantProfile/_pNbO8PFXEeigo_b2tc2xUA/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/VariantProfile/_pNbO8PFXEeigo_b2tc2xUA/0 ../VariantProfile/VariantProfile.uml#_pNfgYPFXEeigo_b2tc2xUA">
   <uml:Model xmi:id="_Uaa4ILVfEeaH88x1PakFmw" name="CommunicationNetwork">
     <packagedElement xmi:type="uml:Class" xmi:id="_O-1jwLVgEeaH88x1PakFmw" name="Network">
       <ownedAttribute xmi:id="_KBJP0LViEeaH88x1PakFmw" name="networkNodes" type="_2EJV4LVhEeaH88x1PakFmw" association="_EC6W0LViEeaH88x1PakFmw">

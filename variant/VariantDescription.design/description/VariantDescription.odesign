@@ -10,7 +10,7 @@
       <pasteDescriptions href="platform:/plugin/org.obeonetwork.dsl.uml2.design/description/uml2.odesign#//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Reused%20Description']/@toolSection/@subSections[name='existingElements']/@ownedTools[name='Paste']"/>
       <validationSet name="Validation rules for system variant specification">
         <ownedRules xsi:type="validation:SemanticValidationRule" name="VD_VR_interfalValueVariant_min_ge_0" level="ERROR" message="The attribut 'min' of stereotype 'intervalValueVariant' must have a non-negative integer value." targetClass="uml::Property">
-          <audits auditExpression="aql:self.getAppliedStereotypes()->select(s | s.eClass().name.equalsIgnoreCase('intervalValueVariant')).eGet('min') > -1"/>
+          <audits auditExpression="aql:if(self.getAppliedStereotypes()->select(s | s.name.equalsIgnoreCase('intervalValueVariant'))->size() > 0) then self.getValue(self.getAppliedStereotypes()->select(s | s.name.equalsIgnoreCase('intervalValueVariant'))->first(), 'min') >= 0.0 else true endif"/>
           <fixes>
             <initialOperation/>
           </fixes>

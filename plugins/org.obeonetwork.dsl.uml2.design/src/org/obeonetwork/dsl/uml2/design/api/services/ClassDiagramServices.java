@@ -443,19 +443,12 @@ public class ClassDiagramServices extends AbstractDiagramServices {
 	 * @return Stereotype applications
 	 */
 	public Collection<Object> getAllStereotypeApplications(DDiagram diagram) {
-/**
-merged, previous code, replaced by StereotypeService operation
 		final Collection<Object> results = Lists.newArrayList();
 		for (final DDiagramElementContainer container : diagram.getContainers()) {
 			final EObject target = container.getTarget();
 			if (target instanceof Element) {
 				results.addAll(((Element)target).getStereotypeApplications());
 			}
-*/
-		Collection<Object> results = org.obeonetwork.dsl.uml2.core.internal.services.StereotypeServices.INSTANCE
-				.getAllStereotypeApplications(diagram);
-		
-		for (final Object target : results) {
 			if (target instanceof Class)
 			{
 				final Class classElement = (Class) target;

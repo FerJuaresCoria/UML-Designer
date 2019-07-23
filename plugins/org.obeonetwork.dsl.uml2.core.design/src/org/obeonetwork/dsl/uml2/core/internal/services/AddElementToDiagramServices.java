@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.sirius.business.api.session.Session;
 import org.eclipse.sirius.diagram.DDiagram;
 import org.eclipse.sirius.diagram.DSemanticDiagram;
+import org.eclipse.sirius.diagram.business.internal.metamodel.helper.ContentHelper;
 import org.eclipse.sirius.diagram.description.AbstractNodeMapping;
 import org.eclipse.sirius.diagram.description.DiagramDescription;
 import org.eclipse.sirius.diagram.description.DiagramElementMapping;
@@ -85,13 +86,15 @@ public class AddElementToDiagramServices {
 
 		final ModelAccessor modelAccessor = session.getModelAccessor();
 
-		for (final DiagramElementMapping mapping : diagram.getDescription().getAllContainerMappings()) {
+		for (final DiagramElementMapping mapping : ContentHelper
+				.getAllContainerMappings(diagram.getDescription(), false)) {
 			final String domainClass = ((AbstractNodeMapping)mapping).getDomainClass();
 			if (modelAccessor.eInstanceOf(semanticElement, domainClass) && !mapping.isCreateElements()) {
 				mappings.add(mapping);
 			}
 		}
-		for (final DiagramElementMapping mapping : diagram.getDescription().getAllNodeMappings()) {
+		for (final DiagramElementMapping mapping : ContentHelper.getAllNodeMappings(diagram.getDescription(),
+				false)) {
 			final String domainClass = ((AbstractNodeMapping)mapping).getDomainClass();
 			if (modelAccessor.eInstanceOf(semanticElement, domainClass) && !mapping.isCreateElements()) {
 				mappings.add(mapping);

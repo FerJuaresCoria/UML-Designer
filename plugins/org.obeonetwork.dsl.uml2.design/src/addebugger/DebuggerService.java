@@ -184,7 +184,6 @@ public class DebuggerService {
 		if (server != null) {
 			server.close();
 			serverThread.stop();
-			serverThread.destroy();
 			serverThread = null;
 			server = null;
 		}

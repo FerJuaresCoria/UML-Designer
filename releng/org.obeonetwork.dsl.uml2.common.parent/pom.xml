@@ -38,9 +38,9 @@ Contributors:
   </licenses>
 
   <properties>
-    <tycho-version>1.2.0</tycho-version>
+    <tycho-version>1.4.0</tycho-version>
     <root-path>../..</root-path>
-    <platform-version-name>photon</platform-version-name>
+    <platform-version-name>2019-06</platform-version-name>
   </properties>
 
   <build>
@@ -59,16 +59,6 @@ Contributors:
         <configuration>
           <resolver>p2</resolver>
           <environments>
-            <environment>
-              <os>linux</os>
-              <ws>gtk</ws>
-              <arch>x86</arch>
-            </environment>
-            <environment>
-              <os>win32</os>
-              <ws>win32</ws>
-              <arch>x86</arch>
-            </environment>
             <environment>
               <os>win32</os>
               <ws>win32</ws>

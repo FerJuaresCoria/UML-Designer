@@ -23,12 +23,14 @@ import org.eclipse.uml2.uml.ActivityParameterNode;
 import org.eclipse.uml2.uml.Association;
 import org.eclipse.uml2.uml.AssociationClass;
 import org.eclipse.uml2.uml.CallEvent;
+import org.eclipse.uml2.uml.CentralBufferNode;
 import org.eclipse.uml2.uml.Classifier;
 import org.eclipse.uml2.uml.DataStoreNode;
-import org.eclipse.uml2.uml.CentralBufferNode;
+import org.eclipse.uml2.uml.DataType;
 import org.eclipse.uml2.uml.DecisionNode;
 import org.eclipse.uml2.uml.Element;
 import org.eclipse.uml2.uml.ElementImport;
+import org.eclipse.uml2.uml.Enumeration;
 import org.eclipse.uml2.uml.EnumerationLiteral;
 import org.eclipse.uml2.uml.Event;
 import org.eclipse.uml2.uml.FinalState;
@@ -87,6 +89,20 @@ public class LabelServices {
      */
     private LabelServices() {
 
+    }
+
+    private boolean startWithVowel(String str) {
+        boolean result = false;
+        if (str != null && str.length() > 0) {
+            final char[] vowels = new char[] { 'a', 'e', 'i', 'o', 'u' };
+            for (final char vowel : vowels) {
+                if (str.startsWith(Character.toString(vowel)) || str.startsWith(Character.toString(vowel).toUpperCase())) {
+                    result = true;
+                    break;
+                }
+            }
+        }
+        return result;
     }
 
     /**
@@ -258,7 +274,8 @@ public class LabelServices {
      */
     public String computeElementImportLabel(ElementImport element) {
         // ['«Metaclass»\n'+self.oclAsType(uml::Element).computeUmlLabel()/]
-        return "«Metaclass»\n" + computeUmlLabel(element); //$NON-NLS-1$
+    	String stereotypeName = "«Metaclass»"; //$NON-NLS-1$
+        return getLabelWithStereotype(element, stereotypeName); 
     }
 
     /**
@@ -296,7 +313,8 @@ public class LabelServices {
      */
     public String computeProfileLabel(Profile element) {
         // ['«Profile» \n'+self.oclAsType(uml::Element).computeUmlLabel()/]
-        return "«Profile» \n" + computeUmlLabel(element); //$NON-NLS-1$
+    	String stereotypeName = "«Profile»"; //$NON-NLS-1$
+        return getLabelWithStereotype(element, stereotypeName); 
     }
 
     /**
@@ -308,7 +326,41 @@ public class LabelServices {
      */
     public String computeStereotypeLabel(Stereotype element) {
         // ['«Stereotype» \n'+self.oclAsType(uml::Element).computeUmlLabel()/]
-        return "«Stereotype» \n" + computeUmlLabel(element); //$NON-NLS-1$
+    	String stereotypeName = "«Stereotype»"; //$NON-NLS-1$
+        return getLabelWithStereotype(element, stereotypeName); 
+    }
+
+    /**
+     * Compute enumeration label.
+     *
+     * @param element
+     *            Enumeration
+     * @return Label
+     */
+    public String computeEnumerationLabel(Enumeration element) {
+        // ['«Stereotype» \n'+self.oclAsType(uml::Element).computeUmlLabel()/]  
+    	String stereotypeName = "«enumeration»"; //$NON-NLS-1$
+        return getLabelWithStereotype(element, stereotypeName); 
+    }
+
+    /**
+     * Compute stereotype label.
+     *
+     * @param element
+     *            DataType
+     * @return Label
+     */
+    public String computeDatatypeLabel(DataType element) {
+        // ['«Stereotype» \n'+self.oclAsType(uml::Element).computeUmlLabel()/]
+    	String stereotypeName = "«dataType»"; //$NON-NLS-1$
+        return getLabelWithStereotype(element, stereotypeName); 
+    }
+    
+    private String getLabelWithStereotype(Element element, String stereotypeName)
+    {
+    	String labelName = computeUmlLabel(element);
+    	String label = stereotypeName + "\n" + labelName; //$NON-NLS-1$
+        return label; 
     }
 
     /**
@@ -433,19 +485,5 @@ public class LabelServices {
     public boolean isNameNotSet(final Element element) {
         final String label = computeUmlLabel(element);
         return label == null || label.isEmpty();
-    }
-
-    private boolean startWithVowel(String str) {
-        boolean result = false;
-        if (str != null && str.length() > 0) {
-            final char[] vowels = new char[] { 'a', 'e', 'i', 'o', 'u' };
-            for (final char vowel : vowels) {
-                if (str.startsWith(Character.toString(vowel)) || str.startsWith(Character.toString(vowel).toUpperCase())) {
-                    result = true;
-                    break;
-                }
-            }
-        }
-        return result;
     }
 }

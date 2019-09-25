@@ -4869,6 +4869,7 @@
           </subNodeMappings>
           <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="10" showIcon="false" labelExpression="service:computeStereotypeLabel" backgroundStyle="GradientTopToBottom">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
             <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -4884,6 +4885,7 @@
           <conditionnalStyles predicateExpression="aql:self.isAbstract and (self.eContainer() = container)">
             <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="10" showIcon="false" labelExpression="service:computeStereotypeLabel" backgroundStyle="Liquid">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelFormat>bold</labelFormat>
               <labelFormat>italic</labelFormat>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -4893,6 +4895,7 @@
           <conditionnalStyles predicateExpression="aql:self.isAbstract and (self.eContainer() &lt;> container)">
             <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="10" showIcon="false" labelExpression="service:computeStereotypeLabel" backgroundStyle="Liquid">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelFormat>bold</labelFormat>
               <labelFormat>italic</labelFormat>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
@@ -4902,13 +4905,13 @@
         </containerMappings>
         <containerMappings name="PD_Enumeration" deletionDescription="//@ownedViewpoints[name='Extend']/@ownedRepresentations[name='Profile%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='PD%20UML%20Element']" labelDirectEdit="//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Reused%20Description']/@toolSection/@subSections[name='directEdit']/@ownedTools[name='NamedElementServiceDirectEdit']" semanticCandidatesExpression="aql:self.getOwnedTypes()->filter(uml::Enumeration)" doubleClickDescription="//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Reused%20Description']/@toolSection/@subSections[name='properties']/@ownedTools[name='Open%20properties%20wizard']" domainClass="uml.Enumeration" reusedNodeMappings="//@ownedViewpoints[name='Extend']/@ownedRepresentations[name='Profile%20Diagram']/@defaultLayer/@containerMappings[name='PD_Stereotype']/@subNodeMappings[name='PD_Property'] //@ownedViewpoints[name='Extend']/@ownedRepresentations[name='Profile%20Diagram']/@defaultLayer/@containerMappings[name='PD_Enumeration']/@subNodeMappings[name='PD_EnumerationLiteral']" childrenPresentation="List">
           <subNodeMappings name="PD_EnumerationLiteral" deletionDescription="//@ownedViewpoints[name='Extend']/@ownedRepresentations[name='Profile%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='PD%20UML%20Element']" labelDirectEdit="//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Reused%20Description']/@toolSection/@subSections[name='directEdit']/@ownedTools[name='NamedElementServiceDirectEdit']" semanticCandidatesExpression="aql:self.ownedLiteral" semanticElements="service:getSemanticElements" doubleClickDescription="//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Reused%20Description']/@toolSection/@subSections[name='properties']/@ownedTools[name='Open%20properties%20wizard']" domainClass="uml.EnumerationLiteral">
-            <style xsi:type="style:SquareDescription" labelExpression="service:computeUmlLabel" labelAlignment="LEFT" sizeComputationExpression="1">
+            <style xsi:type="style:SquareDescription" showIcon="false" labelExpression="service:computeUmlLabel" labelAlignment="LEFT" sizeComputationExpression="1">
               <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='chocolate']"/>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_chocolate']"/>
             </style>
           </subNodeMappings>
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="10" showIcon="false" labelExpression="service:computeUmlLabel">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="10" showIcon="false" labelExpression="service:computeEnumerationLabel">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelFormat>bold</labelFormat>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -4944,7 +4947,7 @@
           </conditionnalStyles>
         </containerMappings>
         <containerMappings name="PD_DataType" preconditionExpression="aql:self.oclIsTypeOf(uml::DataType)" deletionDescription="//@ownedViewpoints[name='Extend']/@ownedRepresentations[name='Profile%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='PD%20UML%20Element']" labelDirectEdit="//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Reused%20Description']/@toolSection/@subSections[name='directEdit']/@ownedTools[name='NamedElementServiceDirectEdit']" semanticCandidatesExpression="aql:self.getOwnedTypes()->filter(uml::DataType)" semanticElements="service:getSemanticElements" doubleClickDescription="//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Reused%20Description']/@toolSection/@subSections[name='properties']/@ownedTools[name='Open%20properties%20wizard']" domainClass="uml.DataType" reusedNodeMappings="//@ownedViewpoints[name='Extend']/@ownedRepresentations[name='Profile%20Diagram']/@defaultLayer/@containerMappings[name='PD_Stereotype']/@subNodeMappings[name='PD_Property']" childrenPresentation="List">
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="10" showIcon="false" labelExpression="service:computeUmlLabel" backgroundStyle="Liquid">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="10" showIcon="false" labelExpression="service:computeDatatypeLabel" backgroundStyle="Liquid">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelFormat>bold</labelFormat>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -5052,8 +5055,9 @@
           </conditionnalStyles>
         </containerMappings>
         <containerMappings name="PD_ElementImport" deletionDescription="//@ownedViewpoints[name='Extend']/@ownedRepresentations[name='Profile%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='PD%20UML%20Element']" semanticCandidatesExpression="feature:eContents" doubleClickDescription="//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Reused%20Description']/@toolSection/@subSections[name='properties']/@ownedTools[name='Open%20properties%20wizard']" domainClass="uml.ElementImport">
-          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" showIcon="false" labelExpression="service:computeElementImportLabel">
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="10" showIcon="false" labelExpression="service:computeElementImportLabel">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
             <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>

@@ -69,8 +69,10 @@ import org.eclipse.ui.PlatformUI;
 import org.eclipse.uml2.uml.Association;
 import org.eclipse.uml2.uml.Class;
 import org.eclipse.uml2.uml.Classifier;
+import org.eclipse.uml2.uml.DataType;
 import org.eclipse.uml2.uml.Element;
 import org.eclipse.uml2.uml.ElementImport;
+import org.eclipse.uml2.uml.Enumeration;
 import org.eclipse.uml2.uml.Extension;
 import org.eclipse.uml2.uml.NamedElement;
 import org.eclipse.uml2.uml.Package;
@@ -335,7 +337,26 @@ public class ProfileDiagramServices extends AbstractDiagramServices {
 	public String computeStereotypeLabel(Stereotype element) {
 		return LabelServices.INSTANCE.computeStereotypeLabel(element);
 	}
-
+	/**
+	 * Compute the label of the given stereotype.
+	 *
+	 * @param element
+	 *            the {@link Stereotype} for which to retrieve a label.
+	 * @return the computed label.
+	 */
+	public String computeEnumerationLabel(Enumeration element) {
+		return LabelServices.INSTANCE.computeEnumerationLabel(element);
+	}	/**
+	 * Compute the label of the given stereotype.
+	 *
+	 * @param element
+	 *            the {@link Stereotype} for which to retrieve a label.
+	 * @return the computed label.
+	 */
+	public String computeDatatypeLabel(DataType element) {
+		return LabelServices.INSTANCE.computeDatatypeLabel(element);
+	}
+	
 	/**
 	 * Compute the target label of for the Extra association defined by the stereotype "stereotype".
 	 *

@@ -812,8 +812,9 @@ public class DisplayLabelSwitch extends UMLSwitch<String> implements ILabelConst
     @Override
     public String caseStereotype(Stereotype stereotype) {
         final String name = stereotype.getName();
-        final String profileName = stereotype.containingProfile().getName();
-        return profileName + " :: " + name; //$NON-NLS-1$
+//        final String profileName = stereotype.containingProfile().getName();
+//        return profileName + " :: " + name; //$NON-NLS-1$
+        return name;
     }
 
     /**

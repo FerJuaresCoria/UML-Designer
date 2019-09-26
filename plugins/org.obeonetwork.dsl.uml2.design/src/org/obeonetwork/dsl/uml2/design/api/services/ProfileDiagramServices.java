@@ -413,6 +413,21 @@ public class ProfileDiagramServices extends AbstractDiagramServices {
 	 *
 	 * @param stereotypeSource
 	 *            stereotype source.
+	 * @param datatypeTarget
+	 *            datatype target.
+	 * @return the created association.
+	 */
+	public Association createAssociation(final Stereotype stereotypeSource,
+			final DataType datatypeTarget) {
+		return createAssociation(stereotypeSource, datatypeTarget, stereotypeSource.getName() + "To" //$NON-NLS-1$
+				+ datatypeTarget.getName());
+	}
+	
+	/**
+	 * Create an UML Association between the stereotypes source and target.
+	 *
+	 * @param stereotypeSource
+	 *            stereotype source.
 	 * @param stereotypeTarget
 	 *            stereotype target.
 	 * @param associationName
@@ -420,7 +435,7 @@ public class ProfileDiagramServices extends AbstractDiagramServices {
 	 * @return the created association.
 	 */
 	private Association createAssociation(final Stereotype stereotypeSource,
-			final Stereotype stereotypeTarget, final String associationName) {
+			final Classifier stereotypeTarget, final String associationName) {
 		final Association association = UMLFactory.eINSTANCE.createAssociation();
 
 		// The name is provided by the item provider

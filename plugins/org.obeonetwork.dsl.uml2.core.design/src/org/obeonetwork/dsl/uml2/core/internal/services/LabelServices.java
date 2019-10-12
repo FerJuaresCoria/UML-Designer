@@ -274,7 +274,7 @@ public class LabelServices {
      */
     public String computeElementImportLabel(ElementImport element) {
         // ['«Metaclass»\n'+self.oclAsType(uml::Element).computeUmlLabel()/]
-    	String stereotypeName = "«Metaclass»"; //$NON-NLS-1$
+    	String stereotypeName = ILabelConstants.OPEN_QUOTE_MARK + "Metaclass" + ILabelConstants.CLOSE_QUOTE_MARK; //$NON-NLS-1$
         return getLabelWithStereotype(element, stereotypeName); 
     }
 
@@ -313,7 +313,7 @@ public class LabelServices {
      */
     public String computeProfileLabel(Profile element) {
         // ['«Profile» \n'+self.oclAsType(uml::Element).computeUmlLabel()/]
-    	String stereotypeName = "«Profile»"; //$NON-NLS-1$
+    	String stereotypeName = ILabelConstants.OPEN_QUOTE_MARK + "Profile" + ILabelConstants.CLOSE_QUOTE_MARK; //$NON-NLS-1$
         return getLabelWithStereotype(element, stereotypeName); 
     }
 
@@ -326,7 +326,7 @@ public class LabelServices {
      */
     public String computeStereotypeLabel(Stereotype element) {
         // ['«Stereotype» \n'+self.oclAsType(uml::Element).computeUmlLabel()/]
-    	String stereotypeName = "«Stereotype»"; //$NON-NLS-1$
+    	String stereotypeName = ILabelConstants.OPEN_QUOTE_MARK + "Stereotype" + ILabelConstants.CLOSE_QUOTE_MARK; //$NON-NLS-1$
         return getLabelWithStereotype(element, stereotypeName); 
     }
 
@@ -339,7 +339,7 @@ public class LabelServices {
      */
     public String computeEnumerationLabel(Enumeration element) {
         // ['«Stereotype» \n'+self.oclAsType(uml::Element).computeUmlLabel()/]  
-    	String stereotypeName = "«enumeration»"; //$NON-NLS-1$
+    	String stereotypeName = ILabelConstants.OPEN_QUOTE_MARK + "enumeration" + ILabelConstants.CLOSE_QUOTE_MARK; //$NON-NLS-1$
         return getLabelWithStereotype(element, stereotypeName); 
     }
 
@@ -352,7 +352,7 @@ public class LabelServices {
      */
     public String computeDatatypeLabel(DataType element) {
         // ['«Stereotype» \n'+self.oclAsType(uml::Element).computeUmlLabel()/]
-    	String stereotypeName = "«dataType»"; //$NON-NLS-1$
+    	String stereotypeName = ILabelConstants.OPEN_QUOTE_MARK + "dataType" + ILabelConstants.CLOSE_QUOTE_MARK; //$NON-NLS-1$
         return getLabelWithStereotype(element, stereotypeName); 
     }
     

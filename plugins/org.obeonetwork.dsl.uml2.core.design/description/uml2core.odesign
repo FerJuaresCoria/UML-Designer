@@ -2265,25 +2265,25 @@
               </initialOperation>
             </tools>
             <tools xsi:type="tool_1:ContainerCreationDescription" name="Read Self Action" containerMappings="//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_ReadSelfAction']">
-              <variable name="container">
-                <subVariables xsi:type="tool:SelectModelElementVariable" name="parameter" candidatesExpression="aql:container.getAllBehaviorsAndPackages()->filter(uml::Activity).owner->filter(uml::Class)"/>
-              </variable>
+              <variable name="container"/>
               <viewVariable name="containerView"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:container">
-                  <subModelOperations xsi:type="tool:If" conditionExpression="aql:container.oclIsTypeOf(uml::Activity) or container.oclIsTypeOf(uml::ActivityPartition) or container.oclIsTypeOf(uml::InterruptibleActivityRegion)">
-                    <subModelOperations xsi:type="tool:ChangeContext" browseExpression="service:findParentActivity">
-                      <subModelOperations xsi:type="tool:CreateInstance" typeName="uml.ReadSelfAction" referenceName="ownedNode">
-                        <subModelOperations xsi:type="tool:CreateInstance" typeName="uml.OutputPin" referenceName="result" variableName="pin">
-                          <subModelOperations xsi:type="tool:ChangeContext" browseExpression="var:pin">
-                            <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="result"/>
-                            <subModelOperations xsi:type="tool:SetValue" featureName="type" valueExpression="var:parameter"/>
+                  <subModelOperations xsi:type="tool:If" conditionExpression="aql:container.owner.oclIsKindOf(uml::Type)">
+                    <subModelOperations xsi:type="tool:If" conditionExpression="aql:container.oclIsTypeOf(uml::Activity) or container.oclIsTypeOf(uml::ActivityPartition) or container.oclIsTypeOf(uml::InterruptibleActivityRegion)">
+                      <subModelOperations xsi:type="tool:ChangeContext" browseExpression="service:findParentActivity">
+                        <subModelOperations xsi:type="tool:CreateInstance" typeName="uml.ReadSelfAction" referenceName="ownedNode">
+                          <subModelOperations xsi:type="tool:CreateInstance" typeName="uml.OutputPin" referenceName="result" variableName="pin">
+                            <subModelOperations xsi:type="tool:ChangeContext" browseExpression="var:pin">
+                              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="result"/>
+                              <subModelOperations xsi:type="tool:SetValue" featureName="type" valueExpression="aql:container.owner"/>
+                            </subModelOperations>
+                            <subModelOperations xsi:type="tool:ChangeContext" browseExpression="var:instance">
+                              <subModelOperations xsi:type="tool:SetValue" featureName="result" valueExpression="var:pin"/>
+                            </subModelOperations>
                           </subModelOperations>
-                          <subModelOperations xsi:type="tool:ChangeContext" browseExpression="var:instance">
-                            <subModelOperations xsi:type="tool:SetValue" featureName="result" valueExpression="var:pin"/>
-                          </subModelOperations>
+                          <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="service:computeDefaultName"/>
                         </subModelOperations>
-                        <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="service:computeDefaultName"/>
                       </subModelOperations>
                     </subModelOperations>
                   </subModelOperations>

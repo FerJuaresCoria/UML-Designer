@@ -2164,7 +2164,7 @@
           <ownedTools xsi:type="tool_1:ToolGroup" name="Object Actions">
             <tools xsi:type="tool_1:ContainerCreationDescription" name="Create Object Action" containerMappings="//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_CreateObjectAction']">
               <variable name="container">
-                <subVariables xsi:type="tool:SelectModelElementVariable" name="classifier" candidatesExpression="aql:container.getAllOperationsAndPackages()->filter(uml::Class)" message="Select a classifier for the Object Action"/>
+                <subVariables xsi:type="tool:SelectModelElementVariable" name="classifier" candidatesExpression="aql:container.getAllAvailableRootPackages().eContents()->select(  element | element.oclIsTypeOf(uml::Class))" message="Select a classifier for the Object Action"/>
               </variable>
               <viewVariable name="containerView"/>
               <initialOperation>

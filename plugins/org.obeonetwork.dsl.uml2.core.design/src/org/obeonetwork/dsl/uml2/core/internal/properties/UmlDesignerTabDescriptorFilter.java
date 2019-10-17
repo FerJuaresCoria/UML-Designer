@@ -54,6 +54,8 @@ public class UmlDesignerTabDescriptorFilter implements IEEFTabDescriptorFilter {
 
 	private static final String SIRIUS_DIAG_PROP_SECT_TAB_ID = "property.tab.DiagramPropertySection"; //$NON-NLS-1$
 
+	private static final String UML_ACTION_TAB_LABEL = "Action"; //$NON-NLS-1$
+
 
 	List<String> siriusTabsId = new ArrayList<String>(
 			Arrays.asList(
@@ -62,7 +64,7 @@ public class UmlDesignerTabDescriptorFilter implements IEEFTabDescriptorFilter {
 					SIRIUS_DIAG_PROP_SECT_TAB_ID));
 
 	List<String> UmlTabs = new ArrayList<String>(
-			Arrays.asList(UML_GENERAL_TAB_LABEL, UML_ADVANCED_TAB_LABEL));
+			Arrays.asList(UML_GENERAL_TAB_LABEL, UML_ADVANCED_TAB_LABEL, UML_ACTION_TAB_LABEL));
 
 	public boolean filter(IEEFTabDescriptor tabDescriptor) {
 		final IWorkbenchPage activePage = PlatformUI.getWorkbench().getActiveWorkbenchWindow()

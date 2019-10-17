@@ -2290,7 +2290,7 @@
                 </firstModelOperations>
               </initialOperation>
             </tools>
-            <tools xsi:type="tool_1:ContainerCreationDescription" name="Read StructuralFeature Action" containerMappings="//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_ReadStructuralFeatureAction']">
+            <tools xsi:type="tool_1:ContainerCreationDescription" name="Read Structural Feature Action" containerMappings="//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_ReadStructuralFeatureAction']">
               <variable name="container"/>
               <viewVariable name="containerView"/>
               <initialOperation>
@@ -2310,7 +2310,7 @@
                             </subModelOperations>
                           </subModelOperations>
                           <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="service:computeDefaultName"/>
-                          <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="New ReadStructuralFeatureAction">
+                          <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="New Read Structural Feature Action">
                             <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
                               <initialOperation>
                                 <firstModelOperations xsi:type="tool:ChangeContext"/>

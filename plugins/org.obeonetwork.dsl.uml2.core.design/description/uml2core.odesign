@@ -415,7 +415,7 @@
       </validationSet>
       <layout xsi:type="description_1:CompositeLayout"/>
       <defaultLayer name="Activity">
-        <edgeMappings name="AD_ControlFlow" deletionDescription="//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Reused%20Description']/@toolSection/@subSections[name='existingElements']/@ownedTools[name='DEL_DeleteFromModel']" labelDirectEdit="//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Reused%20Description']/@toolSection/@subSections[name='directEdit']/@ownedTools[name='NamedElementServiceDirectEdit']" semanticCandidatesExpression="feature:edge" semanticElements="service:getSemanticElements" doubleClickDescription="//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Reused%20Description']/@toolSection/@subSections[name='properties']/@ownedTools[name='Open%20properties%20wizard']" documentation="Edge specified with source mapping as the target semantic (&amp; vice versa) to work around top to bottom layout (see VP-930)" sourceMapping="//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subNodeMappings[name='AD_ControlNode'] //@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_CallBehaviorAction'] //@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_CallOperationAction'] //@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_OpaqueAction'] //@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@additionalLayers[name='Body']/@containerMappings[name='AD_ActivityWithBody']/@subContainerMappings[name='AD_OpaqueActionWithBody'] //@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subNodeMappings[name='AD_AcceptEventAction'] //@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_DataStore'] //@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_StructuredActivityNode'] //@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_CreateObjectAction'] //@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_DestroyObjectAction'] //@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_ReadSelfAction']" targetMapping="//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subNodeMappings[name='AD_ControlNode'] //@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_CallBehaviorAction'] //@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_CallOperationAction'] //@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_OpaqueAction'] //@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@additionalLayers[name='Body']/@containerMappings[name='AD_ActivityWithBody']/@subContainerMappings[name='AD_OpaqueActionWithBody'] //@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subNodeMappings[name='AD_AcceptEventAction'] //@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_DataStore'] //@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_StructuredActivityNode'] //@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_CreateObjectAction'] //@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_DestroyObjectAction'] //@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_ReadSelfAction']" targetFinderExpression="feature:target" sourceFinderExpression="feature:source" domainClass="uml.ControlFlow" useDomainElement="true" reconnections="//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@toolSections.0/@subSections[name='reconnect']/@ownedTools[name='AD_ReconnectControlSource'] //@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@toolSections.0/@subSections[name='reconnect']/@ownedTools[name='AD_ReconnectControlTarget']">
+        <edgeMappings name="AD_ControlFlow" deletionDescription="//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Reused%20Description']/@toolSection/@subSections[name='existingElements']/@ownedTools[name='DEL_DeleteFromModel']" labelDirectEdit="//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Reused%20Description']/@toolSection/@subSections[name='directEdit']/@ownedTools[name='NamedElementServiceDirectEdit']" semanticCandidatesExpression="feature:edge" semanticElements="service:getSemanticElements" doubleClickDescription="//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Reused%20Description']/@toolSection/@subSections[name='properties']/@ownedTools[name='Open%20properties%20wizard']" documentation="Edge specified with source mapping as the target semantic (&amp; vice versa) to work around top to bottom layout (see VP-930)" sourceMapping="//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subNodeMappings[name='AD_ControlNode'] //@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_CallBehaviorAction'] //@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_CallOperationAction'] //@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_OpaqueAction'] //@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@additionalLayers[name='Body']/@containerMappings[name='AD_ActivityWithBody']/@subContainerMappings[name='AD_OpaqueActionWithBody'] //@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subNodeMappings[name='AD_AcceptEventAction'] //@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_DataStore'] //@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_StructuredActivityNode'] //@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_CreateObjectAction'] //@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_DestroyObjectAction'] //@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_ReadSelfAction'] //@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_AddStructuralFeatureValueAction'] //@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_OpaqueAction']/@subNodeMappings[name=''] //@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_ClearStructuralFeatureAction'] //@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_ReadStructuralFeatureAction'] //@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_RemoveStructuralFeatureValueAction'] //@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_ValueSpecificationAction']" targetMapping="//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subNodeMappings[name='AD_ControlNode'] //@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_CallBehaviorAction'] //@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_CallOperationAction'] //@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_OpaqueAction'] //@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@additionalLayers[name='Body']/@containerMappings[name='AD_ActivityWithBody']/@subContainerMappings[name='AD_OpaqueActionWithBody'] //@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subNodeMappings[name='AD_AcceptEventAction'] //@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_DataStore'] //@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_StructuredActivityNode'] //@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_CreateObjectAction'] //@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_DestroyObjectAction'] //@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_ReadSelfAction'] //@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_AddStructuralFeatureValueAction'] //@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_ClearStructuralFeatureAction'] //@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_OpaqueAction']/@subNodeMappings[name=''] //@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_ReadStructuralFeatureAction'] //@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_RemoveStructuralFeatureValueAction'] //@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_ValueSpecificationAction']" targetFinderExpression="feature:target" sourceFinderExpression="feature:source" domainClass="uml.ControlFlow" useDomainElement="true" reconnections="//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@toolSections.0/@subSections[name='reconnect']/@ownedTools[name='AD_ReconnectControlSource'] //@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@toolSections.0/@subSections[name='reconnect']/@ownedTools[name='AD_ReconnectControlTarget']">
           <style routingStyle="manhattan">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <centerLabelStyleDescription showIcon="false" labelExpression="service:computeUmlLabel">
@@ -1284,7 +1284,7 @@
                             </initialOperation>
                           </buttons>
                           <page name="D_AD_CreateOwnedOpaqueAction_DefaultPage" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='Action']/@tools.0/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.0/@subModelOperations.0/@subModelOperations.4/@groups.0"/>
-                          <groups name="D_AD_CreateOwnedOpaqueAction_GeneralGroup" semanticCandidateExpression="var:self" extends="//@extensions.0/@categories.1/@groups.0"/>
+                          <groups name="D_AD_CreateOwnedOpaqueAction_GeneralGroup" semanticCandidateExpression="var:self" extends="//@extensions.0/@categories.0/@groups.7"/>
                         </subModelOperations>
                       </subModelOperations>
                     </subModelOperations>
@@ -2356,7 +2356,7 @@
                                 <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:action"/>
                               </initialOperation>
                             </buttons>
-                            <page name="D_AD_ReadStructuralFeatureAction_DefaultPage" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.8"/>
+                            <page name="D_AD_ReadStructuralFeatureAction_DefaultPage" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.9"/>
                           </subModelOperations>
                         </subModelOperations>
                       </subModelOperations>
@@ -2402,7 +2402,7 @@
                                 <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:action"/>
                               </initialOperation>
                             </buttons>
-                            <page name="D_AD_AddStructuralFeatureValueAction_DefaultPage" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.10"/>
+                            <page name="D_AD_AddStructuralFeatureValueAction_DefaultPage" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.11"/>
                           </subModelOperations>
                         </subModelOperations>
                       </subModelOperations>
@@ -2448,7 +2448,7 @@
                                 <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:action"/>
                               </initialOperation>
                             </buttons>
-                            <page name="D_AD_RemoveStructuralFeatureValueAction_DefaultPage" domainClass="uml.RemoveStructuralFeatureValueAction" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.11"/>
+                            <page name="D_AD_RemoveStructuralFeatureValueAction_DefaultPage" domainClass="uml.RemoveStructuralFeatureValueAction" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.12"/>
                           </subModelOperations>
                         </subModelOperations>
                       </subModelOperations>
@@ -2489,7 +2489,7 @@
                                 <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:action"/>
                               </initialOperation>
                             </buttons>
-                            <page name="D_AD_ClearStructuralFeatureAction_DefaultPage" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.12"/>
+                            <page name="D_AD_ClearStructuralFeatureAction_DefaultPage" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.13"/>
                           </subModelOperations>
                         </subModelOperations>
                       </subModelOperations>
@@ -2525,7 +2525,7 @@
                                 <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:action"/>
                               </initialOperation>
                             </buttons>
-                            <page name="D_AD_ValueSpecificationAction_DefaultPage" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.13"/>
+                            <page name="D_AD_ValueSpecificationAction_DefaultPage" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.14"/>
                           </subModelOperations>
                         </subModelOperations>
                       </subModelOperations>
@@ -3537,7 +3537,7 @@
   </userColorsPalettes>
   <extensions xsi:type="properties:ViewExtensionDescription" name="Properties">
     <categories name="ADEditor">
-      <pages name="PR_Action" labelExpression="Action" domainClass="uml::Action" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.10 //@extensions.0/@categories.0/@groups.6 //@extensions.0/@categories.0/@groups.5 //@extensions.0/@categories.0/@groups.12 //@extensions.0/@categories.0/@groups.8 //@extensions.0/@categories.0/@groups.11 //@extensions.0/@categories.0/@groups.13"/>
+      <pages name="PR_Action" labelExpression="Action" domainClass="uml::Action" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.11 //@extensions.0/@categories.0/@groups.6 //@extensions.0/@categories.0/@groups.5 //@extensions.0/@categories.0/@groups.13 //@extensions.0/@categories.0/@groups.9 //@extensions.0/@categories.0/@groups.12 //@extensions.0/@categories.0/@groups.14 //@extensions.0/@categories.0/@groups.7"/>
       <groups name="ADE_FB_GROUP" labelExpression="OpaqueBehavior (ADEditor)" domainClass="uml::OpaqueBehavior" semanticCandidateExpression="var:self" extends="//@extensions.0/@categories.0/@groups.2">
         <controls xsi:type="properties:LabelDescription" name="Language Label" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('language')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('language'))" isEnabledExpression="aql:false"/>
         <controls xsi:type="properties:ContainerDescription" name="Language" label="Language">
@@ -3739,6 +3739,70 @@
           </semanticValidationRules>
         </validationSet>
       </groups>
+      <groups name="ADE_OA_GROUP" labelExpression="Opaque Action" domainClass="uml::OpaqueAction" semanticCandidateExpression="var:self" extends="//@extensions.0/@categories.0/@groups.2">
+        <controls xsi:type="properties:LabelDescription" name="uml.OpaqueAction.Language.Label" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('language')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('language'))" isEnabledExpression="aql:false"/>
+        <controls xsi:type="properties:ContainerDescription" name="uml.OpaqueAction.Language" label="Language">
+          <controls xsi:type="properties:CheckboxDescription" name="CPP" labelExpression="CPP" valueExpression="aql:self.hasLanguage('CPP')">
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:self.setLanguage('CPP', newValue)"/>
+            </initialOperation>
+          </controls>
+          <controls xsi:type="properties:CheckboxDescription" name="INCLUDE" labelExpression="INCLUDE" valueExpression="aql:self.hasLanguage('INCLUDE')">
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:self.setLanguage('INCLUDE', newValue)"/>
+            </initialOperation>
+          </controls>
+          <controls xsi:type="properties:CheckboxDescription" name="LIBRARY" labelExpression="LIBRARY" valueExpression="aql:self.hasLanguage('LIBRARY')">
+            <initialOperation>
+              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:self.setLanguage('LIBRARY', newValue)"/>
+            </initialOperation>
+          </controls>
+          <layout xsi:type="properties:GridLayoutDescription" numberOfColumns="3" makeColumnsWithEqualWidth="true"/>
+        </controls>
+        <controls xsi:type="properties:TextAreaDescription" name="uml.OpaqueAction.cpp" labelExpression="C++:" helpExpression="Function C++ Source Code" isEnabledExpression="aql:self.eClass().getEStructuralFeature('body').changeable and self.hasLanguage('CPP')" lineCount="7" valueExpression="aql:self.getBody('CPP')">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:self.setBody(newValue, 'CPP')"/>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties:TextAreaDescription" name="uml.OpaqueAction.include" labelExpression="Include:" helpExpression="Function Includes" isEnabledExpression="aql:self.eClass().getEStructuralFeature('body').changeable and self.hasLanguage('INCLUDE')" lineCount="7" valueExpression="aql:self.getBody('INCLUDE')">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:self.setBody(newValue, 'INCLUDE')"/>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties:TextAreaDescription" name="uml.OpaqueAction.library" labelExpression="Library:" helpExpression="Function Libraries" isEnabledExpression="aql:self.eClass().getEStructuralFeature('body').changeable and self.hasLanguage('LIBRARY')" lineCount="7" valueExpression="aql:self.getBody('LIBRARY')">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:self.setBody(newValue, 'LIBRARY')"/>
+          </initialOperation>
+        </controls>
+        <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="uml.OpaqueAction.inputValue" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('inputValue')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('inputValue'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('inputValue').changeable" referenceNameExpression="aql:'inputValue'">
+          <onClickOperation>
+            <firstModelOperations xsi:type="properties:DialogModelOperation" titleExpression="aql:self.inputValue.name">
+              <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
+                <initialOperation/>
+              </buttons>
+              <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
+                <initialOperation/>
+              </buttons>
+              <page name="Default Page" labelExpression="Page" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.7/@controls.5/@onClickOperation/@firstModelOperations/@groups.0"/>
+              <groups name="Default Group" labelExpression="Group" domainClass="uml::InputPin" semanticCandidateExpression="aql:self.inputValue" extends="//@extensions.0/@categories.1/@groups.0"/>
+            </firstModelOperations>
+          </onClickOperation>
+        </controls>
+        <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="uml.OpaqueAction.outputValue" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('outputValue')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('outputValue'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('outputValue').changeable" referenceNameExpression="aql:'outputValue'">
+          <onClickOperation>
+            <firstModelOperations xsi:type="properties:DialogModelOperation" titleExpression="aql:self.outputValue.name">
+              <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
+                <initialOperation/>
+              </buttons>
+              <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
+                <initialOperation/>
+              </buttons>
+              <page name="Default Page" labelExpression="Page" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.7/@controls.6/@onClickOperation/@firstModelOperations/@groups.0"/>
+              <groups name="Default Group" labelExpression="Group" domainClass="uml::OutputPin" semanticCandidateExpression="aql:self.outputValue" extends="//@extensions.0/@categories.1/@groups.0"/>
+            </firstModelOperations>
+          </onClickOperation>
+        </controls>
+      </groups>
       <groups name="ADE_SFA_GROUP" labelExpression="Read Structural Feature Action" domainClass="uml::StructuralFeatureAction" semanticCandidateExpression="var:self" extends="//@extensions.0/@categories.0/@groups.2">
         <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="uml.StructuralFeatureAction.object" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('object')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('object'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('object').changeable" referenceNameExpression="aql:'object'">
           <onClickOperation>
@@ -3749,7 +3813,7 @@
               <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
                 <initialOperation/>
               </buttons>
-              <page name="Default Page" labelExpression="Page" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.7/@controls.0/@onClickOperation/@firstModelOperations/@groups.0"/>
+              <page name="Default Page" labelExpression="Page" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.8/@controls.0/@onClickOperation/@firstModelOperations/@groups.0"/>
               <groups name="Default Group" labelExpression="Group" domainClass="uml::InputPin" semanticCandidateExpression="aql:self.object" extends="//@extensions.0/@categories.1/@groups.0"/>
             </firstModelOperations>
           </onClickOperation>
@@ -3763,30 +3827,14 @@
               <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
                 <initialOperation/>
               </buttons>
-              <page name="Default Page" labelExpression="Page" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.7/@controls.1/@onClickOperation/@firstModelOperations/@groups.0"/>
+              <page name="Default Page" labelExpression="Page" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.8/@controls.1/@onClickOperation/@firstModelOperations/@groups.0"/>
               <groups name="Default Group" labelExpression="Group" domainClass="uml::StructuralFeature" semanticCandidateExpression="aql:self.structuralFeature" extends="//@extensions.0/@categories.1/@groups.0"/>
             </firstModelOperations>
           </onClickOperation>
         </controls>
       </groups>
-      <groups name="ADE_RSFA_GROUP" labelExpression="Read Structural Feature Action" domainClass="uml::ReadStructuralFeatureAction" semanticCandidateExpression="var:self" extends="//@extensions.0/@categories.0/@groups.7">
+      <groups name="ADE_RSFA_GROUP" labelExpression="Read Structural Feature Action" domainClass="uml::ReadStructuralFeatureAction" semanticCandidateExpression="var:self" extends="//@extensions.0/@categories.0/@groups.8">
         <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="uml.ReadStructuralFeatureAction.result" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('result')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('result'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('result').changeable" referenceNameExpression="aql:'result'">
-          <onClickOperation>
-            <firstModelOperations xsi:type="properties:DialogModelOperation" titleExpression="aql:self.result.name">
-              <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
-                <initialOperation/>
-              </buttons>
-              <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
-                <initialOperation/>
-              </buttons>
-              <page name="Default Page" labelExpression="Page" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.8/@controls.0/@onClickOperation/@firstModelOperations/@groups.0"/>
-              <groups name="Default Group" labelExpression="Group" domainClass="uml::OutputPin" semanticCandidateExpression="aql:self.result" extends="//@extensions.0/@categories.1/@groups.0"/>
-            </firstModelOperations>
-          </onClickOperation>
-        </controls>
-      </groups>
-      <groups name="ADE_WSFA_GROUP" labelExpression="Add Structural Feature Value Action" domainClass="uml::WriteStructuralFeatureValueAction" semanticCandidateExpression="var:self" extends="//@extensions.0/@categories.0/@groups.7">
-        <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="uml.WriteStructuralFeatureValueAction.result" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('result')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('result'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('result').changeable" referenceNameExpression="aql:'result'">
           <onClickOperation>
             <firstModelOperations xsi:type="properties:DialogModelOperation" titleExpression="aql:self.result.name">
               <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
@@ -3800,6 +3848,22 @@
             </firstModelOperations>
           </onClickOperation>
         </controls>
+      </groups>
+      <groups name="ADE_WSFA_GROUP" labelExpression="Add Structural Feature Value Action" domainClass="uml::WriteStructuralFeatureValueAction" semanticCandidateExpression="var:self" extends="//@extensions.0/@categories.0/@groups.8">
+        <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="uml.WriteStructuralFeatureValueAction.result" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('result')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('result'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('result').changeable" referenceNameExpression="aql:'result'">
+          <onClickOperation>
+            <firstModelOperations xsi:type="properties:DialogModelOperation" titleExpression="aql:self.result.name">
+              <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
+                <initialOperation/>
+              </buttons>
+              <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
+                <initialOperation/>
+              </buttons>
+              <page name="Default Page" labelExpression="Page" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.10/@controls.0/@onClickOperation/@firstModelOperations/@groups.0"/>
+              <groups name="Default Group" labelExpression="Group" domainClass="uml::OutputPin" semanticCandidateExpression="aql:self.result" extends="//@extensions.0/@categories.1/@groups.0"/>
+            </firstModelOperations>
+          </onClickOperation>
+        </controls>
         <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="uml.WriteStructuralFeatureValueAction.value" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('value')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('value'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('value').changeable" referenceNameExpression="aql:'value'">
           <onClickOperation>
             <firstModelOperations xsi:type="properties:DialogModelOperation" titleExpression="aql:self.value.name">
@@ -3809,37 +3873,16 @@
               <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
                 <initialOperation/>
               </buttons>
-              <page name="Default Page" labelExpression="Page" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.9/@controls.1/@onClickOperation/@firstModelOperations/@groups.0"/>
+              <page name="Default Page" labelExpression="Page" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.10/@controls.1/@onClickOperation/@firstModelOperations/@groups.0"/>
               <groups name="Default Group" labelExpression="Group" domainClass="uml::InputPin" semanticCandidateExpression="aql:self.value" extends="//@extensions.0/@categories.1/@groups.0"/>
             </firstModelOperations>
           </onClickOperation>
         </controls>
       </groups>
-      <groups name="ADE_ASFVA_GROUP" labelExpression="Add Structural Feature Value Action" domainClass="uml::AddStructuralFeatureValueAction" semanticCandidateExpression="var:self" extends="//@extensions.0/@categories.0/@groups.9">
+      <groups name="ADE_ASFVA_GROUP" labelExpression="Add Structural Feature Value Action" domainClass="uml::AddStructuralFeatureValueAction" semanticCandidateExpression="var:self" extends="//@extensions.0/@categories.0/@groups.10">
         <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="uml.AddStructuralFeatureValueAction.insertAt" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('insertAt')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('insertAt'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('insertAt').changeable" referenceNameExpression="aql:'insertAt'">
           <onClickOperation>
             <firstModelOperations xsi:type="properties:DialogModelOperation" titleExpression="aql:self.insertAt.name">
-              <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
-                <initialOperation/>
-              </buttons>
-              <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
-                <initialOperation/>
-              </buttons>
-              <page name="Default Page" labelExpression="Page" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.10/@controls.0/@onClickOperation/@firstModelOperations/@groups.0"/>
-              <groups name="Default Group" labelExpression="Group" domainClass="uml::InputPin" semanticCandidateExpression="aql:self.insertAt" extends="//@extensions.0/@categories.1/@groups.0"/>
-            </firstModelOperations>
-          </onClickOperation>
-        </controls>
-        <controls xsi:type="properties:CheckboxDescription" name="uml.AddStructuralFeatureValueAction.isReplaceAll" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('isReplaceAll')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('isReplaceAll'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('isReplaceAll').changeable" valueExpression="aql:self.isReplaceAll">
-          <initialOperation>
-            <firstModelOperations xsi:type="tool:SetValue" featureName="isReplaceAll" valueExpression="var:newValue"/>
-          </initialOperation>
-        </controls>
-      </groups>
-      <groups name="ADE_RSFVA_GROUP" labelExpression="Remove Structural Feature Value Action" domainClass="uml::RemoveStructuralFeatureValueAction" semanticCandidateExpression="var:self" extends="//@extensions.0/@categories.0/@groups.9">
-        <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="uml.RemoveStructuralFeatureValueAction.removeAt" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('removeAt')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('removeAt'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('removeAt').changeable" referenceNameExpression="aql:'removeAt'">
-          <onClickOperation>
-            <firstModelOperations xsi:type="properties:DialogModelOperation" titleExpression="aql:self.removeAt.name">
               <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
                 <initialOperation/>
               </buttons>
@@ -3851,13 +3894,34 @@
             </firstModelOperations>
           </onClickOperation>
         </controls>
+        <controls xsi:type="properties:CheckboxDescription" name="uml.AddStructuralFeatureValueAction.isReplaceAll" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('isReplaceAll')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('isReplaceAll'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('isReplaceAll').changeable" valueExpression="aql:self.isReplaceAll">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool:SetValue" featureName="isReplaceAll" valueExpression="var:newValue"/>
+          </initialOperation>
+        </controls>
+      </groups>
+      <groups name="ADE_RSFVA_GROUP" labelExpression="Remove Structural Feature Value Action" domainClass="uml::RemoveStructuralFeatureValueAction" semanticCandidateExpression="var:self" extends="//@extensions.0/@categories.0/@groups.10">
+        <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="uml.RemoveStructuralFeatureValueAction.removeAt" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('removeAt')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('removeAt'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('removeAt').changeable" referenceNameExpression="aql:'removeAt'">
+          <onClickOperation>
+            <firstModelOperations xsi:type="properties:DialogModelOperation" titleExpression="aql:self.removeAt.name">
+              <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
+                <initialOperation/>
+              </buttons>
+              <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
+                <initialOperation/>
+              </buttons>
+              <page name="Default Page" labelExpression="Page" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.12/@controls.0/@onClickOperation/@firstModelOperations/@groups.0"/>
+              <groups name="Default Group" labelExpression="Group" domainClass="uml::InputPin" semanticCandidateExpression="aql:self.insertAt" extends="//@extensions.0/@categories.1/@groups.0"/>
+            </firstModelOperations>
+          </onClickOperation>
+        </controls>
         <controls xsi:type="properties:CheckboxDescription" name="uml.RemoveStructuralFeatureValueAction.isRemoveDuplicates" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('isRemoveDuplicates')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('isRemoveDuplicates'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('isRemoveDuplicates').changeable" valueExpression="aql:self.isRemoveDuplicates">
           <initialOperation>
             <firstModelOperations xsi:type="tool:SetValue" featureName="isRemoveDuplicates" valueExpression="var:newValue"/>
           </initialOperation>
         </controls>
       </groups>
-      <groups name="ADE_CSFA_GROUP" labelExpression="Clear Structural Feature Action" domainClass="uml::ClearStructuralFeatureAction" semanticCandidateExpression="var:self" extends="//@extensions.0/@categories.0/@groups.7">
+      <groups name="ADE_CSFA_GROUP" labelExpression="Clear Structural Feature Action" domainClass="uml::ClearStructuralFeatureAction" semanticCandidateExpression="var:self" extends="//@extensions.0/@categories.0/@groups.8">
         <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="uml.ClearStructuralFeatureAction.result" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('result')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('result'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('result').changeable" referenceNameExpression="aql:'result'">
           <onClickOperation>
             <firstModelOperations xsi:type="properties:DialogModelOperation" titleExpression="aql:self.result.name">
@@ -3867,7 +3931,7 @@
               <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
                 <initialOperation/>
               </buttons>
-              <page name="Default Page" labelExpression="Page" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.12/@controls.0/@onClickOperation/@firstModelOperations/@groups.0"/>
+              <page name="Default Page" labelExpression="Page" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.13/@controls.0/@onClickOperation/@firstModelOperations/@groups.0"/>
               <groups name="Default Group" labelExpression="Group" domainClass="uml::OutputPin" semanticCandidateExpression="aql:self.result" extends="//@extensions.0/@categories.1/@groups.0"/>
             </firstModelOperations>
           </onClickOperation>
@@ -3883,7 +3947,7 @@
               <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
                 <initialOperation/>
               </buttons>
-              <page name="Default Page" labelExpression="Page" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.13/@controls.0/@onClickOperation/@firstModelOperations/@groups.0"/>
+              <page name="Default Page" labelExpression="Page" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.14/@controls.0/@onClickOperation/@firstModelOperations/@groups.0"/>
               <groups name="Default Group" labelExpression="Group" domainClass="uml::ValueSpecification" semanticCandidateExpression="aql:self.value" extends="//@extensions.0/@categories.1/@groups.0"/>
             </firstModelOperations>
           </onClickOperation>
@@ -3897,7 +3961,7 @@
               <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
                 <initialOperation/>
               </buttons>
-              <page name="Default Page" labelExpression="Page" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.13/@controls.1/@onClickOperation/@firstModelOperations/@groups.0"/>
+              <page name="Default Page" labelExpression="Page" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.14/@controls.1/@onClickOperation/@firstModelOperations/@groups.0"/>
               <groups name="Default Group" labelExpression="Group" domainClass="uml::OutputPin" semanticCandidateExpression="aql:self.result" extends="//@extensions.0/@categories.1/@groups.0"/>
             </firstModelOperations>
           </onClickOperation>

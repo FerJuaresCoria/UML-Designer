@@ -3434,7 +3434,7 @@
   </userColorsPalettes>
   <extensions xsi:type="properties:ViewExtensionDescription" name="Properties">
     <categories name="PR_General">
-      <pages name="PR_GeneralPage" labelExpression="General" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.2/@groups.10 //@extensions.0/@categories.2/@groups.8 //@extensions.0/@categories.2/@groups.11 //@extensions.0/@categories.0/@groups.0 //@extensions.0/@categories.0/@groups.1 //@extensions.0/@categories.0/@groups.2 //@extensions.0/@categories.0/@groups.3 //@extensions.0/@categories.0/@groups.4 //@extensions.0/@categories.0/@groups.5 //@extensions.0/@categories.0/@groups.6 //@extensions.0/@categories.0/@groups.7 //@extensions.0/@categories.0/@groups.8 //@extensions.0/@categories.2/@groups.5 //@extensions.0/@categories.2/@groups.6"/>
+      <pages name="PR_GeneralPage" labelExpression="General" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.2/@groups.10 //@extensions.0/@categories.2/@groups.12 //@extensions.0/@categories.2/@groups.8 //@extensions.0/@categories.2/@groups.11 //@extensions.0/@categories.0/@groups.0 //@extensions.0/@categories.0/@groups.1 //@extensions.0/@categories.0/@groups.2 //@extensions.0/@categories.0/@groups.3 //@extensions.0/@categories.0/@groups.4 //@extensions.0/@categories.0/@groups.5 //@extensions.0/@categories.0/@groups.6 //@extensions.0/@categories.0/@groups.7 //@extensions.0/@categories.0/@groups.8 //@extensions.0/@categories.2/@groups.5 //@extensions.0/@categories.2/@groups.6"/>
       <groups name="PR_GeneralGroup" labelExpression="General" semanticCandidateExpression="var:self">
         <controls xsi:type="properties:DynamicMappingForDescription" name="GeneralDynamicMapping" iterator="eStructuralFeature" iterableExpression="aql:self.eClass().eAllStructuralFeatures->select(feature | feature.isGeneralFeature(self))">
           <ifs name="general_mono_string_if" predicateExpression="aql:input.emfEditServices(self).needsTextWidget(eStructuralFeature) and not input.emfEditServices(self).isMultiline(eStructuralFeature)">
@@ -4193,7 +4193,7 @@
         </controls>
       </groups>
       <groups name="ADE_RSFVA_GROUP" labelExpression="Remove Structural Feature Value Action" domainClass="uml::RemoveStructuralFeatureValueAction" semanticCandidateExpression="var:self" extends="//@extensions.0/@categories.2/@groups.9">
-        <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="uml.removeStructuralFeatureValueAction.removeAt" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('removeAt')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('removeAt'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('removeAt').changeable" referenceNameExpression="aql:'removeAt'">
+        <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="uml.RemoveStructuralFeatureValueAction.removeAt" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('removeAt')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('removeAt'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('removeAt').changeable" referenceNameExpression="aql:'removeAt'">
           <onClickOperation>
             <firstModelOperations xsi:type="properties:DialogModelOperation" titleExpression="aql:self.removeAt.name">
               <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
@@ -4207,10 +4207,26 @@
             </firstModelOperations>
           </onClickOperation>
         </controls>
-        <controls xsi:type="properties:CheckboxDescription" name="uml.AddStructuralFeatureValueAction.isRemoveDuplicates" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('isRemoveDuplicates')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('isRemoveDuplicates'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('isRemoveDuplicates').changeable" valueExpression="aql:self.isRemoveDuplicates">
+        <controls xsi:type="properties:CheckboxDescription" name="uml.RemoveStructuralFeatureValueAction.isRemoveDuplicates" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('isRemoveDuplicates')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('isRemoveDuplicates'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('isRemoveDuplicates').changeable" valueExpression="aql:self.isRemoveDuplicates">
           <initialOperation>
             <firstModelOperations xsi:type="tool:SetValue" featureName="isRemoveDuplicates" valueExpression="var:newValue"/>
           </initialOperation>
+        </controls>
+      </groups>
+      <groups name="ADE_CSFA_GROUP" labelExpression="Clear Structural Feature Action" domainClass="uml::ClearStructuralFeatureAction" semanticCandidateExpression="var:self" extends="//@extensions.0/@categories.2/@groups.7">
+        <controls xsi:type="properties-ext-widgets-reference:ExtReferenceDescription" name="uml.ClearStructuralFeatureAction.result" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('result')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('result'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('result').changeable" referenceNameExpression="aql:'result'">
+          <onClickOperation>
+            <firstModelOperations xsi:type="properties:DialogModelOperation" titleExpression="aql:self.result.name">
+              <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
+                <initialOperation/>
+              </buttons>
+              <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
+                <initialOperation/>
+              </buttons>
+              <page name="Default Page" labelExpression="Page" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.2/@groups.12/@controls.0/@onClickOperation/@firstModelOperations/@groups.0"/>
+              <groups name="Default Group" labelExpression="Group" domainClass="uml::OutputPin" semanticCandidateExpression="aql:self.result" extends="//@extensions.0/@categories.0/@groups.0"/>
+            </firstModelOperations>
+          </onClickOperation>
         </controls>
       </groups>
     </categories>

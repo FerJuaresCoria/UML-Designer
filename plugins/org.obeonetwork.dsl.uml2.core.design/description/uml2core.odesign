@@ -4131,7 +4131,7 @@
             </firstModelOperations>
           </onClickOperation>
         </controls>
-        <controls xsi:type="properties:CheckboxDescription" name="uml.AddStructuralFeatureValueAction.isReplaceAll" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('insertAt')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('insertAt'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('insertAt').changeable" valueExpression="aql:self.isReplaceAll">
+        <controls xsi:type="properties:CheckboxDescription" name="uml.AddStructuralFeatureValueAction.isReplaceAll" labelExpression="aql:input.emfEditServices(self).getText(self.eClass().getEStructuralFeature('isReplaceAll')) + ':'" helpExpression="aql:input.emfEditServices(self).getDescription(self.eClass().getEStructuralFeature('isReplaceAll'))" isEnabledExpression="aql:self.eClass().getEStructuralFeature('isReplaceAll').changeable" valueExpression="aql:self.isReplaceAll">
           <initialOperation>
             <firstModelOperations xsi:type="tool:SetValue" featureName="isReplaceAll" valueExpression="var:newValue"/>
           </initialOperation>

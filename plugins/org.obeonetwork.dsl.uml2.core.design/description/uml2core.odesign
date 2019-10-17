@@ -2432,6 +2432,47 @@
                 </firstModelOperations>
               </initialOperation>
             </tools>
+            <tools xsi:type="tool_1:ContainerCreationDescription" name="Clear Structural Feature Action" containerMappings="//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_ClearStructuralFeatureAction']">
+              <variable name="container"/>
+              <viewVariable name="containerView"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:container">
+                  <subModelOperations xsi:type="tool:If" conditionExpression="aql:container.oclIsTypeOf(uml::Activity) or container.oclIsTypeOf(uml::ActivityPartition) or container.oclIsTypeOf(uml::InterruptibleActivityRegion)">
+                    <subModelOperations xsi:type="tool:ChangeContext" browseExpression="service:findParentActivity">
+                      <subModelOperations xsi:type="tool:CreateInstance" typeName="uml.ClearStructuralFeatureAction" referenceName="ownedNode" variableName="action">
+                        <subModelOperations xsi:type="tool:ChangeContext" browseExpression="var:action">
+                          <subModelOperations xsi:type="tool:CreateInstance" typeName="uml.InputPin" referenceName="object" variableName="inputpin">
+                            <subModelOperations xsi:type="tool:ChangeContext" browseExpression="var:inputpin">
+                              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="object"/>
+                            </subModelOperations>
+                          </subModelOperations>
+                          <subModelOperations xsi:type="tool:CreateInstance" typeName="uml.OutputPin" referenceName="result" variableName="outputpin">
+                            <subModelOperations xsi:type="tool:ChangeContext" browseExpression="var:outputpin">
+                              <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="out"/>
+                            </subModelOperations>
+                          </subModelOperations>
+                          <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="service:computeDefaultName"/>
+                          <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="New Clear Structural Feature Action">
+                            <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
+                              <initialOperation>
+                                <firstModelOperations xsi:type="tool:ChangeContext"/>
+                              </initialOperation>
+                            </buttons>
+                            <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
+                              <initialOperation>
+                                <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:action"/>
+                              </initialOperation>
+                            </buttons>
+                            <page name="D_AD_ClearStructuralFeatureAction_DefaultPage" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.2/@groups.12"/>
+                          </subModelOperations>
+                        </subModelOperations>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                  <subModelOperations xsi:type="tool:If" conditionExpression="aql:container.oclIsTypeOf(uml::StructuredActivityNode)"/>
+                </firstModelOperations>
+              </initialOperation>
+            </tools>
           </ownedTools>
         </toolSections>
         <decorationDescriptionsSet>

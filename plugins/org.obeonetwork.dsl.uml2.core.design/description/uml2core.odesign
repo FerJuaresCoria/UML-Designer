@@ -2166,7 +2166,7 @@
                               </firstModelOperations>
                             </initialOperation>
                           </buttons>
-                          <buttons labelExpression="OK" isEnabledExpression="aql:(action.operation&lt;>null) and (not action.operation.method->isEmpty())" default="true" closeDialogOnClick="true">
+                          <buttons labelExpression="OK" isEnabledExpression="aql:(action.operation&lt;>null) " default="true" closeDialogOnClick="true">
                             <initialOperation>
                               <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:self.operation">
                                 <subModelOperations xsi:type="tool:For" expression="service:getOutputParameters" iteratorName="output">

@@ -5,9 +5,10 @@ Update site: https://sse.tu-ilmenau.de/umldesigner-update
 
 ## What are the differences between this branch and the original one?
 ### Enhancements
-- Support for Eclipse 2018-12
-- Support for Sirius 6.1.0
+- Support for Eclipse 2019-06
+- Support for Sirius 6.2.2
 - Added support for DataStore and CentralBuffer nodes
+- Added support for several Actions
 
 ### Fixes
 - Remove the restriction for the operation selection during the CallOperationAction creation

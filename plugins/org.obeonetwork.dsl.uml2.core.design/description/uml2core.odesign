@@ -2874,6 +2874,32 @@
                 </firstModelOperations>
               </initialOperation>
             </tools>
+            <tools xsi:type="tool_1:NodeCreationDescription" name="AD_ExpansionNode" nodeMappings="//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_ExpansionRegion']/@borderedNodeMappings[name='AD_ExpansionNode']">
+              <variable name="container"/>
+              <viewVariable name="containerView"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:container">
+                  <subModelOperations xsi:type="tool:If" conditionExpression="aql:container.oclIsTypeOf(uml::ExpansionRegion)">
+                    <subModelOperations xsi:type="tool:CreateInstance" typeName="uml.ExpansionNode" referenceName="node" variableName="action">
+                      <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="service:computeDefaultName"/>
+                      <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="New Expansion Node Action">
+                        <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
+                          <initialOperation>
+                            <firstModelOperations xsi:type="tool:ChangeContext"/>
+                          </initialOperation>
+                        </buttons>
+                        <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
+                          <initialOperation>
+                            <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:action"/>
+                          </initialOperation>
+                        </buttons>
+                        <page name="D_AD_ValueSpecificationAction_DefaultPage" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.1/@groups.0"/>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                </firstModelOperations>
+              </initialOperation>
+            </tools>
           </ownedTools>
         </toolSections>
         <decorationDescriptionsSet>

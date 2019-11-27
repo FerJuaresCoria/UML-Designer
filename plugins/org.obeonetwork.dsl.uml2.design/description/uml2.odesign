@@ -1675,7 +1675,7 @@
                     </buttons>
                     <page name="D_CD_CreatePackage_DefaultPage" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='Package']/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.0/@groups.0"/>
                     <groups name="D_CD_CreatePackage_GeneralGroup" semanticCandidateExpression="var:self">
-                      <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.0/@groups.0"/>
+                      <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.1/@groups.0"/>
                     </groups>
                   </subModelOperations>
                 </subModelOperations>
@@ -1704,7 +1704,7 @@
                       </buttons>
                       <page name="D_CD_CreateClass_DefaultPage" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='Class']/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.0/@subModelOperations.2/@groups.0"/>
                       <groups name="D_CD_CreateClass_GeneralGroup" semanticCandidateExpression="var:self">
-                        <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.0/@groups.0"/>
+                        <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.1/@groups.0"/>
                       </groups>
                     </subModelOperations>
                   </subModelOperations>
@@ -1740,7 +1740,7 @@
                     </buttons>
                     <page name="D_CD_CreateInterface_DefaultPage" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='Interface']/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.2/@groups.0"/>
                     <groups name="D_CD_CreateInterface_GeneralGroup" semanticCandidateExpression="var:self">
-                      <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.0/@groups.0"/>
+                      <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.1/@groups.0"/>
                     </groups>
                   </subModelOperations>
                 </subModelOperations>
@@ -1773,7 +1773,7 @@
                       </buttons>
                       <page name="D_CD_CreateEnumeration_DefaultPage" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='DataTypes']/@tools.0/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.2/@groups.0"/>
                       <groups name="D_CD_CreateEnumeration_GeneralGroup" semanticCandidateExpression="var:self">
-                        <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.0/@groups.0"/>
+                        <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.1/@groups.0"/>
                       </groups>
                     </subModelOperations>
                   </subModelOperations>
@@ -1805,7 +1805,7 @@
                       </buttons>
                       <page name="D_CD_CreatePrimitiveType_DefaultPage" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='DataTypes']/@tools.1/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.2/@groups.0"/>
                       <groups name="D_CD_CreatePrimitiveType_GeneralGroup" semanticCandidateExpression="var:self">
-                        <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.0/@groups.0"/>
+                        <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.1/@groups.0"/>
                       </groups>
                     </subModelOperations>
                   </subModelOperations>
@@ -1837,7 +1837,7 @@
                       </buttons>
                       <page name="D_CD_CreateDataType_DefaultPage" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='DataTypes']/@tools.2/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.2/@groups.0"/>
                       <groups name="D_CD_CreateDataType_GeneralGroup" semanticCandidateExpression="var:self">
-                        <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.0/@groups.0"/>
+                        <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.1/@groups.0"/>
                       </groups>
                     </subModelOperations>
                   </subModelOperations>
@@ -1873,7 +1873,7 @@
                     </buttons>
                     <page name="D_CD_CreateProperty_DefaultPage" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='Property']/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.5/@groups.0"/>
                     <groups name="D_CD_CreateProperty_GeneralGroup" semanticCandidateExpression="var:self">
-                      <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.0/@groups.0"/>
+                      <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.1/@groups.0"/>
                     </groups>
                   </subModelOperations>
                 </subModelOperations>
@@ -1902,10 +1902,10 @@
                   </buttons>
                   <page name="D_CD_CreateOperation_DefaultPage" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='Operation']/@initialOperation/@firstModelOperations/@subModelOperations.0/@groups.0"/>
                   <groups name="D_CD_CreateOperation_GeneralGroup" semanticCandidateExpression="var:self">
-                    <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.0/@groups.0"/>
+                    <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.1/@groups.0"/>
                   </groups>
                   <groups name="D_CD_CreateOperation_ParametersGroup">
-                    <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.0/@groups.3"/>
+                    <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.1/@groups.3"/>
                   </groups>
                 </subModelOperations>
               </firstModelOperations>
@@ -1938,7 +1938,7 @@
                     </buttons>
                     <page name="D_CD_CreateLiteral_DefaultPage" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='Literal']/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.2/@groups.0"/>
                     <groups name="D_CD_CreateLiteral_GeneralGroup" semanticCandidateExpression="var:self">
-                      <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.0/@groups.0"/>
+                      <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.1/@groups.0"/>
                     </groups>
                   </subModelOperations>
                 </subModelOperations>
@@ -1985,7 +1985,7 @@
                     </buttons>
                     <page name="D_CD_CreateQualifier_DefaultPage" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Class%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='Qualifier']/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.1/@groups.0"/>
                     <groups name="D_CD_CreateQualifier_GeneralGroup" semanticCandidateExpression="var:self">
-                      <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.0/@groups.0"/>
+                      <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.1/@groups.0"/>
                     </groups>
                   </subModelOperations>
                 </subModelOperations>
@@ -2575,7 +2575,7 @@
                       </buttons>
                       <page name="D_CD_CreateMomentInterval_DefaultPage" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Class%20Diagram']/@additionalLayers[name='Archetypes']/@toolSections.0/@ownedTools[name='MomentInterval']/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.0/@subModelOperations.2/@groups.0"/>
                       <groups name="D_CD_CreateMomentInterval_GeneralGroup" semanticCandidateExpression="var:self">
-                        <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.0/@groups.0"/>
+                        <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.1/@groups.0"/>
                       </groups>
                     </subModelOperations>
                   </subModelOperations>
@@ -2610,7 +2610,7 @@
                       </buttons>
                       <page name="D_CD_CreateDescription_DefaultPage" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Class%20Diagram']/@additionalLayers[name='Archetypes']/@toolSections.0/@ownedTools[name='Description']/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.0/@subModelOperations.2/@groups.0"/>
                       <groups name="D_CD_CreateDescription_GeneralGroup" semanticCandidateExpression="var:self">
-                        <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.0/@groups.0"/>
+                        <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.1/@groups.0"/>
                       </groups>
                     </subModelOperations>
                   </subModelOperations>
@@ -2645,7 +2645,7 @@
                       </buttons>
                       <page name="D_CD_CreateRole_DefaultPage" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Class%20Diagram']/@additionalLayers[name='Archetypes']/@toolSections.0/@ownedTools[name='Role']/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.0/@subModelOperations.2/@groups.0"/>
                       <groups name="D_CD_CreateRole_GeneralGroup" semanticCandidateExpression="var:self">
-                        <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.0/@groups.0"/>
+                        <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.1/@groups.0"/>
                       </groups>
                     </subModelOperations>
                   </subModelOperations>
@@ -2680,7 +2680,7 @@
                       </buttons>
                       <page name="D_CD_CreatePlaceThing_DefaultPage" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Class%20Diagram']/@additionalLayers[name='Archetypes']/@toolSections.0/@ownedTools[name='Place%2FThing']/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.0/@subModelOperations.2/@groups.0"/>
                       <groups name="D_CD_CreatePlaceThing_GeneralGroup" semanticCandidateExpression="var:self">
-                        <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.0/@groups.0"/>
+                        <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.1/@groups.0"/>
                       </groups>
                     </subModelOperations>
                   </subModelOperations>
@@ -3050,7 +3050,7 @@
                   </buttons>
                   <page name="D_CS_CreateProperty_DefaultPage" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Composite%20Structure%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='CS_Create_Part']/@initialOperation/@firstModelOperations/@subModelOperations.2/@groups.0"/>
                   <groups name="D_CS_CreateProperty_GeneralGroup" semanticCandidateExpression="var:self">
-                    <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.0/@groups.0"/>
+                    <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.1/@groups.0"/>
                   </groups>
                 </subModelOperations>
               </firstModelOperations>
@@ -3078,7 +3078,7 @@
                       </buttons>
                       <page name="D_CS_CreatePort_DefaultPage" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Composite%20Structure%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='CS_Add_Port']/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.0/@subModelOperations.2/@groups.0"/>
                       <groups name="D_CS_CreatePort_GeneralGroup" semanticCandidateExpression="var:self">
-                        <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.0/@groups.0"/>
+                        <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.1/@groups.0"/>
                       </groups>
                     </subModelOperations>
                   </subModelOperations>
@@ -3410,7 +3410,7 @@
                     </buttons>
                     <page name="D_CO_CreateComponent_DefaultPage" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Component%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='Component']/@tools.0/@initialOperation/@firstModelOperations/@subModelOperations.1/@groups.0"/>
                     <groups name="D_CO_CreateComponent_GeneralGroup" semanticCandidateExpression="var:self">
-                      <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.0/@groups.0"/>
+                      <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.1/@groups.0"/>
                     </groups>
                   </subModelOperations>
                 </firstModelOperations>
@@ -3437,7 +3437,7 @@
                         </buttons>
                         <page name="D_CO_CreateClass_DefaultPage" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Component%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='Component']/@tools.1/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.0/@subModelOperations.1/@groups.0"/>
                         <groups name="D_CO_CreateClass_GeneralGroup" semanticCandidateExpression="var:self">
-                          <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.0/@groups.0"/>
+                          <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.1/@groups.0"/>
                         </groups>
                       </subModelOperations>
                     </subModelOperations>
@@ -3472,7 +3472,7 @@
                   </buttons>
                   <page name="D_CO_CreatePort_DefaultPage" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Component%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='Port']/@initialOperation/@firstModelOperations/@subModelOperations.3/@groups.0"/>
                   <groups name="D_CO_CreatePort_GeneralGroup" semanticCandidateExpression="var:self">
-                    <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.0/@groups.0"/>
+                    <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.1/@groups.0"/>
                   </groups>
                 </subModelOperations>
               </firstModelOperations>
@@ -3498,7 +3498,7 @@
                     </buttons>
                     <page name="D_CO_CreateInterface_DefaultPage" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Component%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='Interface']/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.1/@groups.0"/>
                     <groups name="D_CO_CreateInterface_GeneralGroup" semanticCandidateExpression="var:self">
-                      <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.0/@groups.0"/>
+                      <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.1/@groups.0"/>
                     </groups>
                   </subModelOperations>
                   <subModelOperations xsi:type="tool_1:CreateView" mapping="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Component%20Diagram']/@defaultLayer/@nodeMappings[name='CO_RequiredInterface']" containerViewExpression="var:containerView"/>
@@ -3874,7 +3874,7 @@
                       </buttons>
                       <page name="D_DE_CreateNode_DefaultPage" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Deployment%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='Create%20Node']/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.0/@subModelOperations.1/@groups.0"/>
                       <groups name="D_DE_CreateNode_GeneralGroup" semanticCandidateExpression="var:self">
-                        <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.0/@groups.0"/>
+                        <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.1/@groups.0"/>
                       </groups>
                     </subModelOperations>
                   </subModelOperations>
@@ -3895,7 +3895,7 @@
                       </buttons>
                       <page name="D_DE_CreateNode_DefaultPage" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Deployment%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='Create%20Node']/@initialOperation/@firstModelOperations/@subModelOperations.1/@subModelOperations.0/@subModelOperations.1/@groups.0"/>
                       <groups name="D_DE_CreateNode_GeneralGroup" semanticCandidateExpression="var:self">
-                        <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.0/@groups.0"/>
+                        <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.1/@groups.0"/>
                       </groups>
                     </subModelOperations>
                   </subModelOperations>
@@ -3924,7 +3924,7 @@
                       </buttons>
                       <page name="D_DE_CreateDevice_DefaultPage" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Deployment%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='Create%20Device']/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.0/@subModelOperations.1/@groups.0"/>
                       <groups name="D_DE_CreateDevice_GeneralGroup" semanticCandidateExpression="var:self">
-                        <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.0/@groups.0"/>
+                        <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.1/@groups.0"/>
                       </groups>
                     </subModelOperations>
                   </subModelOperations>
@@ -3945,7 +3945,7 @@
                       </buttons>
                       <page name="D_DE_CreateNestedDevice_DefaultPage" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Deployment%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='Create%20Device']/@initialOperation/@firstModelOperations/@subModelOperations.1/@subModelOperations.0/@subModelOperations.1/@groups.0"/>
                       <groups name="D_DE_CreateNestedDevice_GeneralGroup" semanticCandidateExpression="var:self">
-                        <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.0/@groups.0"/>
+                        <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.1/@groups.0"/>
                       </groups>
                     </subModelOperations>
                   </subModelOperations>
@@ -3974,7 +3974,7 @@
                       </buttons>
                       <page name="D_DE_CreateExecutionEnvironment_DefaultPage" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Deployment%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='Create%20Execution%20Environment']/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.0/@subModelOperations.1/@groups.0"/>
                       <groups name="D_DE_CreateExecutionEnvironment_GeneralGroup" semanticCandidateExpression="var:self">
-                        <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.0/@groups.0"/>
+                        <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.1/@groups.0"/>
                       </groups>
                     </subModelOperations>
                   </subModelOperations>
@@ -3995,7 +3995,7 @@
                       </buttons>
                       <page name="D_DE_CreateNestedExecutionEnvironment_DefaultPage" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Deployment%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='Create%20Execution%20Environment']/@initialOperation/@firstModelOperations/@subModelOperations.1/@subModelOperations.0/@subModelOperations.1/@groups.0"/>
                       <groups name="D_DE_CreateNestedExecutionEnvironment_GeneralGroup" semanticCandidateExpression="var:self">
-                        <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.0/@groups.0"/>
+                        <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.1/@groups.0"/>
                       </groups>
                     </subModelOperations>
                   </subModelOperations>
@@ -4024,7 +4024,7 @@
                       </buttons>
                       <page name="D_DE_CreateArtifact_DefaultPage" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Deployment%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='Create%20Artifact']/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.0/@subModelOperations.1/@groups.0"/>
                       <groups name="D_DE_CreateArtifact_GeneralGroup" semanticCandidateExpression="var:self">
-                        <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.0/@groups.0"/>
+                        <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.1/@groups.0"/>
                       </groups>
                     </subModelOperations>
                   </subModelOperations>
@@ -4045,7 +4045,7 @@
                       </buttons>
                       <page name="D_DE_CreateNestedArtifact_DefaultPage" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Deployment%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='Create%20Artifact']/@initialOperation/@firstModelOperations/@subModelOperations.1/@subModelOperations.0/@subModelOperations.1/@groups.0"/>
                       <groups name="D_DE_CreateNestedArtifact_GeneralGroup" semanticCandidateExpression="var:self">
-                        <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.0/@groups.0"/>
+                        <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.1/@groups.0"/>
                       </groups>
                     </subModelOperations>
                   </subModelOperations>
@@ -4495,7 +4495,7 @@
                       </buttons>
                       <page name="D_SD_CreateClass_DefaultPage" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Sequence%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='CR_Lifeline']/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.0/@subModelOperations.1/@groups.0"/>
                       <groups name="D_SD_CreateClass_GeneralGroup" semanticCandidateExpression="var:self">
-                        <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.0/@groups.0"/>
+                        <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.1/@groups.0"/>
                       </groups>
                     </subModelOperations>
                   </subModelOperations>
@@ -4535,7 +4535,7 @@
                     </buttons>
                     <page name="D_SD_CreateActor_DefaultPage" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Sequence%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='CR_Actor']/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.2/@groups.0"/>
                     <groups name="D_SD_CreateActor_GeneralGroup" semanticCandidateExpression="var:self">
-                      <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.0/@groups.0"/>
+                      <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.1/@groups.0"/>
                     </groups>
                   </subModelOperations>
                 </subModelOperations>
@@ -5106,7 +5106,7 @@
                     </buttons>
                     <page name="D_PD_CreatePackage_DefaultPage" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Extend']/@ownedRepresentations[name='Profile%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='Package']/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.1/@groups.0"/>
                     <groups name="D_PD_CreatePackage_GeneralGroup" semanticCandidateExpression="var:self">
-                      <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.0/@groups.0"/>
+                      <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.1/@groups.0"/>
                     </groups>
                   </subModelOperations>
                 </subModelOperations>
@@ -5131,7 +5131,7 @@
                     </buttons>
                     <page name="D_PD_CreateProfile_DefaultPage" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Extend']/@ownedRepresentations[name='Profile%20Diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='Profile']/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.1/@groups.0"/>
                     <groups name="D_PD_CreateProfile_GeneralGroup" semanticCandidateExpression="var:self">
-                      <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.0/@groups.0"/>
+                      <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.1/@groups.0"/>
                     </groups>
                   </subModelOperations>
                 </subModelOperations>
@@ -5158,7 +5158,7 @@
                     </buttons>
                     <page name="D_PD_CreateStereotype_DefaultPage" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Extend']/@ownedRepresentations[name='Profile%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='Stereotype']/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.1/@groups.0"/>
                     <groups name="D_PD_CreateStereotype_GeneralGroup" semanticCandidateExpression="var:self">
-                      <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.0/@groups.0"/>
+                      <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.1/@groups.0"/>
                     </groups>
                   </subModelOperations>
                 </subModelOperations>
@@ -5182,7 +5182,7 @@
                     </buttons>
                     <page name="D_PD_CreateImportMetaclass_DefaultPage" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Extend']/@ownedRepresentations[name='Profile%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='Import%20Metaclass']/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.0/@groups.0"/>
                     <groups name="D_PD_CreateImportMetaclass_GeneralGroup" semanticCandidateExpression="var:self">
-                      <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.0/@groups.0"/>
+                      <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.1/@groups.0"/>
                     </groups>
                   </subModelOperations>
                 </subModelOperations>
@@ -5218,7 +5218,7 @@
                       </buttons>
                       <page name="D_PD_CreateEnumeration_DefaultPage" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Extend']/@ownedRepresentations[name='Profile%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='DataTypes']/@tools.0/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.1/@groups.0"/>
                       <groups name="D_PD_CreateEnumeration_GeneralGroup" semanticCandidateExpression="var:self">
-                        <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.0/@groups.0"/>
+                        <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.1/@groups.0"/>
                       </groups>
                     </subModelOperations>
                   </subModelOperations>
@@ -5243,7 +5243,7 @@
                       </buttons>
                       <page name="D_PD_CreatePrimitiveType_DefaultPage" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Extend']/@ownedRepresentations[name='Profile%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='DataTypes']/@tools.1/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.1/@groups.0"/>
                       <groups name="D_PD_CreatePrimitiveType_GeneralGroup" semanticCandidateExpression="var:self">
-                        <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.0/@groups.0"/>
+                        <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.1/@groups.0"/>
                       </groups>
                     </subModelOperations>
                   </subModelOperations>
@@ -5268,7 +5268,7 @@
                       </buttons>
                       <page name="D_PD_CreateDataType_DefaultPage" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Extend']/@ownedRepresentations[name='Profile%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='DataTypes']/@tools.2/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.1/@groups.0"/>
                       <groups name="D_PD_CreateDataType_GeneralGroup" semanticCandidateExpression="var:self">
-                        <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.0/@groups.0"/>
+                        <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.1/@groups.0"/>
                       </groups>
                     </subModelOperations>
                   </subModelOperations>
@@ -5309,7 +5309,7 @@
                     </buttons>
                     <page name="D_PD_CreateProperty_DefaultPage" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Extend']/@ownedRepresentations[name='Profile%20Diagram']/@defaultLayer/@toolSections.3/@ownedTools[name='Property']/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.4/@groups.0"/>
                     <groups name="D_PD_CreateProperty_GeneralGroup" semanticCandidateExpression="var:self">
-                      <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.0/@groups.0"/>
+                      <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.1/@groups.0"/>
                     </groups>
                   </subModelOperations>
                 </subModelOperations>
@@ -5337,7 +5337,7 @@
                     </buttons>
                     <page name="D_PD_CreateLiteral_DefaultPage" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Extend']/@ownedRepresentations[name='Profile%20Diagram']/@defaultLayer/@toolSections.3/@ownedTools[name='Literal']/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.2/@groups.0"/>
                     <groups name="D_PD_CreateLiteral_GeneralGroup" semanticCandidateExpression="var:self">
-                      <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.0/@groups.0"/>
+                      <extends href="../../org.obeonetwork.dsl.uml2.core.design/description/uml2core.odesign#//@extensions.0/@categories.1/@groups.0"/>
                     </groups>
                   </subModelOperations>
                 </subModelOperations>

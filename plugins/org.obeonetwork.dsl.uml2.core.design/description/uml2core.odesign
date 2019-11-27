@@ -916,7 +916,7 @@
                       </subModelOperations>
                     </subModelOperations>
                   </subModelOperations>
-                  <subModelOperations xsi:type="tool:If" conditionExpression="aql:container.oclIsTypeOf(uml::StructuredActivityNode)">
+                  <subModelOperations xsi:type="tool:If" conditionExpression="aql:container.oclIsKindOf(uml::StructuredActivityNode)">
                     <subModelOperations xsi:type="tool:CreateInstance" typeName="uml.InitialNode" referenceName="node">
                       <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="service:computeDefaultName"/>
                       <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="Create Initial Node">
@@ -970,7 +970,7 @@
                       </subModelOperations>
                     </subModelOperations>
                   </subModelOperations>
-                  <subModelOperations xsi:type="tool:If" conditionExpression="aql:container.oclIsTypeOf(uml::StructuredActivityNode)">
+                  <subModelOperations xsi:type="tool:If" conditionExpression="aql:container.oclIsKindOf(uml::StructuredActivityNode)">
                     <subModelOperations xsi:type="tool:CreateInstance" typeName="uml.ActivityFinalNode" referenceName="node">
                       <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="service:computeDefaultName"/>
                       <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="Create Final Node">
@@ -1024,7 +1024,7 @@
                       </subModelOperations>
                     </subModelOperations>
                   </subModelOperations>
-                  <subModelOperations xsi:type="tool:If" conditionExpression="aql:container.oclIsTypeOf(uml::StructuredActivityNode)">
+                  <subModelOperations xsi:type="tool:If" conditionExpression="aql:container.oclIsKindOf(uml::StructuredActivityNode)">
                     <subModelOperations xsi:type="tool:CreateInstance" typeName="uml.FlowFinalNode" referenceName="node">
                       <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="service:computeDefaultName"/>
                       <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="Create Flow Final Node">
@@ -1078,7 +1078,7 @@
                       </subModelOperations>
                     </subModelOperations>
                   </subModelOperations>
-                  <subModelOperations xsi:type="tool:If" conditionExpression="aql:container.oclIsTypeOf(uml::StructuredActivityNode)">
+                  <subModelOperations xsi:type="tool:If" conditionExpression="aql:container.oclIsKindOf(uml::StructuredActivityNode)">
                     <subModelOperations xsi:type="tool:CreateInstance" typeName="uml.DecisionNode" referenceName="node">
                       <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="service:computeDefaultName"/>
                       <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="Create Decision Node">
@@ -1132,7 +1132,7 @@
                       </subModelOperations>
                     </subModelOperations>
                   </subModelOperations>
-                  <subModelOperations xsi:type="tool:If" conditionExpression="aql:container.oclIsTypeOf(uml::StructuredActivityNode)">
+                  <subModelOperations xsi:type="tool:If" conditionExpression="aql:container.oclIsKindOf(uml::StructuredActivityNode)">
                     <subModelOperations xsi:type="tool:CreateInstance" typeName="uml.MergeNode" referenceName="node">
                       <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="service:computeDefaultName"/>
                       <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="Create Merge Node">
@@ -1186,8 +1186,8 @@
                       </subModelOperations>
                     </subModelOperations>
                   </subModelOperations>
-                  <subModelOperations xsi:type="tool:If" conditionExpression="aql:container.oclIsTypeOf(uml::StructuredActivityNode)">
-                    <subModelOperations xsi:type="tool:CreateInstance" typeName="uml.ForkNode" referenceName="ownedNode">
+                  <subModelOperations xsi:type="tool:If" conditionExpression="aql:container.oclIsKindOf(uml::StructuredActivityNode)">
+                    <subModelOperations xsi:type="tool:CreateInstance" typeName="uml.ForkNode" referenceName="node">
                       <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="service:computeDefaultName"/>
                       <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="Create Fork Node">
                         <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
@@ -1244,7 +1244,7 @@
                       </subModelOperations>
                     </subModelOperations>
                   </subModelOperations>
-                  <subModelOperations xsi:type="tool:If" conditionExpression="aql:container.oclIsTypeOf(uml::StructuredActivityNode)">
+                  <subModelOperations xsi:type="tool:If" conditionExpression="aql:container.oclIsKindOf(uml::StructuredActivityNode)">
                     <subModelOperations xsi:type="tool:CreateInstance" typeName="uml.JoinNode" referenceName="node" variableName="joinNode">
                       <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="service:computeDefaultName"/>
                       <subModelOperations xsi:type="tool:CreateInstance" typeName="uml.LiteralBoolean" referenceName="joinSpec">

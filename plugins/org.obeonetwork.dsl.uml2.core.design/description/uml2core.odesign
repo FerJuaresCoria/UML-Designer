@@ -1958,10 +1958,20 @@
               <targetViewVariable name="targetView"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:source">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="service:findParentActivity">
-                    <subModelOperations xsi:type="tool:CreateInstance" typeName="uml.ObjectFlow" referenceName="edge">
-                      <subModelOperations xsi:type="tool:SetValue" featureName="source" valueExpression="var:source"/>
-                      <subModelOperations xsi:type="tool:SetValue" featureName="target" valueExpression="var:target"/>
+                  <subModelOperations xsi:type="tool:If" conditionExpression="aql:source.existsExpansionRegionParent()">
+                    <subModelOperations xsi:type="tool:ChangeContext" browseExpression="service:findParentExpansionRegion()">
+                      <subModelOperations xsi:type="tool:CreateInstance" typeName="uml.ObjectFlow" referenceName="edge">
+                        <subModelOperations xsi:type="tool:SetValue" featureName="source" valueExpression="var:source"/>
+                        <subModelOperations xsi:type="tool:SetValue" featureName="target" valueExpression="var:target"/>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                  <subModelOperations xsi:type="tool:If" conditionExpression="aql:not source.existsExpansionRegionParent()">
+                    <subModelOperations xsi:type="tool:ChangeContext" browseExpression="service:findParentActivity">
+                      <subModelOperations xsi:type="tool:CreateInstance" typeName="uml.ObjectFlow" referenceName="edge">
+                        <subModelOperations xsi:type="tool:SetValue" featureName="source" valueExpression="var:source"/>
+                        <subModelOperations xsi:type="tool:SetValue" featureName="target" valueExpression="var:target"/>
+                      </subModelOperations>
                     </subModelOperations>
                   </subModelOperations>
                 </firstModelOperations>

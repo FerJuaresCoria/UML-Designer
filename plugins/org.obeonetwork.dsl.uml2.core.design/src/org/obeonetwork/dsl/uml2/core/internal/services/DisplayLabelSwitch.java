@@ -802,7 +802,14 @@ public class DisplayLabelSwitch extends UMLSwitch<String> implements ILabelConst
 	 */
 	@Override
 	public String caseOperation(Operation object) {
-		final StringBuilder label = new StringBuilder(caseNamedElement(object));
+		
+		String visibility = getVisibilityKindSymbol(object.getVisibility());
+		if (visibility.length() > 0)
+		{
+			visibility = visibility + " "; //$NON-NLS-1$
+		}
+		final StringBuilder label = new StringBuilder(visibility);
+		label.append(caseNamedElement(object));
 		label.append("("); //$NON-NLS-1$
 
 		boolean first = true;

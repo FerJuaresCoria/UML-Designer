@@ -77,6 +77,7 @@ import org.eclipse.uml2.uml.Trigger;
 import org.eclipse.uml2.uml.TypedElement;
 import org.eclipse.uml2.uml.UMLPackage;
 import org.eclipse.uml2.uml.ValueSpecification;
+import org.eclipse.uml2.uml.VisibilityKind;
 import org.eclipse.uml2.uml.util.UMLSwitch;
 import org.obeonetwork.dsl.uml2.core.UMLDesignerCorePlugin;
 
@@ -983,13 +984,32 @@ public class DisplayLabelSwitch extends UMLSwitch<String> implements ILabelConst
 	@Override
 	public String caseStructuralFeature(StructuralFeature object) {
 		final String multiplicity = caseMultiplicityElement(object);
+		String visibility = getVisibilityKindSymbol(object.getVisibility());
+		if (visibility.length() > 0)
+		{
+			visibility = visibility + " "; //$NON-NLS-1$
+		}
 		if (multiplicity.isEmpty())
 		{
-			return caseTypedElement(object);
+			return  visibility + caseTypedElement(object);
 		}
-		else
-		{
-			return caseTypedElement(object) + " " + multiplicity; //$NON-NLS-1$
+		return visibility + caseTypedElement(object) + " " + multiplicity; //$NON-NLS-1$
+	}
+	
+	private String getVisibilityKindSymbol(VisibilityKind kind)
+	{
+		switch (kind.getValue()) {
+			case VisibilityKind.PACKAGE:
+				return "~"; //$NON-NLS-1$
+			case VisibilityKind.PRIVATE:
+				return "-"; //$NON-NLS-1$
+			case VisibilityKind.PROTECTED:
+				return "#"; //$NON-NLS-1$
+			case VisibilityKind.PUBLIC:
+				return "+"; //$NON-NLS-1$
+
+			default:
+				return ""; //$NON-NLS-1$
 		}
 	}
 

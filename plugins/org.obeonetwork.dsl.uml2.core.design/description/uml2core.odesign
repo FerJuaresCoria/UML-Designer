@@ -2290,6 +2290,62 @@
                 </firstModelOperations>
               </initialOperation>
             </tools>
+            <tools xsi:type="tool_1:ContainerCreationDescription" documentation="Create a new opaque action" name="Opaque Action" containerMappings="//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_ReuseMappingForExecutableNode']" iconPath="/org.eclipse.uml2.uml.edit/icons/full/obj16/OpaqueAction.gif">
+              <variable name="container"/>
+              <viewVariable name="containerView"/>
+              <initialOperation>
+                <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:container">
+                  <subModelOperations xsi:type="tool:If" conditionExpression="aql:container.oclIsTypeOf(uml::Activity) or container.oclIsTypeOf(uml::ActivityPartition) or container.oclIsTypeOf(uml::InterruptibleActivityRegion)">
+                    <subModelOperations xsi:type="tool:ChangeContext" browseExpression="service:findParentActivity">
+                      <subModelOperations xsi:type="tool:CreateInstance" typeName="uml.OpaqueAction" referenceName="ownedNode">
+                        <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="service:computeDefaultName"/>
+                        <subModelOperations xsi:type="tool:SetValue" featureName="body" valueExpression="aql:'// TODO body of '+instance.name"/>
+                        <subModelOperations xsi:type="tool:If" conditionExpression="aql:container->filter(uml::ActivityPartition)->size() > 0">
+                          <subModelOperations xsi:type="tool:SetValue" featureName="inPartition" valueExpression="var:container"/>
+                        </subModelOperations>
+                        <subModelOperations xsi:type="tool:If" conditionExpression="aql:container->filter(uml::InterruptibleActivityRegion)->size()>0">
+                          <subModelOperations xsi:type="tool:SetValue" featureName="inInterruptibleRegion" valueExpression="var:container"/>
+                        </subModelOperations>
+                        <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="Create Opaque Action">
+                          <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
+                            <initialOperation>
+                              <firstModelOperations xsi:type="tool:ChangeContext"/>
+                            </initialOperation>
+                          </buttons>
+                          <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
+                            <initialOperation>
+                              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:instance"/>
+                            </initialOperation>
+                          </buttons>
+                          <page name="D_AD_CreateOwnedOpaqueAction_DefaultPage" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='Invocation%20Actions']/@tools.2/@initialOperation/@firstModelOperations/@subModelOperations.0/@subModelOperations.0/@subModelOperations.0/@subModelOperations.4/@groups.0"/>
+                          <groups name="D_AD_CreateOwnedOpaqueAction_GeneralGroup" semanticCandidateExpression="var:self" extends="//@extensions.0/@categories.0/@groups.7"/>
+                        </subModelOperations>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                  <subModelOperations xsi:type="tool:If" conditionExpression="aql:container.oclIsKindOf(uml::StructuredActivityNode)">
+                    <subModelOperations xsi:type="tool:CreateInstance" typeName="uml.OpaqueAction" referenceName="node">
+                      <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="service:computeDefaultName"/>
+                      <subModelOperations xsi:type="tool:SetValue" featureName="body" valueExpression="aql:'// TODO body of '+instance.name"/>
+                      <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="Create Opaque Action">
+                        <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
+                          <initialOperation>
+                            <firstModelOperations xsi:type="tool:ChangeContext"/>
+                          </initialOperation>
+                        </buttons>
+                        <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
+                          <initialOperation>
+                            <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:instance"/>
+                          </initialOperation>
+                        </buttons>
+                        <page name="D_AD_CreateOpaqueAction_DefaultPage" semanticCandidateExpression="var:self" groups="//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@toolSections.2/@ownedTools[name='Invocation%20Actions']/@tools.2/@initialOperation/@firstModelOperations/@subModelOperations.1/@subModelOperations.0/@subModelOperations.2/@groups.0"/>
+                        <groups name="D_AD_CreateOpaqueAction_GeneralGroup" semanticCandidateExpression="var:self" extends="//@extensions.0/@categories.0/@groups.7"/>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                </firstModelOperations>
+              </initialOperation>
+            </tools>
           </ownedTools>
           <ownedTools xsi:type="tool_1:ToolGroup" name="Object Actions">
             <tools xsi:type="tool_1:ContainerCreationDescription" name="Create Object Action" containerMappings="//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_CreateObjectAction']">

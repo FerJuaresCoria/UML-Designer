@@ -1,0 +1,11 @@
+@echo off
+
+::SET JAVA_HOME=
+::SET MAVEN_HOME=
+
+SET PATH=C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\
+IF DEFINED MAVEN_HOME (
+	SET "PATH=%MAVEN_HOME%\bin;%PATH%"
+)
+
+mvn clean package

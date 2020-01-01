@@ -1130,7 +1130,10 @@ public class DisplayLabelSwitch extends UMLSwitch<String> implements ILabelConst
 	 */
 	@Override
 	public String caseTypedElement(TypedElement object) {
-		if (object.getType() != null) {
+		if (object.getName().startsWith("self.") || object.getName().compareTo("self") == 0) { //$NON-NLS-1$ //$NON-NLS-2$
+			return caseNamedElement(object);
+		}
+		else if (object.getType() != null) {
 			return caseNamedElement(object) + SPACED_COLUMN + object.getType().getName();
 		}
 		return caseNamedElement(object) + SPACED_COLUMN;

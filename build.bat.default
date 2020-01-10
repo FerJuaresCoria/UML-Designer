@@ -7,5 +7,10 @@ SET PATH=C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\Syst
 IF DEFINED MAVEN_HOME (
 	SET "PATH=%MAVEN_HOME%\bin;%PATH%"
 )
+IF DEFINED JAVA_HOME (
+	SET "PATH=%JAVA_HOME%\bin;%PATH%"
+)
 
-mvn clean package
+CALL mvn clean package
+
+cmd /k

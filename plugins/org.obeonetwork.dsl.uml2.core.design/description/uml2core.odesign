@@ -454,7 +454,7 @@
               <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
             </style>
           </borderedNodeMappings>
-          <subNodeMappings name="AD_ControlNode" deletionDescription="//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Reused%20Description']/@toolSection/@subSections[name='existingElements']/@ownedTools[name='DEL_DeleteFromModel']" semanticCandidatesExpression="service:getExecutableNodes" semanticElements="aql:self->including(self.getStereotypeApplications())" doubleClickDescription="//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Reused%20Description']/@toolSection/@subSections[name='properties']/@ownedTools[name='Open%20properties%20wizard']" domainClass="uml.ControlNode">
+          <subNodeMappings name="AD_ControlNode" deletionDescription="//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Reused%20Description']/@toolSection/@subSections[name='existingElements']/@ownedTools[name='DEL_DeleteFromModel']" semanticCandidatesExpression="service:getExecutableNodes" semanticElements="aql:self->including(self.getStereotypeApplications())" doubleClickDescription="//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Reused%20Description']/@toolSection/@subSections[name='properties']/@ownedTools[name='Open%20properties%20wizard']" domainClass="uml::ControlNode">
             <borderedNodeMappings name="TokenDot" semanticCandidatesExpression="aql:self.getStereotypeApplications()-> select(e|e.eClass().name.equals('Token'))" domainClass="EObject">
               <style xsi:type="style:DotDescription" showIcon="false" labelExpression="aql:self.eGet('number').toString()" labelPosition="node" resizeKind="NSEW">
                 <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -1964,16 +1964,36 @@
               <targetViewVariable name="targetView"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:source">
-                  <subModelOperations xsi:type="tool:If" conditionExpression="aql:source.existsExpansionRegionParent()">
-                    <subModelOperations xsi:type="tool:ChangeContext" browseExpression="service:findParentExpansionRegion()">
+                  <subModelOperations xsi:type="tool:If" conditionExpression="aql:source.oclIsKindOf(uml::ExpansionNode)">
+                    <subModelOperations xsi:type="tool:If" conditionExpression="aql:source.oclAsType(uml::ExpansionNode).regionAsInput &lt;> null">
+                      <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:source.regionAsInput">
+                        <subModelOperations xsi:type="tool:CreateInstance" typeName="uml.ObjectFlow" referenceName="edge">
+                          <subModelOperations xsi:type="tool:SetValue" featureName="source" valueExpression="var:source"/>
+                          <subModelOperations xsi:type="tool:SetValue" featureName="target" valueExpression="var:target"/>
+                          <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="in"/>
+                        </subModelOperations>
+                      </subModelOperations>
+                    </subModelOperations>
+                    <subModelOperations xsi:type="tool:If" conditionExpression="aql:source.oclAsType(uml::ExpansionNode).regionAsOutput &lt;> null">
+                      <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:source.owner">
+                        <subModelOperations xsi:type="tool:CreateInstance" typeName="uml.ObjectFlow" referenceName="edge">
+                          <subModelOperations xsi:type="tool:SetValue" featureName="source" valueExpression="var:source"/>
+                          <subModelOperations xsi:type="tool:SetValue" featureName="target" valueExpression="var:target"/>
+                          <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="out"/>
+                        </subModelOperations>
+                      </subModelOperations>
+                    </subModelOperations>
+                  </subModelOperations>
+                  <subModelOperations xsi:type="tool:If" conditionExpression="aql:source.oclIsKindOf(uml::Pin)">
+                    <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:source.owner.owner">
                       <subModelOperations xsi:type="tool:CreateInstance" typeName="uml.ObjectFlow" referenceName="edge">
                         <subModelOperations xsi:type="tool:SetValue" featureName="source" valueExpression="var:source"/>
                         <subModelOperations xsi:type="tool:SetValue" featureName="target" valueExpression="var:target"/>
                       </subModelOperations>
                     </subModelOperations>
                   </subModelOperations>
-                  <subModelOperations xsi:type="tool:If" conditionExpression="aql:not source.existsExpansionRegionParent()">
-                    <subModelOperations xsi:type="tool:ChangeContext" browseExpression="service:findParentActivity">
+                  <subModelOperations xsi:type="tool:If" conditionExpression="aql:not (source.oclIsKindOf(uml::ExpansionNode) or source.oclIsKindOf(uml::Pin))">
+                    <subModelOperations xsi:type="tool:ChangeContext" browseExpression="feature:eContainer">
                       <subModelOperations xsi:type="tool:CreateInstance" typeName="uml.ObjectFlow" referenceName="edge">
                         <subModelOperations xsi:type="tool:SetValue" featureName="source" valueExpression="var:source"/>
                         <subModelOperations xsi:type="tool:SetValue" featureName="target" valueExpression="var:target"/>

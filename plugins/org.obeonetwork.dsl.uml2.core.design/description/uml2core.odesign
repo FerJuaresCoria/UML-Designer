@@ -2888,14 +2888,14 @@
             </tools>
           </ownedTools>
           <ownedTools xsi:type="tool_1:ToolGroup" name="AD_StructuredActions" label="Structured Actions">
-            <tools xsi:type="tool_1:ContainerCreationDescription" name="ExpansionRegionCreation" containerMappings="//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_ExpansionRegion']">
+            <tools xsi:type="tool_1:ContainerCreationDescription" name="ExpansionRegionCreation" label="ExpansionRegion" containerMappings="//@ownedViewpoints[name='Reused']/@ownedRepresentations[name='Activity%20Diagram']/@defaultLayer/@containerMappings[name='AD_Activity']/@subContainerMappings[name='AD_ExpansionRegion']">
               <variable name="container"/>
               <viewVariable name="containerView"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:container">
-                  <subModelOperations xsi:type="tool:If" conditionExpression="aql:container.oclIsTypeOf(uml::Activity) or container.oclIsTypeOf(uml::ActivityPartition) or container.oclIsTypeOf(uml::InterruptibleActivityRegion)">
-                    <subModelOperations xsi:type="tool:ChangeContext" browseExpression="service:findParentActivity">
-                      <subModelOperations xsi:type="tool:CreateInstance" typeName="uml.ExpansionRegion" referenceName="structuredNode" variableName="instance ">
+                  <subModelOperations xsi:type="tool:If" conditionExpression="aql:container.oclIsTypeOf(uml::Activity)">
+                    <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql:container.oclAsType(uml::Activity)">
+                      <subModelOperations xsi:type="tool:CreateInstance" typeName="uml.ExpansionRegion" referenceName="structuredNode" variableName="region">
                         <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="service:computeDefaultName"/>
                         <subModelOperations xsi:type="tool:If" conditionExpression="aql:container->filter(uml::ActivityPartition)->size() > 0">
                           <subModelOperations xsi:type="tool:SetValue" featureName="inPartition" valueExpression="var:container"/>
@@ -2911,7 +2911,7 @@
                           </buttons>
                           <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
                             <initialOperation>
-                              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:instance"/>
+                              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:region"/>
                             </initialOperation>
                           </buttons>
                           <page name="D_AD_ExpansionRegion_DefaultPage" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.17"/>
@@ -2920,7 +2920,7 @@
                     </subModelOperations>
                   </subModelOperations>
                   <subModelOperations xsi:type="tool:If" conditionExpression="aql:container.oclIsKindOf(uml::StructuredActivityNode)">
-                    <subModelOperations xsi:type="tool:CreateInstance" typeName="uml.ExpansionRegion" referenceName="node" variableName="instance ">
+                    <subModelOperations xsi:type="tool:CreateInstance" typeName="uml.ExpansionRegion" referenceName="node" variableName="region">
                       <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="service:computeDefaultName"/>
                       <subModelOperations xsi:type="tool:If" conditionExpression="aql:container->filter(uml::ActivityPartition)->size() > 0">
                         <subModelOperations xsi:type="tool:SetValue" featureName="inPartition" valueExpression="var:container"/>
@@ -2936,7 +2936,7 @@
                         </buttons>
                         <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
                           <initialOperation>
-                            <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:instance"/>
+                            <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:region"/>
                           </initialOperation>
                         </buttons>
                         <page name="D_AD_ExpansionRegion_DefaultPage" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.0/@groups.17"/>
@@ -2951,25 +2951,51 @@
               <viewVariable name="containerView"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:container">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="service:findParentActivity">
-                    <subModelOperations xsi:type="tool:CreateInstance" typeName="uml.ExpansionNode" referenceName="ownedNode" variableName="action">
-                      <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="service:computeDefaultName"/>
-                      <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="New Expansion Node Action">
-                        <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
-                          <initialOperation>
-                            <firstModelOperations xsi:type="tool:ChangeContext"/>
-                          </initialOperation>
-                        </buttons>
-                        <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
-                          <initialOperation>
-                            <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:action"/>
-                          </initialOperation>
-                        </buttons>
-                        <page name="D_AD_ValueSpecificationAction_DefaultPage" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.1/@groups.0"/>
+                  <subModelOperations xsi:type="tool:If" conditionExpression="aql: container.owner.oclIsKindOf(uml::Activity)">
+                    <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql: container.owner.oclAsType(uml::Activity)">
+                      <subModelOperations xsi:type="tool:CreateInstance" typeName="uml.ExpansionNode" referenceName="ownedNode" variableName="action">
+                        <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="service:computeDefaultName"/>
+                        <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="New Expansion Node Action">
+                          <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
+                            <initialOperation>
+                              <firstModelOperations xsi:type="tool:ChangeContext"/>
+                            </initialOperation>
+                          </buttons>
+                          <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
+                            <initialOperation>
+                              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:action"/>
+                            </initialOperation>
+                          </buttons>
+                          <page name="D_AD_ValueSpecificationAction_DefaultPage" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.1/@groups.0"/>
+                        </subModelOperations>
+                        <subModelOperations xsi:type="tool:SetValue" featureName="regionAsInput" valueExpression="var:container"/>
+                        <subModelOperations xsi:type="tool:ChangeContext" browseExpression="var:container">
+                          <subModelOperations xsi:type="tool:SetValue" featureName="inputElement" valueExpression="var:action"/>
+                        </subModelOperations>
                       </subModelOperations>
-                      <subModelOperations xsi:type="tool:SetValue" featureName="regionAsInput" valueExpression="var:container"/>
-                      <subModelOperations xsi:type="tool:ChangeContext" browseExpression="var:container">
-                        <subModelOperations xsi:type="tool:SetValue" featureName="inputElement" valueExpression="var:action"/>
+                    </subModelOperations>
+                  </subModelOperations>
+                  <subModelOperations xsi:type="tool:If" conditionExpression="aql: container.owner.oclIsKindOf(uml::ExpansionRegion)">
+                    <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql: container.owner.oclAsType(uml::ExpansionRegion)">
+                      <subModelOperations xsi:type="tool:CreateInstance" typeName="uml.ExpansionNode" referenceName="node" variableName="action">
+                        <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="service:computeDefaultName"/>
+                        <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="New Expansion Node Action">
+                          <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
+                            <initialOperation>
+                              <firstModelOperations xsi:type="tool:ChangeContext"/>
+                            </initialOperation>
+                          </buttons>
+                          <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
+                            <initialOperation>
+                              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:action"/>
+                            </initialOperation>
+                          </buttons>
+                          <page name="D_AD_ValueSpecificationAction_DefaultPage" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.1/@groups.0"/>
+                        </subModelOperations>
+                        <subModelOperations xsi:type="tool:SetValue" featureName="regionAsInput" valueExpression="var:container"/>
+                        <subModelOperations xsi:type="tool:ChangeContext" browseExpression="var:container">
+                          <subModelOperations xsi:type="tool:SetValue" featureName="inputElement" valueExpression="var:action"/>
+                        </subModelOperations>
                       </subModelOperations>
                     </subModelOperations>
                   </subModelOperations>
@@ -2981,25 +3007,51 @@
               <viewVariable name="containerView"/>
               <initialOperation>
                 <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:container">
-                  <subModelOperations xsi:type="tool:ChangeContext" browseExpression="service:findParentActivity">
-                    <subModelOperations xsi:type="tool:CreateInstance" typeName="uml.ExpansionNode" referenceName="ownedNode" variableName="action">
-                      <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="service:computeDefaultName"/>
-                      <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="New Expansion Node Action">
-                        <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
-                          <initialOperation>
-                            <firstModelOperations xsi:type="tool:ChangeContext"/>
-                          </initialOperation>
-                        </buttons>
-                        <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
-                          <initialOperation>
-                            <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:action"/>
-                          </initialOperation>
-                        </buttons>
-                        <page name="D_AD_ValueSpecificationAction_DefaultPage" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.1/@groups.0"/>
+                  <subModelOperations xsi:type="tool:If" conditionExpression="aql: container.owner.oclIsKindOf(uml::Activity)">
+                    <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql: container.owner.oclAsType(uml::Activity)">
+                      <subModelOperations xsi:type="tool:CreateInstance" typeName="uml.ExpansionNode" referenceName="ownedNode" variableName="action">
+                        <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="service:computeDefaultName"/>
+                        <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="New Expansion Node Action">
+                          <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
+                            <initialOperation>
+                              <firstModelOperations xsi:type="tool:ChangeContext"/>
+                            </initialOperation>
+                          </buttons>
+                          <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
+                            <initialOperation>
+                              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:action"/>
+                            </initialOperation>
+                          </buttons>
+                          <page name="D_AD_ValueSpecificationAction_DefaultPage" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.1/@groups.0"/>
+                        </subModelOperations>
+                        <subModelOperations xsi:type="tool:SetValue" featureName="regionAsOutput" valueExpression="var:container"/>
+                        <subModelOperations xsi:type="tool:ChangeContext" browseExpression="var:container">
+                          <subModelOperations xsi:type="tool:SetValue" featureName="outputElement" valueExpression="var:action"/>
+                        </subModelOperations>
                       </subModelOperations>
-                      <subModelOperations xsi:type="tool:SetValue" featureName="regionAsOutput" valueExpression="var:container"/>
-                      <subModelOperations xsi:type="tool:ChangeContext" browseExpression="var:container">
-                        <subModelOperations xsi:type="tool:SetValue" featureName="outputElement" valueExpression="var:action"/>
+                    </subModelOperations>
+                  </subModelOperations>
+                  <subModelOperations xsi:type="tool:If" conditionExpression="aql: container.owner.oclIsKindOf(uml::ExpansionRegion)">
+                    <subModelOperations xsi:type="tool:ChangeContext" browseExpression="aql: container.owner.oclAsType(uml::ExpansionRegion)">
+                      <subModelOperations xsi:type="tool:CreateInstance" typeName="uml.ExpansionNode" referenceName="node" variableName="action">
+                        <subModelOperations xsi:type="tool:SetValue" featureName="name" valueExpression="service:computeDefaultName"/>
+                        <subModelOperations xsi:type="properties:DialogModelOperation" titleExpression="New Expansion Node Action">
+                          <buttons labelExpression="Cancel" closeDialogOnClick="true" rollbackChangesOnClose="true">
+                            <initialOperation>
+                              <firstModelOperations xsi:type="tool:ChangeContext"/>
+                            </initialOperation>
+                          </buttons>
+                          <buttons labelExpression="OK" default="true" closeDialogOnClick="true">
+                            <initialOperation>
+                              <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:action"/>
+                            </initialOperation>
+                          </buttons>
+                          <page name="D_AD_ValueSpecificationAction_DefaultPage" semanticCandidateExpression="var:self" groups="//@extensions.0/@categories.1/@groups.0"/>
+                        </subModelOperations>
+                        <subModelOperations xsi:type="tool:SetValue" featureName="regionAsOutput" valueExpression="var:container"/>
+                        <subModelOperations xsi:type="tool:ChangeContext" browseExpression="var:container">
+                          <subModelOperations xsi:type="tool:SetValue" featureName="outputElement" valueExpression="var:action"/>
+                        </subModelOperations>
                       </subModelOperations>
                     </subModelOperations>
                   </subModelOperations>

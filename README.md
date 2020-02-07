@@ -4,7 +4,7 @@ A modified version of the graphical tooling to edit and visualize UML models "UM
 Update site: https://sse.tu-ilmenau.de/umldesigner-update
 
 ## Installation note:
-Third party software 'Sirius Project' as well 'org.eclipse.amalgam' is not completely provided by eclipse update site.
+Third party software 'Sirius Project' as well as 'org.eclipse.amalgam' are not completely provided by eclipse update-site.
 Thus, following update sites must be added to eclipse installation before installing UML Designer.
 - https://download.eclipse.org/sirius/updates/releases/6.2.2/2019-06/
 - https://download.eclipse.org/modeling/amalgam/updates/stable/1.9.2-S20181203/capella/

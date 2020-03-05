@@ -27,6 +27,7 @@ import org.eclipse.uml2.uml.Class;
 import org.eclipse.uml2.uml.Classifier;
 import org.eclipse.uml2.uml.Constraint;
 import org.eclipse.uml2.uml.DataStoreNode;
+import org.eclipse.uml2.uml.DecisionNode;
 import org.eclipse.uml2.uml.Dependency;
 import org.eclipse.uml2.uml.Duration;
 import org.eclipse.uml2.uml.Element;
@@ -303,6 +304,23 @@ public class DisplayLabelSwitch extends UMLSwitch<String> implements ILabelConst
 		return label.toString();
 	}
 
+	private String getVisibilityKindSymbol(VisibilityKind kind)
+	{
+		switch (kind.getValue()) {
+			case VisibilityKind.PACKAGE:
+				return "~"; //$NON-NLS-1$
+			case VisibilityKind.PRIVATE:
+				return "-"; //$NON-NLS-1$
+			case VisibilityKind.PROTECTED:
+				return "#"; //$NON-NLS-1$
+			case VisibilityKind.PUBLIC:
+				return "+"; //$NON-NLS-1$
+
+			default:
+				return ""; //$NON-NLS-1$
+		}
+	}
+
 	/**
 	 * Test if a context dependency is added to the lifeline.
 	 *
@@ -391,7 +409,6 @@ public class DisplayLabelSwitch extends UMLSwitch<String> implements ILabelConst
 
 		return null;
 	}
-
 	/**
 	 * {@inheritDoc}
 	 */
@@ -427,6 +444,7 @@ public class DisplayLabelSwitch extends UMLSwitch<String> implements ILabelConst
 
 		return null;
 	}
+
 	/**
 	 * {@inheritDoc}
 	 */
@@ -488,6 +506,10 @@ public class DisplayLabelSwitch extends UMLSwitch<String> implements ILabelConst
 	public String caseControlFlow(org.eclipse.uml2.uml.ControlFlow object) {
 		String labelToDisplay = labelProvider.getText(object);
 		labelToDisplay = labelToDisplay.replace("<Control Flow>", ""); //$NON-NLS-1$ //$NON-NLS-2$
+		if (object.getSource() instanceof DecisionNode && object.getGuard() != null) {
+			labelToDisplay = "[" + LabelServices.INSTANCE.computeUmlLabel(object.getGuard()) + "] " //$NON-NLS-1$//$NON-NLS-2$
+					+ labelToDisplay;
+		}
 		return labelToDisplay;
 	}
 
@@ -765,6 +787,10 @@ public class DisplayLabelSwitch extends UMLSwitch<String> implements ILabelConst
 	public String caseObjectFlow(org.eclipse.uml2.uml.ObjectFlow object) {
 		String labelToDisplay = labelProvider.getText(object);
 		labelToDisplay = labelToDisplay.replace("<Object Flow>", ""); //$NON-NLS-1$ //$NON-NLS-2$
+		if (object.getSource() instanceof DecisionNode && object.getGuard() != null) {
+			labelToDisplay = "[" + LabelServices.INSTANCE.computeUmlLabel(object.getGuard()) + "] " //$NON-NLS-1$//$NON-NLS-2$
+					+ labelToDisplay;
+		}
 		return labelToDisplay;
 	}
 
@@ -802,7 +828,7 @@ public class DisplayLabelSwitch extends UMLSwitch<String> implements ILabelConst
 	 */
 	@Override
 	public String caseOperation(Operation object) {
-		
+
 		String visibility = getVisibilityKindSymbol(object.getVisibility());
 		if (visibility.length() > 0)
 		{
@@ -921,6 +947,7 @@ public class DisplayLabelSwitch extends UMLSwitch<String> implements ILabelConst
 		return computeLabel(property);
 	}
 
+
 	/**
 	 * {@inheritDoc}
 	 */
@@ -928,7 +955,6 @@ public class DisplayLabelSwitch extends UMLSwitch<String> implements ILabelConst
 	public String caseProtocolStateMachine(ProtocolStateMachine object) {
 		return object.getName();
 	}
-
 
 	/**
 	 * {@inheritDoc}
@@ -1001,23 +1027,6 @@ public class DisplayLabelSwitch extends UMLSwitch<String> implements ILabelConst
 			return  visibility + caseTypedElement(object);
 		}
 		return visibility + caseTypedElement(object) + " " + multiplicity; //$NON-NLS-1$
-	}
-	
-	private String getVisibilityKindSymbol(VisibilityKind kind)
-	{
-		switch (kind.getValue()) {
-			case VisibilityKind.PACKAGE:
-				return "~"; //$NON-NLS-1$
-			case VisibilityKind.PRIVATE:
-				return "-"; //$NON-NLS-1$
-			case VisibilityKind.PROTECTED:
-				return "#"; //$NON-NLS-1$
-			case VisibilityKind.PUBLIC:
-				return "+"; //$NON-NLS-1$
-
-			default:
-				return ""; //$NON-NLS-1$
-		}
 	}
 
 	@Override
